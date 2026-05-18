@@ -1,18 +1,11 @@
 const ITEMS = [
-  "LangChain",
   "LangGraph",
-  "OpenAI SDK",
-  "CrewAI",
-  "RAG",
-  "Pinecone",
-  "ChromaDB",
-  "FastAPI",
-  "Streamlit",
-  "Python",
-  "Docker",
+  "Claude",
   "Claude Code",
+  "RAG",
   "MCP",
-  "Pydantic",
+  "FastAPI",
+  "Next.js",
 ];
 
 export default function Marquee() {
