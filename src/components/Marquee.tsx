@@ -4,8 +4,10 @@ const ITEMS = [
   "Claude Code",
   "RAG",
   "MCP",
+  "Python",
   "FastAPI",
   "Next.js",
+  "Docker",
 ];
 
 export default function Marquee() {
