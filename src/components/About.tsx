@@ -33,7 +33,12 @@ export default function About() {
                 the realization that what I actually wanted to build was AI.
               </p>
               <p className="text-[var(--color-text)]">
-                So I taught myself to code from scratch — and started shipping.
+                The previous chapters carried over more than I expected.
+                Engineering taught precision. Trading taught that decisions
+                made under uncertainty need rules, audit trails, and risk
+                limits <em>built in</em> — not bolted on later. Both turned
+                out to be exactly what production AI systems need. Now I
+                ship agents that earn production through tests, not promises.
               </p>
             </div>
           </Reveal>
