@@ -18,27 +18,22 @@ export default function About() {
               <span className="italic text-gradient">actually work</span>.
             </h2>
 
-            <div className="mt-8 space-y-5 text-lg leading-relaxed text-[var(--color-text-muted)]">
+            <div className="mt-8 text-lg leading-relaxed text-[var(--color-text-muted)]">
               <p>
                 Most AI projects are demos. I&apos;m more interested in the
                 unglamorous middle — the tool calls that have to retry, the
                 retrieval that has to be evaluated, the agent graphs that have
-                to fail gracefully.
-              </p>
-              <p>
-                My path here was not a straight line. A Master&apos;s in
-                Mechanical Engineering. A year designing components in CAD.
-                Three years trading equities, derivatives, and commodities,
-                learning to make decisions under uncertainty. And then in 2024,
-                the realization that what I actually wanted to build was AI.
-              </p>
-              <p className="text-[var(--color-text)]">
-                The previous chapters carried over more than I expected.
-                Engineering taught precision. Trading taught that decisions
-                made under uncertainty need rules, audit trails, and risk
-                limits <em>built in</em> — not bolted on later. Both turned
-                out to be exactly what production AI systems need. Now I
-                ship agents that earn production through tests, not promises.
+                to fail gracefully. My path here wasn&apos;t a straight line:
+                a Master&apos;s in Mechanical Engineering, a year of CAD
+                work, three years trading equities, derivatives, and
+                commodities. Then in 2024, the realization that what I
+                actually wanted to build was AI. The previous chapters
+                carried over more than I expected. Engineering taught
+                precision. Trading taught that decisions made under
+                uncertainty need rules, audit trails, and risk limits{" "}
+                <em>built in</em> — not bolted on later. Both turned out to
+                be exactly what production AI systems need. Now I ship
+                agents that earn production through tests, not promises.
               </p>
             </div>
           </Reveal>
