@@ -26,7 +26,7 @@ export default function About() {
                 to fail gracefully. My path here wasn&apos;t a straight line:
                 a Master&apos;s in Mechanical Engineering, a year of CAD
                 work, three years trading equities, derivatives, and
-                commodities. Then in 2024, the realization that what I
+                commodities. Then in 2025, the realization that what I
                 actually wanted to build was AI. The previous chapters
                 carried over more than I expected. Engineering taught
                 precision. Trading taught that decisions made under
