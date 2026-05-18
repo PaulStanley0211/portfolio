@@ -25,13 +25,21 @@ const instrument = Instrument_Serif({
 export const metadata: Metadata = {
   title: "Paul Stanley Ganganapalli — AI Agent Developer",
   description:
-    "AI Agent Developer building production-grade systems with LangChain, LangGraph, and the OpenAI SDK. Mechanical engineer turned multi-agent architect.",
-  metadataBase: new URL("http://localhost:3000"),
+    "AI Agent Developer building production-grade systems with LangGraph, RAG, MCP, and Claude. Mechanical engineer turned multi-agent architect.",
+  metadataBase: new URL("https://www.paulstanley.dev"),
   openGraph: {
     title: "Paul Stanley Ganganapalli — AI Agent Developer",
     description:
-      "Production-grade multi-agent systems. LangChain · LangGraph · RAG · FastAPI.",
+      "Production-grade multi-agent systems. LangGraph · RAG · MCP · Claude.",
     type: "website",
+    url: "https://www.paulstanley.dev",
+    siteName: "Paul Stanley Ganganapalli",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Paul Stanley Ganganapalli — AI Agent Developer",
+    description:
+      "Production-grade multi-agent systems. LangGraph · RAG · MCP · Claude.",
   },
 };
 

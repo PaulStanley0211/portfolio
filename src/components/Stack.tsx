@@ -6,19 +6,17 @@ const GROUPS: { title: string; items: { name: string; meta?: string }[] }[] = [
     items: [
       { name: "LangChain", meta: "tool calling, chains" },
       { name: "LangGraph", meta: "stateful multi-agent" },
-      { name: "CrewAI", meta: "role-based crews" },
-      { name: "OpenAI SDK", meta: "function calling" },
       { name: "Claude Code", meta: "agentic dev loop" },
+      { name: "MCP", meta: "model context protocol" },
     ],
   },
   {
     title: "Retrieval & RAG",
     items: [
-      { name: "Pinecone", meta: "managed vector DB" },
-      { name: "ChromaDB", meta: "local vector store" },
-      { name: "Hybrid Search", meta: "BM25 + dense" },
+      { name: "ChromaDB", meta: "vector store" },
+      { name: "Qdrant", meta: "production vector DB" },
+      { name: "Hybrid Search", meta: "BM25 + dense + RRF" },
       { name: "Reranking", meta: "cross-encoders" },
-      { name: "Eval Harness", meta: "RAG benchmarks" },
     ],
   },
   {
@@ -26,18 +24,15 @@ const GROUPS: { title: string; items: { name: string; meta?: string }[] }[] = [
     items: [
       { name: "Python", meta: "primary" },
       { name: "FastAPI", meta: "async APIs" },
-      { name: "Streamlit", meta: "rapid UIs" },
       { name: "Docker", meta: "containerization" },
-      { name: "Pydantic", meta: "schemas" },
     ],
   },
   {
     title: "Foundations",
     items: [
       { name: "Mech. Engineering", meta: "M.Sc., RTU" },
-      { name: "CAD / DFM", meta: "design rigor" },
       { name: "Markets", meta: "risk under uncertainty" },
-      { name: "ML / DL / NLP", meta: "bootcamp" },
+      { name: "Classical ML / NLP", meta: "fundamentals" },
     ],
   },
 ];
