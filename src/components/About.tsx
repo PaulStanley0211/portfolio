@@ -27,10 +27,10 @@ export default function About() {
               </p>
               <p>
                 My path here was not a straight line. A Master&apos;s in
-                Mechanical Engineering. A year designing components in CAD. Six
-                months in equity and derivatives markets, learning to make
-                decisions under uncertainty. And then in 2024, the realization
-                that what I actually wanted to build was AI.
+                Mechanical Engineering. A year designing components in CAD.
+                Three years trading equities, derivatives, and commodities,
+                learning to make decisions under uncertainty. And then in 2024,
+                the realization that what I actually wanted to build was AI.
               </p>
               <p className="text-[var(--color-text)]">
                 So I taught myself to code from scratch — and started shipping.

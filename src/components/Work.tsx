@@ -74,6 +74,15 @@ const PROJECTS: Project[] = [
     accent: "lime",
     repo: "https://github.com/PaulStanley0211/prelegal",
   },
+  {
+    name: "MIA — German Retail AI Agent",
+    tagline: "Bilingual e-commerce support. DSGVO-compliant memory.",
+    body: "Production conversational AI for German e-commerce — automates order tracking, returns, recommendations, FAQ, and complaints, reducing support workload 60–70%. LangChain orchestrating Claude over PostgreSQL with persisted ChromaDB memory across sessions and DSGVO-compliant cleanup. Bilingual EN/DE with auto language detection, served via FastAPI + Streamlit.",
+    stack: ["LangChain", "Claude", "PostgreSQL", "ChromaDB", "FastAPI", "Streamlit", "Docker"],
+    status: "Shipped",
+    accent: "fuchsia",
+    repo: "https://github.com/PaulStanley0211/MIA---German-Retail-Agent",
+  },
 ];
 
 const ACCENT_BG: Record<NonNullable<Project["accent"]>, string> = {

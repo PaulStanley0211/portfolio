@@ -7,6 +7,7 @@ import Hero from "@/components/Hero";
 import Journey from "@/components/Journey";
 import Marquee from "@/components/Marquee";
 import Nav from "@/components/Nav";
+import Resume from "@/components/Resume";
 import SiteBackground from "@/components/SiteBackground";
 import Stack from "@/components/Stack";
 import Work from "@/components/Work";
@@ -23,6 +24,7 @@ export default function Home() {
       <Journey />
       <Stack />
       <Work />
+      <Resume />
       <Contact />
       <Footer />
       <Chat />
