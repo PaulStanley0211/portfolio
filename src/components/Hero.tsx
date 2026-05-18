@@ -131,7 +131,7 @@ export default function Hero() {
 
         <div className="mt-20 grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/5 rounded-2xl overflow-hidden border border-white/10 max-w-3xl">
           {[
-            { k: "8+", v: "AI agent systems shipped" },
+            { k: "7+", v: "AI agent systems shipped" },
             { k: "M.Sc", v: "Mech. Engineering · 2021" },
             { k: "3y+", v: "Markets · risk · uncertainty" },
             { k: "EU", v: "Based in Germany" },

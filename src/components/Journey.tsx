@@ -16,7 +16,7 @@ const STOPS: Stop[] = [
     title: "AI Agent Developer",
     org: "Self-directed · Building & Shipping",
     location: "Germany",
-    body: "Pivoted to AI in 2024 — self-directed, building on a mechanical-engineering foundation. Now shipping production-grade systems: multi-agent finance workstations, agentic RAG, predictive maintenance, conversational drafting tools, and bilingual retail support. Open to full-time and freelance.",
+    body: "Pivoted to AI in 2024 — self-directed, building on a mechanical-engineering foundation. Now shipping production-grade systems: multi-agent finance workstations, agentic RAG, predictive maintenance, and conversational drafting tools. Open to full-time and freelance.",
     tags: [
       "LangChain",
       "LangGraph",

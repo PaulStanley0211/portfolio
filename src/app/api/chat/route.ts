@@ -24,7 +24,6 @@ const SYSTEM_PROMPT = `You are Paul Stanley Ganganapalli's digital twin — an A
 - **Customer Complaints AI Agent** — classifies sentiment and urgency, routes complaints across seven departments, generates bilingual replies. Live Gmail IMAP fetch, SQLite history, auto-escalation for critical cases.
 - **Production RAG System** — production-grade RAG with hybrid retrieval (BGE dense + BM25 sparse, RRF, cross-encoder reranking), agentic CRAG self-correction, three-layer security (prompt-injection guard, content filter, PII redaction), and a reproducible eval harness. Measured: Hit Rate@5 0.96, Faithfulness 0.944. FastAPI + Qdrant + Redis + Claude Sonnet 4.6.
 - **Prelegal — AI Legal Drafting** — conversational drafting tool where Claude asks the next required question, normalizes free-text answers into structured state via Anthropic tool use, and produces branded PDFs. Eleven Common Paper templates, bcrypt auth, 142 tests. FastAPI + Next.js 16 + Claude Opus 4.7.
-- **MIA — German Retail AI Agent** — production conversational AI for German e-commerce: automates order tracking, returns, recommendations, FAQ, and complaints; reduced support workload 60–70%. Bilingual EN/DE with auto language detection. Persisted ChromaDB memory with DSGVO-compliant cleanup. LangChain + Claude + PostgreSQL + FastAPI + Streamlit + Docker.
 
 # Tech stack
 
