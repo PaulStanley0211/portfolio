@@ -1,4 +1,5 @@
 const ITEMS = [
+  "LangChain",
   "LangGraph",
   "Claude",
   "Claude Code",
