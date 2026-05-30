@@ -146,18 +146,18 @@ export default function Chat() {
         aria-label={open ? "Close chat" : "Chat with Paul's AI twin"}
         className={`fixed bottom-5 right-5 z-[60] flex items-center gap-2 rounded-full pl-3 pr-4 py-2.5 transition-all duration-300 ${
           open
-            ? "bg-white/10 border border-white/15 backdrop-blur-xl text-white"
-            : "bg-[var(--color-accent)] text-black hover:shadow-[0_12px_40px_-8px_rgba(212,255,58,0.55)] hover:-translate-y-0.5"
+            ? "bg-[var(--color-surface)] border border-[var(--color-border-strong)] backdrop-blur-xl text-[var(--color-text)]"
+            : "bg-[var(--color-accent)] text-[#0a0a0a] hover:shadow-[0_12px_40px_-8px_rgba(74,222,128,0.45)] hover:-translate-y-0.5"
         }`}
       >
         <span
           className={`relative flex h-7 w-7 items-center justify-center rounded-full text-[11px] font-bold ${
-            open ? "bg-[var(--color-accent)] text-black" : "bg-black text-[var(--color-accent)]"
+            open ? "bg-[var(--color-accent)] text-[#0a0a0a]" : "bg-[#0a0a0a] text-[var(--color-accent)]"
           }`}
         >
           {open ? "×" : "PS"}
           {!open && (
-            <span className="absolute -top-0.5 -right-0.5 h-2.5 w-2.5 rounded-full bg-emerald-400 ring-2 ring-[var(--color-accent)]" />
+            <span className="absolute -top-0.5 -right-0.5 h-2.5 w-2.5 rounded-full bg-emerald-500 ring-2 ring-[var(--color-bg)]" />
           )}
         </span>
         <span className="text-sm font-medium tracking-tight">
@@ -173,18 +173,18 @@ export default function Chat() {
         }`}
       >
         <div className="mx-auto sm:mx-0 w-full sm:w-[420px] max-w-full">
-          <div className="rounded-t-3xl sm:rounded-3xl border border-white/10 bg-[#0a0a0c]/95 backdrop-blur-2xl shadow-[0_-12px_60px_-12px_rgba(0,0,0,0.7)] overflow-hidden flex flex-col h-[78vh] sm:h-[600px]">
-            <header className="relative px-5 py-4 border-b border-white/8 flex items-center gap-3">
+          <div className="rounded-t-3xl sm:rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)]/98 backdrop-blur-2xl shadow-[0_-12px_60px_-12px_rgba(27,24,21,0.4)] overflow-hidden flex flex-col h-[78vh] sm:h-[600px]">
+            <header className="relative px-5 py-4 border-b border-[var(--color-border)] flex items-center gap-3">
               <div className="relative">
-                <div className="h-10 w-10 rounded-full bg-gradient-to-br from-[var(--color-accent)] to-violet-500 flex items-center justify-center text-black font-mono text-[12px] font-bold">
+                <div className="h-10 w-10 rounded-full bg-gradient-to-br from-[var(--color-amber-from)] to-[var(--color-amber-to)] flex items-center justify-center text-[#0a0a0a] font-mono text-[12px] font-bold">
                   PS
                 </div>
-                <span className="absolute -bottom-0.5 -right-0.5 h-3 w-3 rounded-full bg-emerald-400 ring-2 ring-[#0a0a0c]" />
+                <span className="absolute -bottom-0.5 -right-0.5 h-3 w-3 rounded-full bg-emerald-500 ring-2 ring-[var(--color-surface)]" />
               </div>
               <div className="flex-1 min-w-0">
-                <div className="text-sm text-white tracking-tight flex items-center gap-2">
+                <div className="text-sm text-[var(--color-ink)] tracking-tight flex items-center gap-2">
                   Paul&apos;s AI twin
-                  <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[var(--color-accent)]/80">
+                  <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[var(--color-accent-soft)]">
                     online
                   </span>
                 </div>
@@ -195,7 +195,7 @@ export default function Chat() {
               {messages.length > 0 && (
                 <button
                   onClick={reset}
-                  className="text-[10px] font-mono uppercase tracking-[0.16em] text-[var(--color-text-dim)] hover:text-white transition-colors px-2 py-1 rounded-md hover:bg-white/5"
+                  className="text-[10px] font-mono uppercase tracking-[0.16em] text-[var(--color-text-dim)] hover:text-[var(--color-ink)] transition-colors px-2 py-1 rounded-md hover:bg-[var(--color-ink)]/5"
                   aria-label="Reset chat"
                 >
                   Reset
@@ -211,10 +211,10 @@ export default function Chat() {
                 <div className="space-y-4">
                   <Bubble role="assistant">
                     <p className="text-[15px] leading-relaxed">
-                      Hi — I&apos;m Paul&apos;s digital twin. He&apos;s a
-                      mechanical engineer turned AI Agent Developer, and
-                      he&apos;s currently open to full-time and freelance work.
-                      Ask me anything.
+                      Hey, I&apos;m Paul&apos;s digital twin. He&apos;s a
+                      mechanical engineer who moved into AI agent development,
+                      and he&apos;s open to full-time and freelance work right
+                      now. Ask me anything.
                     </p>
                   </Bubble>
                   <div className="pt-1">
@@ -226,7 +226,7 @@ export default function Chat() {
                         <button
                           key={q}
                           onClick={() => send(q)}
-                          className="text-left text-[13px] text-[var(--color-text-muted)] hover:text-white border border-white/10 hover:border-white/20 bg-white/[0.02] hover:bg-white/[0.05] rounded-2xl px-3.5 py-2 transition-colors"
+                          className="text-left text-[13px] text-[var(--color-text-muted)] hover:text-[var(--color-ink)] border border-[var(--color-border)] hover:border-[var(--color-border-strong)] bg-[var(--color-bg)] hover:bg-[var(--color-ink)]/[0.04] rounded-2xl px-3.5 py-2 transition-colors"
                         >
                           {q}
                         </button>
@@ -248,7 +248,7 @@ export default function Chat() {
                 ))
               )}
               {error && (
-                <div className="text-xs text-rose-300/90 bg-rose-500/10 border border-rose-500/20 rounded-xl px-3 py-2">
+                <div className="text-xs text-rose-300 bg-rose-500/10 border border-rose-500/25 rounded-xl px-3 py-2">
                   {error}
                 </div>
               )}
@@ -256,9 +256,9 @@ export default function Chat() {
 
             <form
               onSubmit={handleSubmit}
-              className="border-t border-white/8 p-3 bg-black/40"
+              className="border-t border-[var(--color-border)] p-3 bg-[var(--color-bg)]"
             >
-              <div className="flex items-end gap-2 rounded-2xl border border-white/10 bg-white/[0.03] focus-within:border-white/25 transition-colors px-3 py-2">
+              <div className="flex items-end gap-2 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] focus-within:border-[var(--color-ink)]/40 transition-colors px-3 py-2">
                 <textarea
                   ref={inputRef}
                   value={input}
@@ -272,17 +272,17 @@ export default function Chat() {
                   rows={1}
                   placeholder="Ask about Paul..."
                   disabled={streaming}
-                  className="flex-1 bg-transparent resize-none outline-none text-[15px] text-white placeholder:text-[var(--color-text-dim)] max-h-32 py-1.5 disabled:opacity-50"
+                  className="flex-1 bg-transparent resize-none outline-none text-[15px] text-[var(--color-ink)] placeholder:text-[var(--color-text-dim)] max-h-32 py-1.5 disabled:opacity-50"
                   style={{ minHeight: "28px" }}
                 />
                 <button
                   type="submit"
                   disabled={!input.trim() || streaming}
-                  className="flex items-center justify-center h-9 w-9 rounded-full bg-[var(--color-accent)] text-black disabled:opacity-30 disabled:cursor-not-allowed hover:scale-105 transition-transform"
+                  className="flex items-center justify-center h-9 w-9 rounded-full bg-[var(--color-accent)] text-[#0a0a0a] disabled:opacity-30 disabled:cursor-not-allowed hover:scale-105 transition-transform"
                   aria-label="Send message"
                 >
                   {streaming ? (
-                    <span className="h-3 w-3 rounded-sm bg-black animate-pulse" />
+                    <span className="h-3 w-3 rounded-sm bg-[#0a0a0a] animate-pulse" />
                   ) : (
                     <svg
                       width="16"
@@ -325,8 +325,8 @@ function Bubble({
       <div
         className={`max-w-[85%] rounded-2xl px-4 py-2.5 ${
           isUser
-            ? "bg-[var(--color-accent)] text-black rounded-br-md"
-            : "bg-white/[0.04] border border-white/8 text-[var(--color-text)] rounded-bl-md"
+            ? "bg-[var(--color-ink)] text-[var(--color-cream)] rounded-br-md"
+            : "bg-[var(--color-bg)] border border-[var(--color-border)] text-[var(--color-ink)] rounded-bl-md"
         }`}
       >
         {children}
@@ -338,9 +338,9 @@ function Bubble({
 function TypingDots() {
   return (
     <div className="flex items-center gap-1 py-1">
-      <span className="h-1.5 w-1.5 rounded-full bg-white/60 animate-bounce [animation-delay:-0.3s]" />
-      <span className="h-1.5 w-1.5 rounded-full bg-white/60 animate-bounce [animation-delay:-0.15s]" />
-      <span className="h-1.5 w-1.5 rounded-full bg-white/60 animate-bounce" />
+      <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-ink)]/45 animate-bounce [animation-delay:-0.3s]" />
+      <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-ink)]/45 animate-bounce [animation-delay:-0.15s]" />
+      <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-ink)]/45 animate-bounce" />
     </div>
   );
 }

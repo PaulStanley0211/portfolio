@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono, Instrument_Serif } from "next/font/google";
+import { Inter, JetBrains_Mono, Caveat } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
@@ -15,20 +15,20 @@ const jetbrains = JetBrains_Mono({
   display: "swap",
 });
 
-const instrument = Instrument_Serif({
-  variable: "--font-serif",
+// Handwritten accent used on the sticker badge (reserved for the portrait/photo block).
+const caveat = Caveat({
+  variable: "--font-script",
   subsets: ["latin"],
-  weight: "400",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Paul Stanley Ganganapalli — AI Agent Developer",
+  title: "Paul Stanley Ganganapalli, AI Agent Developer",
   description:
     "AI Agent Developer building production-grade systems with LangGraph, RAG, MCP, and Claude. Mechanical engineer turned multi-agent architect.",
   metadataBase: new URL("https://www.paulstanley.dev"),
   openGraph: {
-    title: "Paul Stanley Ganganapalli — AI Agent Developer",
+    title: "Paul Stanley Ganganapalli, AI Agent Developer",
     description:
       "Production-grade multi-agent systems. LangGraph · RAG · MCP · Claude.",
     type: "website",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Paul Stanley Ganganapalli — AI Agent Developer",
+    title: "Paul Stanley Ganganapalli, AI Agent Developer",
     description:
       "Production-grade multi-agent systems. LangGraph · RAG · MCP · Claude.",
   },
@@ -49,7 +49,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${jetbrains.variable} ${instrument.variable}`}
+      className={`${inter.variable} ${jetbrains.variable} ${caveat.variable}`}
       suppressHydrationWarning
     >
       <head>

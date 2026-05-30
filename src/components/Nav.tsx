@@ -50,20 +50,22 @@ export default function Nav() {
     >
       <div className="mx-auto max-w-6xl px-6">
         <div
-          className={`flex items-center justify-between rounded-full px-5 py-2.5 transition-all duration-300 ${
+          className={`grid grid-cols-[auto_1fr_auto] items-center gap-4 rounded-full px-5 py-2.5 transition-all duration-300 ${
             scrolled
-              ? "bg-black/40 backdrop-blur-xl border border-white/10 shadow-lg shadow-black/40"
+              ? "bg-[var(--color-cream)]/80 backdrop-blur-xl border border-[var(--color-border)] shadow-lg shadow-[rgba(27,24,21,0.08)]"
               : "bg-transparent border border-transparent"
           }`}
         >
           <a href="#top" className="flex items-center gap-2.5 group">
-            <span className="relative flex h-7 w-7 items-center justify-center rounded-md bg-[var(--color-accent)] text-black font-mono text-[11px] font-bold transition-transform group-hover:rotate-[-6deg]">
-              PS
+            <span className="relative flex h-7 w-7 items-center justify-center rounded-md bg-[var(--color-accent)] text-[#0a0a0a] font-bold text-[13px] transition-transform group-hover:rotate-[-6deg]">
+              P
             </span>
-            <span className="hidden sm:inline text-sm text-white">Paul Stanley</span>
+            <span className="font-bold text-lg sm:text-xl text-[var(--color-ink)] tracking-tight">
+              Paul Stanley
+            </span>
           </a>
 
-          <nav className="hidden md:flex items-center gap-1">
+          <nav className="hidden md:flex items-center justify-center gap-1">
             {links.map((l) => {
               const isActive = active === l.id;
               return (
@@ -72,8 +74,8 @@ export default function Nav() {
                   href={l.href}
                   className={`relative px-3.5 py-1.5 text-sm transition-colors rounded-full ${
                     isActive
-                      ? "text-white bg-white/8"
-                      : "text-[var(--color-text-muted)] hover:text-white hover:bg-white/5"
+                      ? "text-[var(--color-ink)] bg-[var(--color-ink)]/[0.06]"
+                      : "text-[var(--color-text-muted)] hover:text-[var(--color-ink)] hover:bg-[var(--color-ink)]/[0.04]"
                   }`}
                 >
                   {l.label}
@@ -88,28 +90,41 @@ export default function Nav() {
             })}
           </nav>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center justify-end gap-2">
             <a
               href="#contact"
-              className="hidden sm:inline-flex items-center gap-1.5 rounded-full bg-white text-black px-4 py-1.5 text-sm font-medium hover:bg-[var(--color-accent)] transition-colors"
+              className="hidden sm:inline-flex items-center gap-2 rounded-full border border-[var(--color-border-strong)] bg-white/[0.05] px-4 py-1.5 text-sm font-medium text-[var(--color-ink)] hover:bg-white/[0.1] hover:border-[var(--color-accent)] transition-colors"
             >
-              Get in touch
-              <span aria-hidden>→</span>
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              Contact
             </a>
             <button
               onClick={() => setOpen((v) => !v)}
               aria-label="Toggle menu"
-              className="md:hidden h-9 w-9 inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5"
+              aria-expanded={open}
+              className="md:hidden h-9 w-9 inline-flex items-center justify-center rounded-full border border-[var(--color-border-strong)] bg-white/[0.05]"
             >
               <span className="sr-only">Menu</span>
               <div className="flex flex-col gap-1">
                 <span
-                  className={`block h-0.5 w-4 bg-white transition-transform ${
+                  className={`block h-0.5 w-4 bg-[var(--color-ink)] transition-transform ${
                     open ? "translate-y-[3px] rotate-45" : ""
                   }`}
                 />
                 <span
-                  className={`block h-0.5 w-4 bg-white transition-transform ${
+                  className={`block h-0.5 w-4 bg-[var(--color-ink)] transition-transform ${
                     open ? "-translate-y-[3px] -rotate-45" : ""
                   }`}
                 />
@@ -119,13 +134,13 @@ export default function Nav() {
         </div>
 
         {open && (
-          <div className="md:hidden mt-2 rounded-2xl border border-white/10 bg-black/70 backdrop-blur-xl p-2">
+          <div className="md:hidden mt-2 rounded-2xl border border-[var(--color-border)] bg-[var(--color-cream)]/95 backdrop-blur-xl p-2 shadow-lg shadow-[rgba(27,24,21,0.1)]">
             {links.map((l) => (
               <a
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="block px-4 py-3 text-sm text-[var(--color-text-muted)] hover:text-white hover:bg-white/5 rounded-xl"
+                className="block px-4 py-3 text-sm text-[var(--color-text-muted)] hover:text-[var(--color-ink)] hover:bg-[var(--color-ink)]/[0.04] rounded-xl"
               >
                 {l.label}
               </a>

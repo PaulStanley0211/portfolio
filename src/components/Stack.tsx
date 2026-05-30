@@ -44,20 +44,19 @@ export default function Stack() {
         <Reveal>
           <div className="flex items-center gap-3 mb-6">
             <span className="section-eyebrow">03 · Stack</span>
-            <div className="h-px flex-1 bg-white/10 max-w-[120px]" />
+            <div className="h-px flex-1 bg-[var(--color-ink)]/10 max-w-[120px]" />
           </div>
-          <h2 className="section-title text-[clamp(2rem,5vw,3.75rem)] max-w-4xl">
-            The toolbox behind the{" "}
-            <span className="italic text-gradient">agents</span>.
+          <h2 className="section-title text-[clamp(2rem,5vw,3.75rem)] max-w-4xl text-[var(--color-ink)]">
+            My <span className="text-accent">Stack</span>
           </h2>
         </Reveal>
 
-        <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/8 rounded-3xl overflow-hidden border border-white/10">
+        <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[var(--color-ink)]/10 rounded-3xl overflow-hidden border border-[var(--color-border)] shadow-[0_18px_50px_-30px_rgba(27,24,21,0.4)]">
           {GROUPS.map((g, i) => (
             <Reveal key={g.title} delay={i * 80}>
-              <div className="bg-[var(--color-bg)] p-7 h-full flex flex-col gap-5 hover:bg-white/[0.02] transition-colors">
+              <div className="bg-[var(--color-surface)] p-7 h-full flex flex-col gap-5 hover:bg-[var(--color-bg)] transition-colors">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-sm font-mono uppercase tracking-[0.16em] text-white">
+                  <h3 className="text-sm font-mono uppercase tracking-[0.16em] text-[var(--color-ink)]">
                     {g.title}
                   </h3>
                   <span className="font-mono text-[10px] text-[var(--color-text-dim)]">
@@ -68,7 +67,7 @@ export default function Stack() {
                   {g.items.map((it) => (
                     <li
                       key={it.name}
-                      className="group flex items-baseline justify-between gap-3 border-b border-white/5 pb-2.5 last:border-0 last:pb-0"
+                      className="group flex items-baseline justify-between gap-3 border-b border-[var(--color-border)] pb-2.5 last:border-0 last:pb-0"
                     >
                       <span className="text-[var(--color-text)] text-sm tracking-tight">
                         {it.name}
@@ -90,9 +89,9 @@ export default function Stack() {
           <div className="mt-12 flex flex-wrap items-center gap-2">
             <span className="section-eyebrow mr-2">Certifications</span>
             {[
-              "Vista Equity — AI in Action",
-              "Datacom — Co-pilot to Autonomous Agent",
-              "BCG — GenAI Job Simulation",
+              "Vista Equity: AI in Action",
+              "Datacom: Co-pilot to Autonomous Agent",
+              "BCG: GenAI Job Simulation",
               "AI Engineer Agentic Track · MCP",
               "DataScience: ML / DL / NLP Bootcamp",
             ].map((c) => (

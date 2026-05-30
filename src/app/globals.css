@@ -1,23 +1,27 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-bg: #060606;
-  --color-bg-elevated: #0c0c0d;
-  --color-surface: #111113;
-  --color-border: #1f1f23;
-  --color-border-strong: #2a2a30;
-  --color-text: #f5f5f7;
-  --color-text-muted: #a1a1aa;
-  --color-text-dim: #71717a;
-  --color-accent: #d4ff3a;
-  --color-accent-soft: #b8e028;
-  --color-violet: #8b5cf6;
-  --color-fuchsia: #e879f9;
-  --color-amber: #f59e0b;
+  /* Dark "Chase Brocke" palette — near-black canvas, green accent */
+  --color-frame: #0a0a0a;             /* darkest page frame behind panels */
+  --color-bg: #0d0d0d;                /* near-black section background */
+  --color-bg-elevated: #151515;       /* slightly raised surface */
+  --color-surface: #161616;           /* cards */
+  --color-border: rgba(237, 237, 237, 0.1);
+  --color-border-strong: rgba(237, 237, 237, 0.22);
+  --color-text: #ededed;              /* primary off-white text */
+  --color-text-muted: #a3a3a3;        /* muted gray body */
+  --color-text-dim: #6f6f6f;          /* dim gray */
+  --color-ink: #ededed;               /* light foreground (was near-black ink) */
+
+  --color-amber-from: #4ade80;        /* hero accent top (now green) */
+  --color-amber-to: #22c55e;          /* hero accent bottom (now green) */
+  --color-accent: #4ade80;            /* green accent (primary) */
+  --color-accent-soft: #22c55e;       /* deeper green */
+  --color-cream: #0a0a0a;             /* dark text on light/green surfaces */
 
   --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
-  --font-serif: var(--font-serif);
+  --font-script: var(--font-script);
 }
 
 * {
@@ -27,7 +31,7 @@
 
 html,
 body {
-  background: var(--color-bg);
+  background: var(--color-frame);
   color: var(--color-text);
   font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
   font-feature-settings: "ss01", "cv11";
@@ -35,7 +39,7 @@ body {
 
 ::selection {
   background: var(--color-accent);
-  color: #000;
+  color: #0a0a0a;
 }
 
 ::-webkit-scrollbar {
@@ -46,12 +50,12 @@ body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1f1f23;
+  background: #2a2a2a;
   border-radius: 999px;
-  border: 2px solid #060606;
+  border: 2px solid var(--color-frame);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #2a2a30;
+  background: #3a3a3a;
 }
 
 html {
@@ -75,8 +79,8 @@ html {
   100% { background-position: 200% 0; }
 }
 @keyframes pulse-dot {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(212, 255, 58, 0.6); }
-  50% { box-shadow: 0 0 0 10px rgba(212, 255, 58, 0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.55); }
+  50% { box-shadow: 0 0 0 10px rgba(74, 222, 128, 0); }
 }
 @keyframes marquee {
   0% { transform: translateX(0); }
@@ -91,44 +95,53 @@ html {
   50%, 100% { opacity: 0; }
 }
 
+/* Soft warm color washes used in the background */
 .blob {
   position: absolute;
   border-radius: 9999px;
   filter: blur(120px);
-  opacity: 0.55;
+  opacity: 0.35;
   pointer-events: none;
   will-change: transform;
 }
 
+/* Subtle grain — faint light speckle on the dark canvas */
 .grain::before {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
-  opacity: 0.06;
+  opacity: 0.04;
   z-index: 1;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.5 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
-  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.9 0 0 0 0 0.9 0 0 0 0 0.9 0 0 0 0.6 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  mix-blend-mode: screen;
 }
 
+/* Faint grid, masked to a soft ellipse */
 .grid-bg {
   background-image:
-    linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px);
+    linear-gradient(to right, rgba(237, 237, 237, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(237, 237, 237, 0.05) 1px, transparent 1px);
   background-size: 56px 56px;
   -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black 30%, transparent 75%);
   mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black 30%, transparent 75%);
 }
 
+/* Accent words inside headlines — green gradient */
 .text-gradient {
-  background: linear-gradient(120deg, #ffffff 0%, #ffffff 40%, #d4ff3a 60%, #8b5cf6 90%);
+  background: linear-gradient(120deg, #4ade80 0%, #22c55e 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
+/* Flat green accent word inside bold-caps headings */
+.text-accent {
+  color: var(--color-accent);
+}
+
 .shimmer-text {
-  background: linear-gradient(90deg, #71717a 0%, #f5f5f7 50%, #71717a 100%);
+  background: linear-gradient(90deg, #3a3a3a 0%, #ededed 50%, #3a3a3a 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -137,54 +150,75 @@ html {
 }
 
 .hairline {
-  background-image: linear-gradient(to right, transparent, rgba(255,255,255,0.15) 20%, rgba(255,255,255,0.15) 80%, transparent);
+  background-image: linear-gradient(to right, transparent, rgba(237, 237, 237, 0.14) 20%, rgba(237, 237, 237, 0.14) 80%, transparent);
   height: 1px;
 }
 
+/* Dark elevated card surface */
 .glass {
-  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 18px 40px -24px rgba(0, 0, 0, 0.7);
 }
-
 .glass:hover {
-  border-color: rgba(255,255,255,0.16);
+  border-color: var(--color-border-strong);
 }
 
+/* Primary CTA — green pill (the accent buttons in the reference) */
 .btn-primary {
   position: relative;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.75rem 1.25rem;
+  padding: 0.8rem 1.4rem;
   border-radius: 999px;
   background: var(--color-accent);
-  color: #000;
-  font-weight: 500;
+  color: #0a0a0a;
+  font-weight: 600;
   letter-spacing: -0.01em;
-  transition: transform 0.15s ease, box-shadow 0.2s ease;
-  box-shadow: 0 0 0 0 rgba(212, 255, 58, 0);
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+  box-shadow: 0 6px 20px -10px rgba(74, 222, 128, 0.5);
 }
 .btn-primary:hover {
   transform: translateY(-1px);
-  box-shadow: 0 12px 40px -8px rgba(212, 255, 58, 0.45);
+  background: var(--color-accent-soft);
+  box-shadow: 0 16px 40px -12px rgba(74, 222, 128, 0.45);
 }
 
+/* Secondary — bordered ghost pill */
 .btn-ghost {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.75rem 1.25rem;
+  padding: 0.8rem 1.4rem;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.12);
-  color: #f5f5f7;
-  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--color-border-strong);
+  color: var(--color-text);
+  background: rgba(237, 237, 237, 0.04);
   transition: background 0.2s ease, border-color 0.2s ease;
 }
 .btn-ghost:hover {
-  background: rgba(255,255,255,0.06);
-  border-color: rgba(255,255,255,0.22);
+  background: rgba(237, 237, 237, 0.08);
+  border-color: var(--color-accent);
+}
+
+/* Small circular icon button (the "View Listing" arrow) */
+.circle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.75rem;
+  width: 2.75rem;
+  flex: none;
+  border-radius: 999px;
+  background: rgba(237, 237, 237, 0.08);
+  color: var(--color-text);
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+.circle-btn:hover {
+  transform: rotate(-8deg) scale(1.05);
+  background: var(--color-accent);
+  color: #0a0a0a;
 }
 
 .tag {
@@ -193,11 +227,11 @@ html {
   gap: 0.4rem;
   padding: 0.3rem 0.7rem;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.1);
-  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--color-border);
+  background: rgba(237, 237, 237, 0.04);
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  color: #d4d4d8;
+  color: var(--color-text-muted);
   letter-spacing: 0.02em;
 }
 
@@ -228,7 +262,7 @@ html.js .reveal.in {
   width: 600px;
   height: 600px;
   border-radius: 9999px;
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.18), transparent 60%);
+  background: radial-gradient(circle, rgba(74, 222, 128, 0.1), transparent 60%);
   transform: translate(-50%, -50%);
   z-index: 0;
   transition: opacity 0.3s ease;
@@ -244,10 +278,11 @@ html.js .reveal.in {
 }
 
 .section-title {
-  font-family: var(--font-serif);
-  font-weight: 400;
-  letter-spacing: -0.02em;
-  line-height: 1;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
 }
 
 .caret::after {
@@ -255,6 +290,42 @@ html.js .reveal.in {
   margin-left: 2px;
   color: var(--color-accent);
   animation: blink 1.2s steps(2) infinite;
+}
+
+/* The hero panel — dark with a faint green wash */
+.amber-panel {
+  background:
+    radial-gradient(120% 120% at 78% 8%, rgba(74, 222, 128, 0.1), transparent 45%),
+    linear-gradient(155deg, #141414 0%, #0c0c0c 100%);
+  border: 1px solid var(--color-border);
+}
+
+/* Rotated handwritten sticker badge */
+.sticker {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--color-surface);
+  border-radius: 999px / 70%;
+  padding: 0.7rem 1.5rem;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+  border: 1px solid var(--color-border);
+}
+.sticker-script {
+  font-family: var(--font-script), cursive;
+  color: var(--color-accent);
+  line-height: 1;
+}
+
+/* Floating feature card (the listing card) */
+.feature-card {
+  background: var(--color-surface);
+  border-radius: 1.5rem;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 24px 60px -24px rgba(0, 0, 0, 0.6);
 }
 
 @media (prefers-reduced-motion: reduce) {

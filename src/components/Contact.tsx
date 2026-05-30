@@ -7,20 +7,28 @@ export default function Contact() {
         <Reveal>
           <div className="flex items-center gap-3 mb-6">
             <span className="section-eyebrow">06 · Contact</span>
-            <div className="h-px flex-1 bg-white/10 max-w-[120px]" />
+            <div className="h-px flex-1 bg-[var(--color-ink)]/10 max-w-[120px]" />
           </div>
         </Reveal>
 
         <div className="grid lg:grid-cols-12 gap-10 items-center">
           <Reveal className="lg:col-span-7">
-            <h2 className="section-title text-[clamp(2.25rem,6vw,5rem)]">
-              Let&apos;s build something{" "}
-              <span className="italic text-gradient">that ships</span>.
+            <h2 className="section-title text-[clamp(2.75rem,9vw,6.5rem)] text-[var(--color-ink)]">
+              <span className="block">
+                Let&apos;s <span className="text-accent">Build</span>
+              </span>
+              <span className="block text-right">Something</span>
             </h2>
+            <a
+              href="mailto:Paulstanleyganganapalli@gmail.com"
+              className="mt-8 inline-block text-lg sm:text-2xl font-semibold tracking-tight text-[var(--color-text)] underline decoration-[var(--color-border-strong)] underline-offset-[6px] transition-colors hover:text-[var(--color-accent)] hover:decoration-[var(--color-accent)]"
+            >
+              Paulstanleyganganapalli@gmail.com
+            </a>
             <p className="mt-6 text-lg text-[var(--color-text-muted)] max-w-xl leading-relaxed">
-              I&apos;m available for full-time AI Agent Developer roles —
-              remote or on-site, anywhere — and selective freelance
-              engagements. The fastest way to reach me is email.
+              I&apos;m available for full-time AI Agent Developer roles,
+              remote or on-site, anywhere, and I take on a few freelance
+              projects too. The fastest way to reach me is email.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -53,10 +61,10 @@ export default function Contact() {
           </Reveal>
 
           <Reveal className="lg:col-span-5" delay={120}>
-            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-b from-white/[0.04] to-white/[0.01] p-7">
+            <div className="glass relative overflow-hidden rounded-3xl p-7">
               <div
                 aria-hidden
-                className="pointer-events-none absolute -top-24 -right-24 h-64 w-64 rounded-full bg-gradient-to-br from-[var(--color-accent)]/30 via-transparent to-transparent blur-2xl"
+                className="pointer-events-none absolute -top-24 -right-24 h-64 w-64 rounded-full bg-gradient-to-br from-[var(--color-accent)]/25 via-transparent to-transparent blur-2xl"
               />
               <div className="relative space-y-5">
                 <ContactRow
@@ -99,11 +107,11 @@ function ContactRow({
   badge?: boolean;
 }) {
   const content = (
-    <div className="flex items-center justify-between gap-4 py-3 border-b border-white/5 last:border-0">
+    <div className="flex items-center justify-between gap-4 py-3 border-b border-[var(--color-border)] last:border-0">
       <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-[var(--color-text-dim)]">
         {label}
       </span>
-      <span className="text-sm text-white inline-flex items-center gap-2 text-right">
+      <span className="text-sm text-[var(--color-ink)] inline-flex items-center gap-2 text-right">
         {badge && <span className="dot-pulse" />}
         <span className="break-all">{value}</span>
       </span>
@@ -111,7 +119,7 @@ function ContactRow({
   );
   if (href)
     return (
-      <a href={href} className="block hover:bg-white/[0.02] rounded-lg -mx-2 px-2">
+      <a href={href} className="block hover:bg-[var(--color-ink)]/[0.03] rounded-lg -mx-2 px-2">
         {content}
       </a>
     );

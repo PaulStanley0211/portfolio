@@ -16,7 +16,7 @@ const STOPS: Stop[] = [
     title: "AI Agent Developer",
     org: "Self-directed · Building & Shipping",
     location: "Germany",
-    body: "Pivoted to AI in 2024 — self-directed, building on a mechanical-engineering foundation. Now shipping production-grade systems: multi-agent finance workstations, agentic RAG, predictive maintenance, and conversational drafting tools. Open to full-time and freelance.",
+    body: "I moved into AI in 2024, teaching myself and building on top of a mechanical-engineering foundation. These days I ship production systems: multi-agent finance workstations, agentic RAG, predictive maintenance, and conversational drafting tools. Open to full-time and freelance work.",
     tags: [
       "LangChain",
       "LangGraph",
@@ -36,7 +36,7 @@ const STOPS: Stop[] = [
     title: "Equity, Derivative & Commodities Trader",
     org: "Freelance",
     location: "India",
-    body: "Three years in live markets — equities, derivatives, commodities. Built strategies, hedged risk in real time, learned to make decisions when the signal is bad and the cost is real. The single best preparation for shipping AI agents in production.",
+    body: "Three years in live markets across equities, derivatives, and commodities. I built strategies, hedged risk in real time, and learned to make decisions when the signal is bad and the cost is real. Honestly, it was the best preparation I could have had for shipping AI agents in production.",
     tags: ["Risk Management", "Strategy", "Macro Analysis"],
   },
   {
@@ -52,7 +52,7 @@ const STOPS: Stop[] = [
     title: "M.Sc. Mechanical Engineering",
     org: "Riga Technical University",
     location: "Latvia",
-    body: "Master's in Mechanical Engineering — the rigor that still shows up in every system I design today.",
+    body: "Master's in Mechanical Engineering, and the rigor it drilled into me still shows up in every system I design today.",
     tags: ["Master's"],
   },
   {
@@ -77,17 +77,18 @@ export default function Journey() {
         <Reveal>
           <div className="flex items-center gap-3 mb-6">
             <span className="section-eyebrow">02 · Career Journey</span>
-            <div className="h-px flex-1 bg-white/10 max-w-[120px]" />
+            <div className="h-px flex-1 bg-[var(--color-ink)]/10 max-w-[120px]" />
           </div>
           <div className="flex flex-wrap items-end justify-between gap-6 mb-16">
-            <h2 className="section-title text-[clamp(2rem,5vw,3.75rem)] max-w-3xl">
-              From CAD drawings to{" "}
-              <span className="italic text-gradient">agent graphs</span>.
+            <h2 className="section-title text-[clamp(2rem,5vw,3.75rem)] max-w-3xl text-[var(--color-ink)]">
+              From CAD Drawings To{" "}
+              <span className="text-accent">Agent Graphs</span>
             </h2>
             <p className="text-[var(--color-text-muted)] max-w-md text-base leading-relaxed">
-              Not a linear story — and that&apos;s the point. Each chapter
-              taught a different muscle: precision, decision-making under
-              uncertainty, and the discipline to ship.
+              It&apos;s not a linear story, and that&apos;s kind of the point.
+              Each chapter taught me something different: precision,
+              making decisions under uncertainty, and the discipline to
+              actually ship.
             </p>
           </div>
         </Reveal>
@@ -95,7 +96,7 @@ export default function Journey() {
         <ol className="relative">
           <div
             aria-hidden
-            className="absolute left-3 sm:left-4 top-2 bottom-2 w-px bg-gradient-to-b from-[var(--color-accent)]/60 via-white/15 to-transparent"
+            className="absolute left-3 sm:left-4 top-2 bottom-2 w-px bg-gradient-to-b from-[var(--color-accent)]/70 via-[var(--color-ink)]/15 to-transparent"
           />
           {STOPS.map((s, i) => (
             <Reveal as="li" key={i} delay={i * 60}>
@@ -104,22 +105,22 @@ export default function Journey() {
                   aria-hidden
                   className={`absolute left-0 top-1.5 h-7 w-7 rounded-full border ${
                     s.highlight
-                      ? "border-[var(--color-accent)] bg-[var(--color-accent)] shadow-[0_0_24px_rgba(212,255,58,0.45)]"
-                      : "border-white/20 bg-[var(--color-bg-elevated)]"
+                      ? "border-[var(--color-accent)] bg-[var(--color-accent)] shadow-[0_0_24px_rgba(74,222,128,0.45)]"
+                      : "border-[var(--color-ink)]/20 bg-[var(--color-surface)]"
                   } flex items-center justify-center`}
                 >
                   <span
                     className={`h-2 w-2 rounded-full ${
-                      s.highlight ? "bg-black" : "bg-white/40"
+                      s.highlight ? "bg-[var(--color-ink)]" : "bg-[var(--color-ink)]/30"
                     }`}
                   />
                 </span>
 
                 <div
-                  className={`group relative rounded-2xl border bg-gradient-to-b from-white/[0.03] to-white/[0.005] p-6 sm:p-7 transition-colors ${
+                  className={`group relative rounded-2xl border bg-[var(--color-surface)] p-6 sm:p-7 shadow-[0_1px_2px_rgba(27,24,21,0.04),0_18px_40px_-24px_rgba(27,24,21,0.25)] transition-colors ${
                     s.highlight
-                      ? "border-[var(--color-accent)]/30 hover:border-[var(--color-accent)]/60"
-                      : "border-white/8 hover:border-white/20"
+                      ? "border-[var(--color-accent)]/40 hover:border-[var(--color-accent)]"
+                      : "border-[var(--color-border)] hover:border-[var(--color-border-strong)]"
                   }`}
                 >
                   <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
@@ -133,7 +134,7 @@ export default function Journey() {
                     )}
                   </div>
 
-                  <h3 className="mt-2 text-xl sm:text-2xl text-white tracking-tight">
+                  <h3 className="mt-2 font-bold text-xl sm:text-2xl text-[var(--color-ink)] tracking-tight">
                     {s.title}
                   </h3>
                   <div className="text-[var(--color-text-muted)] text-sm sm:text-base">
