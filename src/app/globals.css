@@ -335,3 +335,82 @@ html.js .reveal.in {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ============================================================
+   STUDIO — Sillage case-study theme
+   Scoped palette + type. Overrides the CSS custom properties
+   only inside [data-theme="sillage"], so the global dark/green
+   site theme above is untouched. Reused utilities that read
+   var(--color-*) automatically pick up these warm values.
+   ============================================================ */
+[data-theme="sillage"] {
+  --color-frame: #f0e9dd;          /* Bone */
+  --color-bg: #f0e9dd;             /* Bone */
+  --color-bg-elevated: #e9e0d0;
+  --color-surface: #e8dfce;
+  --color-border: rgba(26, 23, 20, 0.14);
+  --color-border-strong: rgba(26, 23, 20, 0.3);
+  --color-text: #1a1714;          /* Charcoal */
+  --color-text-muted: #6b6a66;    /* Smoke Grey */
+  --color-text-dim: #8c887e;
+  --color-ink: #1a1714;
+  --color-accent: #b16a2b;        /* Amber */
+  --color-accent-soft: #a98b4f;   /* Antique Gold */
+  --color-gold: #a98b4f;          /* Antique Gold */
+  --color-cream: #f0e9dd;
+
+  --font-sans: var(--font-montserrat);
+  --font-display: var(--font-playfair);
+  --font-body: var(--font-montserrat);
+}
+
+[data-theme="sillage"] ::selection {
+  background: var(--color-accent);
+  color: #f0e9dd;
+}
+
+/* Tall high-contrast serif, wide spacing — the Sillage display voice. */
+.sillage-display {
+  font-family: var(--font-playfair), Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  letter-spacing: 0.005em;
+  line-height: 1.04;
+}
+
+/* Quiet uppercase label in amber. */
+.sillage-eyebrow {
+  font-family: var(--font-montserrat), ui-sans-serif, sans-serif;
+  font-weight: 500;
+  font-size: 0.72rem;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+/* Montserrat Light body, the way the brand specs it. */
+.sillage-body {
+  font-family: var(--font-montserrat), ui-sans-serif, sans-serif;
+  font-weight: 300;
+  line-height: 1.85;
+  color: var(--color-text-muted);
+}
+
+/* A fine engraved hairline — a nod to the trail wrapping the glass. */
+.sillage-rule {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(26, 23, 20, 0.22) 18%,
+    rgba(26, 23, 20, 0.22) 82%,
+    transparent
+  );
+}
+
+/* Wordmark spacing for the SILLAGE masthead. */
+.sillage-wordmark {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-weight: 600;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+}

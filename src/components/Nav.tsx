@@ -1,20 +1,31 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
+// Section links are absolute (`/#id`) so they also work from /studio routes:
+// from the homepage they scroll in-page, from elsewhere they route home first.
+// "Studio" is a real route rather than a section.
 const links = [
-  { href: "#about", label: "About", id: "about" },
-  { href: "#journey", label: "Journey", id: "journey" },
-  { href: "#stack", label: "Stack", id: "stack" },
-  { href: "#work", label: "Work", id: "work" },
-  { href: "#resume", label: "Resume", id: "resume" },
-  { href: "#contact", label: "Contact", id: "contact" },
+  { href: "/#about", label: "About", id: "about" },
+  { href: "/#journey", label: "Journey", id: "journey" },
+  { href: "/#stack", label: "Stack", id: "stack" },
+  { href: "/#work", label: "Work", id: "work" },
+  { href: "/studio", label: "Studio", id: "studio" },
+  { href: "/#resume", label: "Resume", id: "resume" },
+  { href: "/#contact", label: "Contact", id: "contact" },
 ];
 
 export default function Nav() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState<string>("");
+
+  const isLinkActive = (id: string) =>
+    id === "studio"
+      ? pathname.startsWith("/studio")
+      : pathname === "/" && active === id;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -56,7 +67,7 @@ export default function Nav() {
               : "bg-transparent border border-transparent"
           }`}
         >
-          <a href="#top" className="flex items-center gap-2.5 group">
+          <a href="/" className="flex items-center gap-2.5 group">
             <span className="relative flex h-7 w-7 items-center justify-center rounded-md bg-[var(--color-accent)] text-[#0a0a0a] font-bold text-[13px] transition-transform group-hover:rotate-[-6deg]">
               P
             </span>
@@ -67,7 +78,7 @@ export default function Nav() {
 
           <nav className="hidden md:flex items-center justify-center gap-1">
             {links.map((l) => {
-              const isActive = active === l.id;
+              const isActive = isLinkActive(l.id);
               return (
                 <a
                   key={l.href}
@@ -92,7 +103,7 @@ export default function Nav() {
 
           <div className="flex items-center justify-end gap-2">
             <a
-              href="#contact"
+              href="/#contact"
               className="hidden sm:inline-flex items-center gap-2 rounded-full border border-[var(--color-border-strong)] bg-white/[0.05] px-4 py-1.5 text-sm font-medium text-[var(--color-ink)] hover:bg-white/[0.1] hover:border-[var(--color-accent)] transition-colors"
             >
               <svg

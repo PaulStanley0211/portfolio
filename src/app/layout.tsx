@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono, Caveat } from "next/font/google";
+import {
+  Inter,
+  JetBrains_Mono,
+  Caveat,
+  Playfair_Display,
+  Montserrat,
+} from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
@@ -19,6 +25,21 @@ const jetbrains = JetBrains_Mono({
 const caveat = Caveat({
   variable: "--font-script",
   subsets: ["latin"],
+  display: "swap",
+});
+
+// Studio case-study type system (used only inside the [data-theme="sillage"] scope).
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
+
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
   display: "swap",
 });
 
@@ -49,7 +70,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${jetbrains.variable} ${caveat.variable}`}
+      className={`${inter.variable} ${jetbrains.variable} ${caveat.variable} ${playfair.variable} ${montserrat.variable}`}
       suppressHydrationWarning
     >
       <head>
