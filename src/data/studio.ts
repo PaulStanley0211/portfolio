@@ -1,7 +1,7 @@
 // Studio, creative / brand case studies.
-// Single source of truth for both the /studio grid and the /studio/[slug]
-// case-study pages. Adding a new brand is one new StudioProject entry below;
-// no new components or routes required.
+// Single source of truth for both the homepage Studio grid and the
+// /studio/[slug] case-study pages. Adding a new brand is one new StudioProject
+// entry below; no new components or routes required.
 
 export type Swatch = { name: string; hex: string };
 

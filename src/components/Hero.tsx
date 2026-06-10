@@ -60,7 +60,7 @@ export default function Hero() {
                 See my work
                 <span aria-hidden>→</span>
               </a>
-              <a href="/studio" className="btn-ghost">
+              <a href="#studio" className="btn-ghost">
                 View the Studio
                 <span aria-hidden>→</span>
               </a>

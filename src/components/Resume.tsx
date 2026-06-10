@@ -6,7 +6,7 @@ export default function Resume() {
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
           <div className="flex items-center gap-3 mb-6">
-            <span className="section-eyebrow">05 · Resume</span>
+            <span className="section-eyebrow">06 · Resume</span>
             <div className="h-px flex-1 bg-[var(--color-ink)]/10 max-w-[120px]" />
           </div>
         </Reveal>

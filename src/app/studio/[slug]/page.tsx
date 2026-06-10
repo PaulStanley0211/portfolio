@@ -54,7 +54,7 @@ export default async function CaseStudyPage({
       <header className="sticky top-0 z-40 border-b border-[var(--color-border)] bg-[var(--color-bg)]/85 backdrop-blur-md">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
           <Link
-            href="/studio"
+            href="/#studio"
             className="text-[0.72rem] uppercase tracking-[0.28em] text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-accent)]"
           >
             ← Studio
@@ -122,7 +122,7 @@ export default async function CaseStudyPage({
           </p>
           <div className="mt-2 flex items-center gap-6">
             <Link
-              href="/studio"
+              href="/#studio"
               className="text-[0.78rem] uppercase tracking-[0.2em] text-[var(--color-accent)] hover:underline"
             >
               ← All studio work

@@ -10,6 +10,7 @@ import Nav from "@/components/Nav";
 import Resume from "@/components/Resume";
 import SiteBackground from "@/components/SiteBackground";
 import Stack from "@/components/Stack";
+import Studio from "@/components/Studio";
 import Work from "@/components/Work";
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
       <Journey />
       <Stack />
       <Work />
+      <Studio />
       <Resume />
       <Contact />
       <Footer />

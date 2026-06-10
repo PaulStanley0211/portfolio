@@ -3,15 +3,15 @@
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
-// Section links are absolute (`/#id`) so they also work from /studio routes:
-// from the homepage they scroll in-page, from elsewhere they route home first.
-// "Studio" is a real route rather than a section.
+// Section links are absolute (`/#id`) so they also work from /studio/[slug]
+// routes: from the homepage they scroll in-page, from elsewhere they route
+// home first. Studio is a section in the homepage flow, not a separate page.
 const links = [
   { href: "/#about", label: "About", id: "about" },
   { href: "/#journey", label: "Journey", id: "journey" },
   { href: "/#stack", label: "Stack", id: "stack" },
   { href: "/#work", label: "Work", id: "work" },
-  { href: "/studio", label: "Studio", id: "studio" },
+  { href: "/#studio", label: "Studio", id: "studio" },
   { href: "/#resume", label: "Resume", id: "resume" },
   { href: "/#contact", label: "Contact", id: "contact" },
 ];
@@ -22,10 +22,7 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState<string>("");
 
-  const isLinkActive = (id: string) =>
-    id === "studio"
-      ? pathname.startsWith("/studio")
-      : pathname === "/" && active === id;
+  const isLinkActive = (id: string) => pathname === "/" && active === id;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
