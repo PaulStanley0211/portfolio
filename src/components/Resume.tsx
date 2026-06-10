@@ -37,6 +37,17 @@ export default function Resume() {
                 <span aria-hidden>↓</span>
               </a>
             </div>
+
+            <p className="mt-4 text-sm text-[var(--color-text-dim)]">
+              This is my general resume.{" "}
+              <a
+                href="#contact"
+                className="text-[var(--color-accent)] hover:underline"
+              >
+                Get in touch
+              </a>{" "}
+              for a version tailored to your role.
+            </p>
           </Reveal>
 
           <Reveal className="lg:col-span-5" delay={120}>
