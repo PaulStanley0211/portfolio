@@ -26,9 +26,9 @@ export async function generateMetadata({
       description: project.meta.description,
       images: [
         {
-          url: "https://www.paulstanley.dev/sillage/og-poster.jpg",
+          url: project.meta.ogImage,
           width: 1200,
-          height: 679,
+          height: project.meta.ogHeight,
           alt: `${project.name} — campaign key visual`,
         },
       ],
@@ -47,8 +47,8 @@ export default async function CaseStudyPage({
 
   return (
     <main
-      data-theme="sillage"
-      className="min-h-screen bg-[var(--color-bg)] font-[var(--font-montserrat)] text-[var(--color-text)]"
+      data-theme={project.slug}
+      className="cs-page min-h-screen bg-[var(--color-bg)] font-[var(--font-body)] text-[var(--color-text)]"
     >
       {/* Slim immersive header — replaces the global nav for full immersion */}
       <header className="sticky top-0 z-40 border-b border-[var(--color-border)] bg-[var(--color-bg)]/85 backdrop-blur-md">
@@ -59,7 +59,7 @@ export default async function CaseStudyPage({
           >
             ← Studio
           </Link>
-          <span className="sillage-wordmark text-sm text-[var(--color-ink)]">
+          <span className="cs-wordmark text-sm text-[var(--color-ink)]">
             {project.name}
           </span>
           <Link
@@ -72,7 +72,7 @@ export default async function CaseStudyPage({
       </header>
 
       {/* Hero — campaign key visual with the wordmark masthead */}
-      <section className="relative h-[82vh] min-h-[520px] w-full overflow-hidden">
+      <section className="cs-hero relative h-[82vh] min-h-[520px] w-full overflow-hidden">
         <Image
           src={project.hero.image}
           alt={`${project.name} campaign key visual`}
@@ -82,30 +82,30 @@ export default async function CaseStudyPage({
           className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[rgba(26,23,20,0.3)] via-[rgba(26,23,20,0.08)] to-[rgba(26,23,20,0.7)]" />
-        <div className="absolute inset-0 flex flex-col items-center justify-end px-6 pb-16 text-center sm:pb-20">
-          <h1 className="sillage-wordmark text-[clamp(2rem,9vw,6rem)] text-[#f0e9dd]">
+        <div className="cs-hero-inner absolute inset-0 flex flex-col items-center justify-end px-6 pb-16 text-center sm:pb-20">
+          <h1 className="cs-wordmark text-[clamp(2rem,9vw,6rem)] text-[var(--color-ondark)]">
             {project.hero.title}
           </h1>
-          <p className="mt-4 font-[var(--font-playfair)] text-[clamp(1rem,3vw,1.6rem)] italic text-[#f0e9dd]/90">
+          <p className="mt-4 font-[var(--font-display)] text-[clamp(1rem,3vw,1.6rem)] italic text-[var(--color-ondark)]/90">
             {project.hero.tagline}
           </p>
-          <p className="mt-6 text-[0.68rem] uppercase tracking-[0.3em] text-[#f0e9dd]/70">
+          <p className="cs-hero-meta mt-6 text-[0.68rem] uppercase tracking-[0.3em] text-[var(--color-ondark)]/70">
             {project.discipline} · {project.year}
           </p>
         </div>
       </section>
 
       {/* Intro lede */}
-      <section className="mx-auto max-w-2xl px-6 pb-4 pt-20 text-center">
+      <section className="cs-intro cs-narrow mx-auto max-w-2xl px-6 pb-4 pt-20 text-center">
         <Reveal>
-          <p className="sillage-display text-[clamp(1.15rem,2.8vw,1.65rem)] leading-relaxed text-[var(--color-ink)]">
+          <p className="cs-display text-[clamp(1.15rem,2.8vw,1.65rem)] leading-relaxed text-[var(--color-ink)]">
             {project.intro}
           </p>
         </Reveal>
       </section>
 
       {/* Content blocks */}
-      <div className="space-y-20 py-16 sm:space-y-28 sm:py-20">
+      <div className="cs-blocks space-y-20 py-16 sm:space-y-28 sm:py-20">
         {project.blocks.map((block, i) => (
           <Blocks key={i} block={block} />
         ))}
@@ -114,7 +114,7 @@ export default async function CaseStudyPage({
       {/* Footer */}
       <footer className="border-t border-[var(--color-border)]">
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 px-6 py-14 text-center">
-          <span className="sillage-wordmark text-lg text-[var(--color-ink)]">
+          <span className="cs-wordmark text-lg text-[var(--color-ink)]">
             {project.name}
           </span>
           <p className="text-[0.74rem] uppercase tracking-[0.24em] text-[var(--color-text-muted)]">

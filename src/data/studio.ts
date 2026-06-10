@@ -5,7 +5,14 @@
 
 export type Swatch = { name: string; hex: string };
 
-export type ImageRef = { src: string; alt: string; caption?: string };
+export type ImageRef = {
+  src: string;
+  alt: string;
+  caption?: string;
+  /** Intrinsic size for next/image. Defaults to 2000×1131 when omitted. */
+  w?: number;
+  h?: number;
+};
 
 /**
  * A case study is an ordered list of content blocks. The case-study page maps
@@ -47,9 +54,17 @@ export type StudioProject = {
   /** Short lede shown under the hero, before the blocks. */
   intro: string;
   /** Per-case-study SEO / social metadata. */
-  meta: { description: string };
+  meta: {
+    description: string;
+    /** Absolute URL of the 1200px social card. */
+    ogImage: string;
+    /** Height of that card (width is always 1200). */
+    ogHeight: number;
+  };
   blocks: Block[];
 };
+
+const SITE = "https://www.paulstanley.dev";
 
 const sillage: StudioProject = {
   slug: "sillage",
@@ -68,6 +83,8 @@ const sillage: StudioProject = {
   meta: {
     description:
       "Sillage — a self-directed luxury fragrance house built end to end with AI. Naming, positioning, verbal and visual identity, product, campaign, and two films.",
+    ogImage: `${SITE}/sillage/og-poster.jpg`,
+    ogHeight: 679,
   },
   blocks: [
     {
@@ -225,7 +242,177 @@ const sillage: StudioProject = {
   ],
 };
 
-export const studioProjects: StudioProject[] = [sillage];
+const biom: StudioProject = {
+  slug: "biom",
+  name: "BIOM",
+  oneLine: "A luxury prebiotic soda, built end to end with AI.",
+  discipline: "Brand identity · Art direction · Packaging · Film",
+  year: "2026",
+  thumbnail: "/biom/poster.webp",
+  hero: {
+    title: "BIOM",
+    tagline: "Feel it work.",
+    image: "/biom/poster.webp",
+  },
+  intro:
+    "A luxury prebiotic soda, built from a blank page to a locked campaign. Naming and positioning first, then verbal and visual identity, then the product and the campaign. One operator, full pipeline.",
+  meta: {
+    description:
+      "BIOM — a self-directed luxury prebiotic soda built end to end with AI. Naming, positioning, identity, packaging, campaign and motion in a chrome-and-blood-orange world.",
+    ogImage: `${SITE}/biom/og-poster.jpg`,
+    ogHeight: 679,
+  },
+  blocks: [
+    {
+      type: "text",
+      eyebrow: "Overview",
+      heading: "One operator, full pipeline",
+      body: [
+        "BIOM is a self-directed brand project: a luxury prebiotic soda built from a blank page to a locked campaign. I ran it the way an agency would — naming and positioning first, then verbal and visual identity, then the product and the campaign.",
+      ],
+    },
+    {
+      type: "text",
+      eyebrow: "The idea",
+      heading: "The opposite of the pharmacy",
+      body: [
+        "Functional drinks almost always look like the pharmacy: clinical, busy, shouting their benefits. I wanted the opposite. BIOM is a prebiotic soda treated as a luxury design object — wellness you can actually feel, with the polish of a premium product rather than a supplement.",
+        "The promise is in two words. Feel it work.",
+      ],
+    },
+    {
+      type: "quote",
+      text: "Feel it work.",
+      attribution: "BIOM",
+    },
+    {
+      type: "text",
+      eyebrow: "Positioning",
+      heading: "Luxury functional soda",
+      body: [
+        "BIOM sits between wellness and premium beverage — design-led and quietly confident, deliberately away from the health-aisle look.",
+        "It is for someone who buys good things and expects the function to come without the clinical packaging.",
+      ],
+    },
+    {
+      type: "text",
+      eyebrow: "Verbal identity",
+      heading: "States what it does, trusts you to get it",
+      body: [
+        "Tagline — Feel it work.",
+        "Voice: confident, modern and precise. Clean lines, a little technical, never preachy about health.",
+      ],
+    },
+    {
+      type: "palette",
+      eyebrow: "Visual identity",
+      heading: "Chrome and blood orange",
+      body: [
+        "A sharp, slightly futuristic system. Chrome and blood orange against warm cream give it the feel of a premium object — modern and a touch clinical, in the best way.",
+        "Type pairs an italic Didone display with a clean grotesk for body and a monospaced face for the technical detail layer. Blood Orange is the hero across every campaign asset, the single colour that makes the whole system snap.",
+      ],
+      swatches: [
+        { name: "Warm Cream", hex: "#FCF6F0" },
+        { name: "Charcoal Ink", hex: "#1D1D1B" },
+        { name: "Chrome Silver", hex: "#C0C0C0" },
+        { name: "Blood Orange", hex: "#9E2B1A" },
+      ],
+    },
+    {
+      type: "imagePair",
+      items: [
+        {
+          src: "/biom/logo-symbol.webp",
+          alt: "BIOM logo and orbital symbol — italic Didone wordmark with the abstract orbital mark and B monogram.",
+        },
+        {
+          src: "/biom/brand-board.webp",
+          alt: "BIOM brand board — wordmark, marks, packaging, palette and type system on one sheet.",
+        },
+      ],
+    },
+    {
+      type: "text",
+      eyebrow: "The product",
+      heading: "The can",
+      body: [
+        "Blood Orange is the hero flavour — the chrome and warm cream carrying the premium feel while the orange does the work. Designed to look like something you would leave out on the counter, not hide in a cupboard.",
+      ],
+    },
+    {
+      type: "image",
+      full: true,
+      image: {
+        src: "/biom/product.webp",
+        alt: "The BIOM can and bottle — Blood Orange, chrome and charcoal against a dark surface.",
+        caption: "The master can, with the bottle format alongside — the orange doing the work.",
+      },
+    },
+    {
+      type: "text",
+      eyebrow: "The campaign",
+      heading: "Holds at a distance, and up close",
+      body: [
+        "A campaign poster and a wide out-of-home billboard, both built on the chrome-and-blood-orange world. Bold, clean and product-led — the kind of work that holds at a distance on a billboard and up close on a phone.",
+      ],
+    },
+    {
+      type: "image",
+      full: true,
+      image: {
+        src: "/biom/ooh.webp",
+        alt: "BIOM out-of-home billboard in the chrome-and-blood-orange world.",
+      },
+    },
+    {
+      type: "image",
+      full: true,
+      image: {
+        src: "/biom/location.webp",
+        alt: "BIOM brand environment — a chrome ring of blood-orange light in a still, architectural space.",
+        caption: "The world the brand lives in — still, architectural, lit in blood orange.",
+      },
+    },
+    {
+      type: "video",
+      eyebrow: "The films",
+      heading: "Bringing the can to life",
+      src: "/biom/film-hero.mp4",
+      poster: "/biom/poster.webp",
+      mode: "ambient",
+      label: "Hero film",
+      body: [
+        "The static world is locked — and the motion is in. Two films in the same chrome-and-blood-orange language, bringing the can to life.",
+      ],
+    },
+    {
+      type: "video",
+      heading: "The kinetic cut",
+      src: "/biom/film-kinetic.mp4",
+      poster: "/biom/product.webp",
+      mode: "ambient",
+      label: "Kinetic cut",
+      body: [
+        "A fast, product-led counterpoint — hard light, chrome, and the single hit of blood orange.",
+      ],
+    },
+    {
+      type: "text",
+      eyebrow: "Tools & process",
+      heading: "One brand across the whole stack",
+      body: [
+        "Built through Higgsfield. GPT Image 2 for the text-heavy assets, since it renders type cleanly, and Nano Banana for the can renders and image-to-image consistency. References fed in at every step so the can, the marks and the colour stayed exact across the logo, the master can, the brand board, the poster and the billboard.",
+        "Lock each asset before moving on, keep the palette tight, and the whole stack reads as one brand.",
+      ],
+    },
+    {
+      type: "quote",
+      text: "BIOM. Built solo, end to end, with AI.",
+    },
+  ],
+};
+
+export const studioProjects: StudioProject[] = [sillage, biom];
 
 export function getProject(slug: string): StudioProject | undefined {
   return studioProjects.find((p) => p.slug === slug);

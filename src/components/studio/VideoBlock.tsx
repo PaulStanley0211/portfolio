@@ -74,7 +74,7 @@ export default function VideoBlock({ src, poster, mode, label }: Props) {
         )}
       </div>
       {label && (
-        <figcaption className="mt-3 text-center font-[var(--font-montserrat)] text-[0.7rem] uppercase tracking-[0.28em] text-[var(--color-text-dim)]">
+        <figcaption className="mt-3 text-center font-[var(--font-body)] text-[0.7rem] uppercase tracking-[0.28em] text-[var(--color-text-dim)]">
           {label}
         </figcaption>
       )}

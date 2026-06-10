@@ -337,12 +337,16 @@ html.js .reveal.in {
 }
 
 /* ============================================================
-   STUDIO — Sillage case-study theme
-   Scoped palette + type. Overrides the CSS custom properties
-   only inside [data-theme="sillage"], so the global dark/green
-   site theme above is untouched. Reused utilities that read
-   var(--color-*) automatically pick up these warm values.
+   STUDIO — case-study themes
+   Each brand scopes its own palette + type under [data-theme="..."],
+   overriding the CSS custom properties only inside that subtree so the
+   global dark/green site theme above is untouched. The shared .cs-*
+   classes below are theme-driven (they read the vars each theme sets),
+   so the same case-study components render in any brand's world.
+   Adding a brand = a new [data-theme] block here + one studio.ts entry.
    ============================================================ */
+
+/* Sillage — bone / amber / antique gold, Playfair + Montserrat Light. */
 [data-theme="sillage"] {
   --color-frame: #f0e9dd;          /* Bone */
   --color-bg: #f0e9dd;             /* Bone */
@@ -358,28 +362,69 @@ html.js .reveal.in {
   --color-accent-soft: #a98b4f;   /* Antique Gold */
   --color-gold: #a98b4f;          /* Antique Gold */
   --color-cream: #f0e9dd;
+  --color-ondark: #f0e9dd;        /* light text over the dark hero image */
 
   --font-sans: var(--font-montserrat);
   --font-display: var(--font-playfair);
   --font-body: var(--font-montserrat);
+
+  --cs-display-style: normal;
+  --cs-display-tracking: 0.005em;
+  --cs-body-weight: 300;
+  --cs-rule-color: rgba(26, 23, 20, 0.22);
+  --cs-wordmark-style: normal;
+  --cs-wordmark-tracking: 0.42em;
 }
 
-[data-theme="sillage"] ::selection {
+/* BIOM — warm cream / charcoal / chrome / blood orange, italic Didone
+   (Playfair) display + clean grotesk (Inter) body. */
+[data-theme="biom"] {
+  --color-frame: #fcf6f0;          /* Warm Cream */
+  --color-bg: #fcf6f0;             /* Warm Cream */
+  --color-bg-elevated: #f4ece1;
+  --color-surface: #f3eae0;
+  --color-border: rgba(29, 29, 27, 0.14);
+  --color-border-strong: rgba(29, 29, 27, 0.28);
+  --color-text: #1d1d1b;          /* Charcoal Ink */
+  --color-text-muted: #57544f;    /* readable warm grey for body */
+  --color-text-dim: #8a857d;
+  --color-ink: #1d1d1b;
+  --color-accent: #9e2b1a;        /* Blood Orange */
+  --color-accent-soft: #b8412c;
+  --color-gold: #c0c0c0;          /* Chrome Silver */
+  --color-cream: #fcf6f0;
+  --color-ondark: #fcf6f0;        /* light text over the dark hero image */
+
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-playfair);
+  --font-body: var(--font-sans);  /* Inter — clean grotesk, ≈ Neue Haas */
+
+  --cs-display-style: italic;     /* italic Didone display */
+  --cs-display-tracking: 0;
+  --cs-body-weight: 400;
+  --cs-rule-color: rgba(29, 29, 27, 0.2);
+  --cs-wordmark-style: italic;
+  --cs-wordmark-tracking: 0.16em;
+}
+
+[data-theme="sillage"] ::selection,
+[data-theme="biom"] ::selection {
   background: var(--color-accent);
-  color: #f0e9dd;
+  color: var(--color-bg);
 }
 
-/* Tall high-contrast serif, wide spacing — the Sillage display voice. */
-.sillage-display {
-  font-family: var(--font-playfair), Georgia, "Times New Roman", serif;
+/* High-contrast display voice (Didone for both brands). */
+.cs-display {
+  font-family: var(--font-display), Georgia, "Times New Roman", serif;
   font-weight: 600;
-  letter-spacing: 0.005em;
+  font-style: var(--cs-display-style, normal);
+  letter-spacing: var(--cs-display-tracking, 0.005em);
   line-height: 1.04;
 }
 
-/* Quiet uppercase label in amber. */
-.sillage-eyebrow {
-  font-family: var(--font-montserrat), ui-sans-serif, sans-serif;
+/* Quiet uppercase label in the brand accent. */
+.cs-eyebrow {
+  font-family: var(--font-body), ui-sans-serif, sans-serif;
   font-weight: 500;
   font-size: 0.72rem;
   letter-spacing: 0.34em;
@@ -387,30 +432,132 @@ html.js .reveal.in {
   color: var(--color-accent);
 }
 
-/* Montserrat Light body, the way the brand specs it. */
-.sillage-body {
-  font-family: var(--font-montserrat), ui-sans-serif, sans-serif;
-  font-weight: 300;
+/* Body copy at the weight each brand specs. */
+.cs-body {
+  font-family: var(--font-body), ui-sans-serif, sans-serif;
+  font-weight: var(--cs-body-weight, 400);
   line-height: 1.85;
   color: var(--color-text-muted);
 }
 
-/* A fine engraved hairline — a nod to the trail wrapping the glass. */
-.sillage-rule {
+/* A fine hairline rule in the brand ink. */
+.cs-rule {
   height: 1px;
   background: linear-gradient(
     to right,
     transparent,
-    rgba(26, 23, 20, 0.22) 18%,
-    rgba(26, 23, 20, 0.22) 82%,
+    var(--cs-rule-color) 18%,
+    var(--cs-rule-color) 82%,
     transparent
   );
 }
 
-/* Wordmark spacing for the SILLAGE masthead. */
-.sillage-wordmark {
-  font-family: var(--font-playfair), Georgia, serif;
+/* Wordmark masthead. */
+.cs-wordmark {
+  font-family: var(--font-display), Georgia, serif;
   font-weight: 600;
-  letter-spacing: 0.42em;
+  font-style: var(--cs-wordmark-style, normal);
+  letter-spacing: var(--cs-wordmark-tracking, 0.42em);
   text-transform: uppercase;
+}
+
+/* ============================================================
+   BIOM — "technical" treatment.
+   Same warm-cream / charcoal / chrome / blood-orange palette as the
+   theme block above, but a sharp, engineered, left-anchored layout
+   with a monospace technical layer — deliberately unlike Sillage's
+   soft, centered editorial world. The cs-* hook classes are inert
+   elsewhere; everything here is scoped to [data-theme="biom"].
+   ============================================================ */
+
+/* Faint blueprint grid over the cream page (the dark hero covers its own area). */
+[data-theme="biom"].cs-page {
+  background-image:
+    linear-gradient(rgba(29, 29, 27, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(29, 29, 27, 0.05) 1px, transparent 1px);
+  background-size: 46px 46px;
+}
+
+/* Hero masthead anchored bottom-left, mono meta line. */
+[data-theme="biom"] .cs-hero-inner {
+  align-items: flex-start;
+  text-align: left;
+}
+[data-theme="biom"] .cs-hero-meta {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  letter-spacing: 0.22em;
+}
+
+/* Left-anchor narrow content to the wide media column's left edge. */
+[data-theme="biom"] .cs-narrow {
+  margin-left: max(0px, calc(50% - 32rem));
+  margin-right: auto;
+  text-align: left;
+}
+
+/* Monospace, numbered section labels with a blood-orange index. */
+[data-theme="biom"] .cs-eyebrow {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  color: var(--color-text-muted);
+}
+[data-theme="biom"] .cs-blocks {
+  counter-reset: cs-sec;
+}
+[data-theme="biom"] .cs-block .cs-eyebrow {
+  counter-increment: cs-sec;
+}
+[data-theme="biom"] .cs-block .cs-eyebrow::before {
+  content: counter(cs-sec, decimal-leading-zero) "  /  ";
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+/* Sharp headings with a short blood-orange underline. */
+[data-theme="biom"] .cs-heading {
+  position: relative;
+  padding-bottom: 0.55rem;
+  letter-spacing: -0.01em;
+}
+[data-theme="biom"] .cs-heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 2.25rem;
+  height: 2px;
+  background: var(--color-accent);
+}
+
+/* Square, chrome-framed media — no soft rounding or warm shadow. */
+[data-theme="biom"] .cs-figure {
+  border-radius: 0;
+  border-color: rgba(29, 29, 27, 0.28);
+  box-shadow: none;
+}
+
+/* Quote as a left statement with a blood-orange bar; drop the centered rules. */
+[data-theme="biom"] .cs-block--quote .cs-rule {
+  display: none;
+}
+[data-theme="biom"] .cs-quote-text {
+  border-left: 3px solid var(--color-accent);
+  padding-left: 1.4rem;
+  text-align: left;
+}
+[data-theme="biom"] .cs-quote-attr {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  text-align: left;
+}
+
+/* Palette as a clinical mono spec — square chips, monospace data. */
+[data-theme="biom"] .cs-swatch-chip {
+  border-radius: 0;
+  height: 4.5rem;
+}
+[data-theme="biom"] .cs-swatch-name,
+[data-theme="biom"] .cs-swatch-hex {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  letter-spacing: 0.02em;
 }
