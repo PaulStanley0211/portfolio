@@ -16,6 +16,15 @@ type Project = {
 
 const PROJECTS: Project[] = [
   {
+    name: "Visual Quality Control Agent",
+    tagline: "Detect the defect. Diagnose the cause. Make the call.",
+    body: "A single-station industrial QC agent that pairs a PatchCore vision detector (0.999 image AUROC on MVTec AD, CPU-only) with a LangGraph plan → act → observe loop. It reads machine, batch, and operator history from a SQLite MES to judge whether a fault is random or systematic, decides pass/rework/reject as a deterministic, auditable function, and escalates low-confidence cases to a human. A drift monitor (OOD gate + PSI) guards the pass path against camera and lighting shift. The LLM only writes the narrative; 88 tests cover the rest.",
+    stack: ["PatchCore (anomalib)", "LangGraph", "Claude", "FastAPI", "SQLite MES", "Docker", "Streamlit"],
+    status: "Shipped",
+    category: "AI Agents & RAG",
+    repo: "https://github.com/PaulStanley0211/visual-quality-control-agent",
+  },
+  {
     name: "Predictive Maintenance Multi-Agent System",
     tagline: "Four agents. Zero humans in the loop.",
     body: "LangGraph pipeline of Monitor → Diagnostics → Recommendation → Workflow agents that watches industrial pumps, RAGs maintenance manuals via Claude, and files tickets. Deployed on Azure with three MCP servers.",
