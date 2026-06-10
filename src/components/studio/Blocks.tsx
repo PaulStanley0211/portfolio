@@ -3,10 +3,11 @@ import Reveal from "@/components/Reveal";
 import VideoBlock from "@/components/studio/VideoBlock";
 import type { Block } from "@/data/studio";
 
-// All Sillage stills are 2688 × 1520. Passing the intrinsic size keeps the
-// layout stable while next/image serves an optimized, responsive version.
-const IMG_W = 2688;
-const IMG_H = 1520;
+// Sillage stills are optimized WebP at 2000 × 1131 (same 16:9-ish ratio as the
+// originals). Passing the intrinsic size keeps the layout stable while
+// next/image serves a responsive version.
+const IMG_W = 2000;
+const IMG_H = 1131;
 
 function TextHead({ eyebrow, heading }: { eyebrow?: string; heading?: string }) {
   if (!eyebrow && !heading) return null;

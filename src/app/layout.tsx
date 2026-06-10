@@ -55,12 +55,21 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://www.paulstanley.dev",
     siteName: "Paul Stanley Ganganapalli",
+    images: [
+      {
+        url: "https://www.paulstanley.dev/sillage/og-home.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Paul Stanley Ganganapalli — AI Agent Developer",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Paul Stanley Ganganapalli, AI Agent Developer",
     description:
       "Production-grade multi-agent systems. LangGraph · RAG · MCP · Claude.",
+    images: ["https://www.paulstanley.dev/sillage/og-home.jpg"],
   },
 };
 

@@ -57,11 +57,11 @@ const sillage: StudioProject = {
   oneLine: "A luxury fragrance house, built end to end with AI.",
   discipline: "Brand identity · Art direction · Film",
   year: "2026",
-  thumbnail: "/sillage/poster.png",
+  thumbnail: "/sillage/poster.webp",
   hero: {
     title: "SILLAGE",
     tagline: "Essence invisible, ever remembered.",
-    image: "/sillage/poster.png",
+    image: "/sillage/poster.webp",
   },
   intro:
     "A complete luxury perfume house, built from a blank page to a finished campaign. Run the way an agency would — naming and positioning first, then verbal and visual identity, then the product, then the campaign and the films. One operator, full pipeline, start to finish.",
@@ -132,11 +132,11 @@ const sillage: StudioProject = {
       type: "imagePair",
       items: [
         {
-          src: "/sillage/logo-symbol.png",
+          src: "/sillage/logo-symbol.webp",
           alt: "Sillage logo and scent-trail symbol — tall serif wordmark with the abstract trail mark.",
         },
         {
-          src: "/sillage/brand-kit.png",
+          src: "/sillage/brand-kit.webp",
           alt: "Sillage brand kit — wordmark, monogram, palette and type system on one sheet.",
         },
       ],
@@ -154,7 +154,7 @@ const sillage: StudioProject = {
       type: "image",
       full: true,
       image: {
-        src: "/sillage/product.png",
+        src: "/sillage/product.webp",
         alt: "The Sillage master bottle — smoked grey glass, amber extrait, brushed gunmetal cap engraved with an S.",
         caption: "The master bottle. Raw amber resin and smoked wood in frame, telling the scent story as objects.",
       },
@@ -172,7 +172,7 @@ const sillage: StudioProject = {
       type: "image",
       full: true,
       image: {
-        src: "/sillage/location.png",
+        src: "/sillage/location.webp",
         alt: "Sillage campaign environment — warm, painterly light with the styling pulled into the brand palette.",
         caption: "The world, styled into the palette — romance kept, brand kept modern.",
       },
@@ -182,7 +182,7 @@ const sillage: StudioProject = {
       eyebrow: "The films",
       heading: "She walks into it",
       src: "/sillage/film-cinematic.mp4",
-      poster: "/sillage/film-cinematic-poster.png",
+      poster: "/sillage/poster.webp",
       mode: "ambient",
       label: "Cinematic cut · 10s",
       body: [
@@ -194,7 +194,7 @@ const sillage: StudioProject = {
       type: "video",
       heading: "The kinetic cut",
       src: "/sillage/film-kinetic.mp4",
-      poster: "/sillage/film-kinetic-poster.png",
+      poster: "/sillage/product.webp",
       mode: "ambient",
       label: "Kinetic cut · 8s",
       body: [

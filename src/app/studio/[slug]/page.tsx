@@ -24,7 +24,14 @@ export async function generateMetadata({
     openGraph: {
       title: `${project.name} · Studio`,
       description: project.meta.description,
-      images: [project.hero.image],
+      images: [
+        {
+          url: "https://www.paulstanley.dev/sillage/og-poster.jpg",
+          width: 1200,
+          height: 679,
+          alt: `${project.name} — campaign key visual`,
+        },
+      ],
     },
   };
 }

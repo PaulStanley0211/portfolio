@@ -10,6 +10,21 @@ export const metadata: Metadata = {
   title: "Studio — Brand & Creative | Paul Stanley Ganganapalli",
   description:
     "A creative studio: full brand worlds — identity, art direction and film — built end to end with AI.",
+  openGraph: {
+    title: "Studio — Brand & Creative",
+    description:
+      "Full brand worlds — identity, art direction and film — built end to end with AI.",
+    type: "website",
+    url: "https://www.paulstanley.dev/studio",
+    images: [
+      {
+        url: "https://www.paulstanley.dev/sillage/og-poster.jpg",
+        width: 1200,
+        height: 679,
+        alt: "Sillage — a luxury fragrance house built end to end with AI",
+      },
+    ],
+  },
 };
 
 export default function StudioPage() {
