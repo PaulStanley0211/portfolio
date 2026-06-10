@@ -33,6 +33,19 @@ export async function generateMetadata({
         },
       ],
     },
+    // Mirror the per-brand Open Graph tags. Without this, Twitter cards fall
+    // back to the root layout's twitter block (homepage title + Sillage image).
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.name} · Studio`,
+      description: project.meta.description,
+      images: [
+        {
+          url: project.meta.ogImage,
+          alt: `${project.name}, campaign key visual`,
+        },
+      ],
+    },
   };
 }
 
