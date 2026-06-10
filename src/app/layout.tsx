@@ -5,6 +5,8 @@ import {
   Caveat,
   Playfair_Display,
   Montserrat,
+  Fraunces,
+  Manrope,
 } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
@@ -40,6 +42,20 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600"],
+  display: "swap",
+});
+
+// Kera case-study type: a warm contrast serif (Canela substitute) + clean grotesk.
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
+
+const manrope = Manrope({
+  variable: "--font-manrope",
+  subsets: ["latin"],
   display: "swap",
 });
 
@@ -79,7 +95,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${jetbrains.variable} ${caveat.variable} ${playfair.variable} ${montserrat.variable}`}
+      className={`${inter.variable} ${jetbrains.variable} ${caveat.variable} ${playfair.variable} ${montserrat.variable} ${fraunces.variable} ${manrope.variable}`}
       suppressHydrationWarning
     >
       <head>

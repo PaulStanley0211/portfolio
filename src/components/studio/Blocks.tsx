@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import VideoBlock from "@/components/studio/VideoBlock";
+import VideoRow from "@/components/studio/VideoRow";
 import type { Block, ImageRef } from "@/data/studio";
 
 // Fallback intrinsic size (Sillage stills are 2000 × 1131). Per-image w/h in the
@@ -167,6 +168,19 @@ export default function Blocks({ block }: { block: Block }) {
             mode={block.mode}
             label={block.label}
           />
+        </Reveal>
+      );
+
+    case "videoRow":
+      return (
+        <Reveal className="cs-block cs-block--video w-full">
+          {(block.eyebrow || block.heading || block.body) && (
+            <div className="cs-narrow mx-auto mb-8 w-full max-w-2xl px-6">
+              <TextHead eyebrow={block.eyebrow} heading={block.heading} />
+              {block.body && <Paragraphs body={block.body} />}
+            </div>
+          )}
+          <VideoRow items={block.items} />
         </Reveal>
       );
 

@@ -561,3 +561,80 @@ html.js .reveal.in {
   font-family: var(--font-mono), ui-monospace, monospace;
   letter-spacing: 0.02em;
 }
+
+/* Kera — cream / sand / stone / ink, Fraunces (warm contrast serif) + Manrope. */
+[data-theme="kera"] {
+  --color-frame: #f5f1e9;          /* Cream */
+  --color-bg: #f5f1e9;             /* Cream */
+  --color-bg-elevated: #efe8db;
+  --color-surface: #eee6d8;
+  --color-border: rgba(26, 24, 21, 0.12);
+  --color-border-strong: rgba(26, 24, 21, 0.22);
+  --color-text: #1a1815;          /* Ink */
+  --color-text-muted: #6f685e;    /* readable warm grey for body */
+  --color-text-dim: #9a9389;      /* Stone */
+  --color-ink: #1a1815;
+  --color-accent: #b59a6b;        /* Sand, slightly deepened for presence */
+  --color-accent-soft: #cbb593;   /* Sand */
+  --color-gold: #9a9389;          /* Stone */
+  --color-cream: #f5f1e9;
+  --color-ondark: #f5f1e9;        /* light text over the warm hero image */
+
+  --font-sans: var(--font-manrope);
+  --font-display: var(--font-fraunces);
+  --font-body: var(--font-manrope);
+
+  --cs-display-style: normal;
+  --cs-display-tracking: -0.015em;
+  --cs-body-weight: 400;
+  --cs-rule-color: rgba(154, 147, 137, 0.5);
+  --cs-wordmark-style: normal;
+  --cs-wordmark-tracking: 0.06em;
+}
+
+[data-theme="kera"] ::selection {
+  background: var(--color-accent-soft);
+  color: var(--color-ink);
+}
+
+/* ============================================================
+   KERA — "editorial" treatment.
+   Warm, calm and clean, the opposite of clinical: centered section
+   headers under a small sand marker, refined Fraunces headings,
+   left-set body copy, soft natural neutrals. Distinct from Sillage's
+   dark-romantic centering and BIOM's left-anchored technical grid.
+   Scoped to [data-theme="kera"].
+   ============================================================ */
+
+/* Manrope, letter-spaced sand labels. */
+[data-theme="kera"] .cs-eyebrow {
+  font-family: var(--font-manrope), ui-sans-serif, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  color: var(--color-accent);
+}
+
+/* Centered section headers with a small sand marker line above the label. */
+[data-theme="kera"] .cs-block .cs-eyebrow,
+[data-theme="kera"] .cs-block .cs-heading {
+  text-align: center;
+}
+[data-theme="kera"] .cs-block .cs-eyebrow::before {
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 1px;
+  margin: 0 auto 1rem;
+  background: var(--color-accent-soft);
+}
+
+/* Refined Fraunces headings, a touch lighter and tighter. */
+[data-theme="kera"] .cs-heading {
+  font-weight: 500;
+  line-height: 1.12;
+}
+
+/* Calm, generous body measure. */
+[data-theme="kera"] .cs-body {
+  line-height: 1.8;
+}

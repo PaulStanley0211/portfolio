@@ -41,6 +41,14 @@ export type Block =
       eyebrow?: string;
       heading?: string;
       body?: string[];
+    }
+  | {
+      // A row of portrait (9:16) films, e.g. social / Hyper Motion verticals.
+      type: "videoRow";
+      eyebrow?: string;
+      heading?: string;
+      body?: string[];
+      items: { src: string; poster: string; label?: string }[];
     };
 
 export type StudioProject = {
@@ -412,7 +420,173 @@ const biom: StudioProject = {
   ],
 };
 
-export const studioProjects: StudioProject[] = [sillage, biom];
+const kera: StudioProject = {
+  slug: "kera",
+  name: "Kera",
+  oneLine: "Men's skincare, without the guesswork.",
+  discipline: "Brand identity · Art direction · Packaging · Film",
+  year: "2026",
+  thumbnail: "/kera/poster.webp",
+  hero: {
+    title: "KERA",
+    tagline: "Good skin, no guesswork.",
+    image: "/kera/poster.webp",
+  },
+  intro:
+    "A self-directed men's skincare brand, built from a blank page to a full campaign. The whole pipeline run by one operator: naming and positioning, verbal and visual identity, the product system, the campaign, and the films.",
+  meta: {
+    description:
+      "Kera. A self-directed men's skincare brand built end to end with AI. Naming, positioning, identity, a three-piece product system, campaign, and three films.",
+    ogImage: `${SITE}/kera/og-poster.jpg`,
+    ogHeight: 679,
+  },
+  blocks: [
+    {
+      type: "text",
+      eyebrow: "Overview",
+      heading: "One operator, start to finish",
+      body: [
+        "Kera is a self-directed men's skincare brand, built from a blank page to a full campaign. I ran the whole pipeline: naming and positioning, verbal and visual identity, the product system, the campaign, and the films.",
+      ],
+    },
+    {
+      type: "text",
+      eyebrow: "The idea",
+      heading: "Good skin, no guesswork",
+      body: [
+        "Most men want better skin and zero homework. The category answers that with either clinical drugstore packaging or overwrought luxury-grooming theatre, and both leave a guy guessing what to actually buy and in what order.",
+        "I built Kera on the opposite promise: good skin, no guesswork. A short, honest system that tells you exactly what to use, with nothing to decode.",
+      ],
+    },
+    {
+      type: "quote",
+      text: "Good skin, no guesswork.",
+      attribution: "Kera",
+    },
+    {
+      type: "text",
+      eyebrow: "Positioning",
+      heading: "Approachable premium",
+      body: [
+        "Kera sits above the drugstore but below the intimidating luxury shelf. Function first, plainly spoken, confident without shouting.",
+        "It is made for the man who wants results and a routine he can actually keep.",
+      ],
+    },
+    {
+      type: "text",
+      eyebrow: "Verbal identity",
+      heading: "Talks like a straight-talking friend",
+      body: [
+        "Tagline, Good skin, no guesswork.",
+        "Voice: plain, direct, certain. No jargon, no miracle claims, no fluff. It talks the way a straight-talking friend would, the one who actually knows what works.",
+      ],
+    },
+    {
+      type: "palette",
+      eyebrow: "Visual identity",
+      heading: "Warm and clean, the opposite of clinical",
+      body: [
+        "The palette stays in soft natural neutrals so the products feel calm and premium. A clean wordmark and a tight, legible type system carry the honesty of the brand. Nothing decorative that the message does not need.",
+        "Type pairs a warm contrast serif for headings with a clean grotesk for body.",
+      ],
+      swatches: [
+        { name: "Cream", hex: "#F5F1E9" },
+        { name: "Sand", hex: "#CBB593" },
+        { name: "Stone", hex: "#9A9389" },
+        { name: "Ink", hex: "#1A1815" },
+      ],
+    },
+    {
+      type: "imagePair",
+      items: [
+        {
+          src: "/kera/logo.webp",
+          alt: "Kera wordmark and K monogram, a clean contrast serif with a tight, legible mark.",
+          w: 2000,
+          h: 1116,
+        },
+        {
+          src: "/kera/brand-board.webp",
+          alt: "Kera brand board, wordmark, monogram, palette and type system on one sheet.",
+        },
+      ],
+    },
+    {
+      type: "text",
+      eyebrow: "The product",
+      heading: "Three things that actually matter",
+      body: [
+        "A focused three-piece system: cleanser, moisturiser and SPF. Not a wall of products, the three things that actually matter, in the order you use them.",
+        "The kit is the brand idea made physical. No guesswork about where to start or what comes next.",
+      ],
+    },
+    {
+      type: "image",
+      full: true,
+      image: {
+        src: "/kera/product-set.webp",
+        alt: "The Kera three-piece kit, cleanser, moisturiser and SPF, on warm travertine stone.",
+        caption: "The three-piece kit: cleanser, moisturiser and SPF, in the order you use them.",
+      },
+    },
+    {
+      type: "text",
+      eyebrow: "The campaign",
+      heading: "Quiet confidence, not a hard sell",
+      body: [
+        "A cinematic hero poster and a wide out-of-home billboard, built on the same calm, warm world. The products lead, the copy stays short, and the whole thing reads as quiet confidence rather than a hard sell.",
+      ],
+    },
+    {
+      type: "image",
+      full: true,
+      image: {
+        src: "/kera/ooh.webp",
+        alt: "Kera out-of-home billboard in the calm, warm brand world.",
+      },
+    },
+    {
+      type: "videoRow",
+      eyebrow: "The films",
+      heading: "Three films, two opposite moods",
+      body: [
+        "A UGC-style cleanser spot, the honest, in-hand register that men's grooming actually sells in. Then two product-hero Hyper Motion commercials: the moisturiser in a dark moody studio, and the SPF in bright, sun-drenched light. Same brand, two opposite moods, to prove it holds either way.",
+      ],
+      items: [
+        {
+          src: "/kera/film-cleanser.mp4",
+          poster: "/kera/film-cleanser-poster.webp",
+          label: "Cleanser · UGC",
+        },
+        {
+          src: "/kera/film-moisturiser.mp4",
+          poster: "/kera/film-moisturiser-poster.webp",
+          label: "Moisturiser · Dark studio",
+        },
+        {
+          src: "/kera/film-spf.mp4",
+          poster: "/kera/film-spf-poster.webp",
+          label: "SPF · Bright light",
+        },
+      ],
+    },
+    {
+      type: "text",
+      eyebrow: "Tools & process",
+      heading: "One brand across the whole set",
+      body: [
+        "Built through Higgsfield. GPT Image 2 for anything with text, Nano Banana for product renders and image-to-image consistency, Marketing Studio for the UGC spot, and Hyper Motion for the product films. References carried forward at every step so the bottles, the kit and the marks stayed identical across the set.",
+        "Lock each asset before moving on, keep the palette tight, and a warm poster and a dark studio film still read as one brand.",
+      ],
+    },
+    {
+      type: "quote",
+      text: "Kera. Built solo, end to end, with AI.",
+    },
+  ],
+};
+
+export const studioProjects: StudioProject[] = [sillage, biom, kera];
 
 export function getProject(slug: string): StudioProject | undefined {
   return studioProjects.find((p) => p.slug === slug);
