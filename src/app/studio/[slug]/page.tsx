@@ -17,9 +17,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const project = getProject(slug);
-  if (!project) return { title: "Studio — Not found" };
+  if (!project) return { title: "Studio. Not found" };
   return {
-    title: `${project.name} — ${project.oneLine} | Studio`,
+    title: `${project.name}. ${project.oneLine} | Studio`,
     description: project.meta.description,
     openGraph: {
       title: `${project.name} · Studio`,
@@ -29,7 +29,7 @@ export async function generateMetadata({
           url: project.meta.ogImage,
           width: 1200,
           height: project.meta.ogHeight,
-          alt: `${project.name} — campaign key visual`,
+          alt: `${project.name}, campaign key visual`,
         },
       ],
     },
@@ -50,7 +50,7 @@ export default async function CaseStudyPage({
       data-theme={project.slug}
       className="cs-page min-h-screen bg-[var(--color-bg)] font-[var(--font-body)] text-[var(--color-text)]"
     >
-      {/* Slim immersive header — replaces the global nav for full immersion */}
+      {/* Slim immersive header, replaces the global nav for full immersion */}
       <header className="sticky top-0 z-40 border-b border-[var(--color-border)] bg-[var(--color-bg)]/85 backdrop-blur-md">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
           <Link
@@ -71,7 +71,7 @@ export default async function CaseStudyPage({
         </div>
       </header>
 
-      {/* Hero — campaign key visual with the wordmark masthead */}
+      {/* Hero, campaign key visual with the wordmark masthead */}
       <section className="cs-hero relative h-[82vh] min-h-[520px] w-full overflow-hidden">
         <Image
           src={project.hero.image}

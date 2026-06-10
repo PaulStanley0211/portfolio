@@ -7,21 +7,23 @@ import StudioCard from "@/components/studio/StudioCard";
 import { studioProjects } from "@/data/studio";
 
 export const metadata: Metadata = {
-  title: "Studio — Brand & Creative | Paul Stanley Ganganapalli",
+  title: "Studio, Brand & Creative | Paul Stanley Ganganapalli",
   description:
-    "A creative studio: full brand worlds — identity, art direction and film — built end to end with AI.",
+    "A creative studio: full brand worlds, identity, art direction and film, built end to end with AI.",
   openGraph: {
-    title: "Studio — Brand & Creative",
+    title: "Studio, Brand & Creative",
     description:
-      "Full brand worlds — identity, art direction and film — built end to end with AI.",
+      "Full brand worlds, identity, art direction and film, built end to end with AI.",
     type: "website",
     url: "https://www.paulstanley.dev/studio",
     images: [
       {
+        // TODO: replace with a dedicated /studio/og-studio.jpg once that image
+        // exists. Falling back to the Sillage poster for now.
         url: "https://www.paulstanley.dev/sillage/og-poster.jpg",
         width: 1200,
         height: 679,
-        alt: "Sillage — a luxury fragrance house built end to end with AI",
+        alt: "Studio, brand and creative work built end to end with AI",
       },
     ],
   },
@@ -43,7 +45,7 @@ export default function StudioPage() {
             Brand <span className="text-accent">&amp;</span> Creative
           </h1>
           <p className="mt-6 max-w-2xl leading-relaxed text-[var(--color-text-muted)]">
-            A separate room from the engineering work — full brand worlds built
+            A separate room from the engineering work, full brand worlds built
             end to end with AI: naming, identity, product, campaign and film.
             Open one to step inside.
           </p>

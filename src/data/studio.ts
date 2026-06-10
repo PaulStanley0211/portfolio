@@ -1,4 +1,4 @@
-// Studio — creative / brand case studies.
+// Studio, creative / brand case studies.
 // Single source of truth for both the /studio grid and the /studio/[slug]
 // case-study pages. Adding a new brand is one new StudioProject entry below;
 // no new components or routes required.
@@ -79,10 +79,10 @@ const sillage: StudioProject = {
     image: "/sillage/poster.webp",
   },
   intro:
-    "A complete luxury perfume house, built from a blank page to a finished campaign. Run the way an agency would — naming and positioning first, then verbal and visual identity, then the product, then the campaign and the films. One operator, full pipeline, start to finish.",
+    "A complete luxury perfume house, built from a blank page to a finished campaign. Run the way an agency would, naming and positioning first, then verbal and visual identity, then the product, then the campaign and the films. One operator, full pipeline, start to finish.",
   meta: {
     description:
-      "Sillage — a self-directed luxury fragrance house built end to end with AI. Naming, positioning, verbal and visual identity, product, campaign, and two films.",
+      "Sillage. A self-directed luxury fragrance house built end to end with AI. Naming, positioning, verbal and visual identity, product, campaign, and two films.",
     ogImage: `${SITE}/sillage/og-poster.jpg`,
     ogHeight: 679,
   },
@@ -92,7 +92,7 @@ const sillage: StudioProject = {
       eyebrow: "Overview",
       heading: "One operator, full pipeline",
       body: [
-        "Sillage is a self-directed brand project: a complete luxury perfume house built from a blank page to a finished campaign. I ran it the way an agency would — naming and positioning first, then verbal and visual identity, then the product, then the campaign and the films.",
+        "Sillage is a self-directed brand project: a complete luxury perfume house built from a blank page to a finished campaign. I ran it the way an agency would, naming and positioning first, then verbal and visual identity, then the product, then the campaign and the films.",
         "Every decision is documented here so you can see the thinking, not just the output.",
       ],
     },
@@ -101,7 +101,7 @@ const sillage: StudioProject = {
       eyebrow: "The idea",
       heading: "You are remembered by what you leave behind",
       body: [
-        "The word sillage is a perfumery term. It means the trail of scent a person leaves behind them as they move through a room — the thing you notice a moment after they have gone.",
+        "The word sillage is a perfumery term. It means the trail of scent a person leaves behind them as they move through a room, the thing you notice a moment after they have gone.",
         "I built the whole brand on that single idea. Not the loudest scent in the room, the one that lingers after you. The name says what the product does without explaining anything, and it gave me a concept that runs through every asset: the trail.",
       ],
     },
@@ -110,9 +110,9 @@ const sillage: StudioProject = {
       eyebrow: "Positioning",
       heading: "Quiet, on purpose",
       body: [
-        "Sillage sits in modern niche luxury, the fastest-growing tier of the fragrance market — the same register as the houses people who care about scent already follow, but with its own philosophy.",
+        "Sillage sits in modern niche luxury, the fastest-growing tier of the fragrance market, the same register as the houses people who care about scent already follow, but with its own philosophy.",
         "It is genderless on purpose. The idea of a trail and a memory belongs to no one gender.",
-        "The tension it owns: almost all fragrance marketing shouts, with fame and seduction. Sillage does the opposite — restraint, after-image, quiet projection. The luxury of being remembered without trying.",
+        "The tension it owns: almost all fragrance marketing shouts, with fame and seduction. Sillage does the opposite. Restraint, after-image, quiet projection. The luxury of being remembered without trying.",
       ],
     },
     {
@@ -125,7 +125,7 @@ const sillage: StudioProject = {
       eyebrow: "Verbal identity",
       heading: "The brand speaks the way the scent behaves",
       body: [
-        "Descriptor — SILLAGE PARFUMS. Tagline — Essence invisible, ever remembered.",
+        "Descriptor, SILLAGE PARFUMS. Tagline, Essence invisible, ever remembered.",
         "Voice: quiet, precise, certain. Short lines. Nothing oversold.",
       ],
     },
@@ -135,7 +135,7 @@ const sillage: StudioProject = {
       heading: "A three-part mark, one trail",
       body: [
         "A three-part mark system, tied together by the trail motif: a tall high-contrast serif wordmark, an abstract scent-trail symbol built from fine lines that fade into the air, and a single-S monogram inside a thin circle for caps, foils and avatars.",
-        "Type is Playfair Display for display and Montserrat Light for body. The palette is roughly ninety percent neutral with two small warm accents — because restraint is the luxury.",
+        "Type is Playfair Display for display and Montserrat Light for body. The palette is roughly ninety percent neutral with two small warm accents, because restraint is the luxury.",
       ],
       swatches: [
         { name: "Bone", hex: "#F0E9DD" },
@@ -150,11 +150,11 @@ const sillage: StudioProject = {
       items: [
         {
           src: "/sillage/logo-symbol.webp",
-          alt: "Sillage logo and scent-trail symbol — tall serif wordmark with the abstract trail mark.",
+          alt: "Sillage logo and scent-trail symbol, tall serif wordmark with the abstract trail mark.",
         },
         {
           src: "/sillage/brand-kit.webp",
-          alt: "Sillage brand kit — wordmark, monogram, palette and type system on one sheet.",
+          alt: "Sillage brand kit, wordmark, monogram, palette and type system on one sheet.",
         },
       ],
     },
@@ -172,7 +172,7 @@ const sillage: StudioProject = {
       full: true,
       image: {
         src: "/sillage/product.webp",
-        alt: "The Sillage master bottle — smoked grey glass, amber extrait, brushed gunmetal cap engraved with an S.",
+        alt: "The Sillage master bottle, smoked grey glass, amber extrait, brushed gunmetal cap engraved with an S.",
         caption: "The master bottle. Raw amber resin and smoked wood in frame, telling the scent story as objects.",
       },
     },
@@ -181,7 +181,7 @@ const sillage: StudioProject = {
       eyebrow: "The campaign",
       heading: "A figure out of time",
       body: [
-        "For the key visual I cast a figure out of time — a woman in a timeless gown, shot in painterly Old-Master light, dark and still. It reads as exactly what the brand is about: someone you remember long after they have gone.",
+        "For the key visual I cast a figure out of time, a woman in a timeless gown, shot in painterly Old-Master light, dark and still. It reads as exactly what the brand is about: someone you remember long after they have gone.",
         "I pulled the styling into our palette rather than a literal period look, so the romance stays but the brand stays modern. The bottle sits in the warm light beside her, the wordmark runs as a masthead, the marks sit quiet in the corner.",
       ],
     },
@@ -190,8 +190,8 @@ const sillage: StudioProject = {
       full: true,
       image: {
         src: "/sillage/location.webp",
-        alt: "Sillage campaign environment — warm, painterly light with the styling pulled into the brand palette.",
-        caption: "The world, styled into the palette — romance kept, brand kept modern.",
+        alt: "Sillage campaign environment, warm, painterly light with the styling pulled into the brand palette.",
+        caption: "The world, styled into the palette. Romance kept, brand kept modern.",
       },
     },
     {
@@ -204,7 +204,7 @@ const sillage: StudioProject = {
       label: "Cinematic cut · 10s",
       body: [
         "I made two films, deliberately opposite, to show the brand holds across registers.",
-        "The film is a slow, emotional cinematic cut in a bright sunlit studio — the inverse of the dark poster. She lifts the bottle, sprays once into the air, and steps into the cloud, letting the scent settle and rise into a golden trail that lingers where she stood. A woman walking into her own sillage.",
+        "The film is a slow, emotional cinematic cut in a bright sunlit studio, the inverse of the dark poster. She lifts the bottle, sprays once into the air, and steps into the cloud, letting the scent settle and rise into a golden trail that lingers where she stood. A woman walking into her own sillage.",
       ],
     },
     {
@@ -258,7 +258,7 @@ const biom: StudioProject = {
     "A luxury prebiotic soda, built from a blank page to a locked campaign. Naming and positioning first, then verbal and visual identity, then the product and the campaign. One operator, full pipeline.",
   meta: {
     description:
-      "BIOM — a self-directed luxury prebiotic soda built end to end with AI. Naming, positioning, identity, packaging, campaign and motion in a chrome-and-blood-orange world.",
+      "BIOM. A self-directed luxury prebiotic soda built end to end with AI. Naming, positioning, identity, packaging, campaign and motion in a chrome-and-blood-orange world.",
     ogImage: `${SITE}/biom/og-poster.jpg`,
     ogHeight: 679,
   },
@@ -268,7 +268,7 @@ const biom: StudioProject = {
       eyebrow: "Overview",
       heading: "One operator, full pipeline",
       body: [
-        "BIOM is a self-directed brand project: a luxury prebiotic soda built from a blank page to a locked campaign. I ran it the way an agency would — naming and positioning first, then verbal and visual identity, then the product and the campaign.",
+        "BIOM is a self-directed brand project: a luxury prebiotic soda built from a blank page to a locked campaign. I ran it the way an agency would, naming and positioning first, then verbal and visual identity, then the product and the campaign.",
       ],
     },
     {
@@ -276,7 +276,7 @@ const biom: StudioProject = {
       eyebrow: "The idea",
       heading: "The opposite of the pharmacy",
       body: [
-        "Functional drinks almost always look like the pharmacy: clinical, busy, shouting their benefits. I wanted the opposite. BIOM is a prebiotic soda treated as a luxury design object — wellness you can actually feel, with the polish of a premium product rather than a supplement.",
+        "Functional drinks almost always look like the pharmacy: clinical, busy, shouting their benefits. I wanted the opposite. BIOM is a prebiotic soda treated as a luxury design object, wellness you can actually feel, with the polish of a premium product rather than a supplement.",
         "The promise is in two words. Feel it work.",
       ],
     },
@@ -290,7 +290,7 @@ const biom: StudioProject = {
       eyebrow: "Positioning",
       heading: "Luxury functional soda",
       body: [
-        "BIOM sits between wellness and premium beverage — design-led and quietly confident, deliberately away from the health-aisle look.",
+        "BIOM sits between wellness and premium beverage, design-led and quietly confident, deliberately away from the health-aisle look.",
         "It is for someone who buys good things and expects the function to come without the clinical packaging.",
       ],
     },
@@ -299,7 +299,7 @@ const biom: StudioProject = {
       eyebrow: "Verbal identity",
       heading: "States what it does, trusts you to get it",
       body: [
-        "Tagline — Feel it work.",
+        "Tagline, Feel it work.",
         "Voice: confident, modern and precise. Clean lines, a little technical, never preachy about health.",
       ],
     },
@@ -308,7 +308,7 @@ const biom: StudioProject = {
       eyebrow: "Visual identity",
       heading: "Chrome and blood orange",
       body: [
-        "A sharp, slightly futuristic system. Chrome and blood orange against warm cream give it the feel of a premium object — modern and a touch clinical, in the best way.",
+        "A sharp, slightly futuristic system. Chrome and blood orange against warm cream give it the feel of a premium object, modern and a touch clinical, in the best way.",
         "Type pairs an italic Didone display with a clean grotesk for body and a monospaced face for the technical detail layer. Blood Orange is the hero across every campaign asset, the single colour that makes the whole system snap.",
       ],
       swatches: [
@@ -323,11 +323,11 @@ const biom: StudioProject = {
       items: [
         {
           src: "/biom/logo-symbol.webp",
-          alt: "BIOM logo and orbital symbol — italic Didone wordmark with the abstract orbital mark and B monogram.",
+          alt: "BIOM logo and orbital symbol, italic Didone wordmark with the abstract orbital mark and B monogram.",
         },
         {
           src: "/biom/brand-board.webp",
-          alt: "BIOM brand board — wordmark, marks, packaging, palette and type system on one sheet.",
+          alt: "BIOM brand board, wordmark, marks, packaging, palette and type system on one sheet.",
         },
       ],
     },
@@ -336,7 +336,7 @@ const biom: StudioProject = {
       eyebrow: "The product",
       heading: "The can",
       body: [
-        "Blood Orange is the hero flavour — the chrome and warm cream carrying the premium feel while the orange does the work. Designed to look like something you would leave out on the counter, not hide in a cupboard.",
+        "Blood Orange is the hero flavour, the chrome and warm cream carrying the premium feel while the orange does the work. Designed to look like something you would leave out on the counter, not hide in a cupboard.",
       ],
     },
     {
@@ -344,8 +344,8 @@ const biom: StudioProject = {
       full: true,
       image: {
         src: "/biom/product.webp",
-        alt: "The BIOM can and bottle — Blood Orange, chrome and charcoal against a dark surface.",
-        caption: "The master can, with the bottle format alongside — the orange doing the work.",
+        alt: "The BIOM can and bottle, Blood Orange, chrome and charcoal against a dark surface.",
+        caption: "The master can, with the bottle format alongside, the orange doing the work.",
       },
     },
     {
@@ -353,7 +353,7 @@ const biom: StudioProject = {
       eyebrow: "The campaign",
       heading: "Holds at a distance, and up close",
       body: [
-        "A campaign poster and a wide out-of-home billboard, both built on the chrome-and-blood-orange world. Bold, clean and product-led — the kind of work that holds at a distance on a billboard and up close on a phone.",
+        "A campaign poster and a wide out-of-home billboard, both built on the chrome-and-blood-orange world. Bold, clean and product-led, the kind of work that holds at a distance on a billboard and up close on a phone.",
       ],
     },
     {
@@ -369,8 +369,8 @@ const biom: StudioProject = {
       full: true,
       image: {
         src: "/biom/location.webp",
-        alt: "BIOM brand environment — a chrome ring of blood-orange light in a still, architectural space.",
-        caption: "The world the brand lives in — still, architectural, lit in blood orange.",
+        alt: "BIOM brand environment, a chrome ring of blood-orange light in a still, architectural space.",
+        caption: "The world the brand lives in, still, architectural, lit in blood orange.",
       },
     },
     {
@@ -382,7 +382,7 @@ const biom: StudioProject = {
       mode: "ambient",
       label: "Hero film",
       body: [
-        "The static world is locked — and the motion is in. Two films in the same chrome-and-blood-orange language, bringing the can to life.",
+        "Two films in the same chrome-and-blood-orange language, bringing the can to life.",
       ],
     },
     {
@@ -393,7 +393,7 @@ const biom: StudioProject = {
       mode: "ambient",
       label: "Kinetic cut",
       body: [
-        "A fast, product-led counterpoint — hard light, chrome, and the single hit of blood orange.",
+        "A fast, product-led counterpoint, hard light, chrome, and the single hit of blood orange.",
       ],
     },
     {
