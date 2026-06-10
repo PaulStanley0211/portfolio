@@ -9,6 +9,7 @@ const SKILLS = [
   "RAG",
   "MCP",
   "Docker",
+  "Higgsfield",
 ];
 
 const STATS = [
