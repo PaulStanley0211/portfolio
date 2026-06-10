@@ -12,11 +12,11 @@ type Stop = {
 
 const STOPS: Stop[] = [
   {
-    period: "2024 to Present",
+    period: "2025 to Present",
     title: "AI Agent Developer",
     org: "Self-directed · Building & Shipping",
     location: "Germany",
-    body: "I moved into AI in 2024, teaching myself and building on top of a mechanical-engineering foundation. These days I ship production systems: multi-agent finance workstations, agentic RAG, predictive maintenance, and conversational drafting tools. Open to full-time and freelance work.",
+    body: "I moved into AI in 2025, teaching myself and building on top of a mechanical-engineering foundation. These days I ship production systems: multi-agent finance workstations, agentic RAG, predictive maintenance, and conversational drafting tools. Open to full-time and freelance work.",
     tags: [
       "LangChain",
       "LangGraph",

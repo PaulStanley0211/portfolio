@@ -13,7 +13,7 @@ const SKILLS = [
 ];
 
 const STATS = [
-  { k: "8+", v: "AI agent systems shipped" },
+  { k: "8", v: "AI agent systems shipped" },
   { k: "M.Sc", v: "Mech. Engineering · 2021" },
   { k: "3y+", v: "Markets · risk · uncertainty" },
   { k: "EU", v: "Based in Germany" },
