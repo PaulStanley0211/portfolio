@@ -10,7 +10,7 @@ const IMG_W = 2000;
 const IMG_H = 1131;
 
 // The cs-* hook classes below are inert by default (Sillage uses the Tailwind
-// utilities as-is). A brand theme can restyle them — see the [data-theme="biom"]
+// utilities as-is). A brand theme can restyle them, see the [data-theme="biom"]
 // "technical" treatment in globals.css.
 
 function TextHead({ eyebrow, heading }: { eyebrow?: string; heading?: string }) {

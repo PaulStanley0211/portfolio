@@ -203,7 +203,7 @@ function ProjectRow({
       >
         <div className="overflow-hidden">
           <div className="grid gap-8 pb-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-            {/* Left — copy */}
+            {/* Left, copy */}
             <div>
               <div className="flex items-center gap-2.5 mb-3">
                 <span
@@ -249,7 +249,7 @@ function ProjectRow({
               </div>
             </div>
 
-            {/* Right — preview tile */}
+            {/* Right, preview tile */}
             <div
               aria-hidden
               className="relative hidden aspect-[16/10] overflow-hidden rounded-2xl border border-[var(--color-border)] bg-gradient-to-br from-emerald-400/15 via-[var(--color-surface)] to-[var(--color-surface)] lg:block"

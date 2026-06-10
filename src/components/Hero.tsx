@@ -1,15 +1,4 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import BrushStrokes from "./BrushStrokes";
-
-const ROTATING_WORDS = [
-  "production-grade",
-  "autonomous",
-  "multi-agent",
-  "RAG-native",
-  "tool-using",
-];
 
 const SKILLS = [
   "LangChain",
@@ -30,36 +19,6 @@ const STATS = [
 ];
 
 export default function Hero() {
-  const [display, setDisplay] = useState(ROTATING_WORDS[0]);
-  const [idx, setIdx] = useState(0);
-  const [phase, setPhase] = useState<"typing" | "pausing" | "deleting">(
-    "pausing"
-  );
-
-  useEffect(() => {
-    const word = ROTATING_WORDS[idx];
-    let timer: ReturnType<typeof setTimeout>;
-    if (phase === "typing") {
-      if (display.length < word.length) {
-        timer = setTimeout(() => setDisplay(word.slice(0, display.length + 1)), 55);
-      } else {
-        timer = setTimeout(() => setPhase("pausing"), 1400);
-      }
-    } else if (phase === "pausing") {
-      timer = setTimeout(() => setPhase("deleting"), 800);
-    } else {
-      if (display.length > 0) {
-        timer = setTimeout(() => setDisplay(word.slice(0, display.length - 1)), 30);
-      } else {
-        timer = setTimeout(() => {
-          setIdx((i) => (i + 1) % ROTATING_WORDS.length);
-          setPhase("typing");
-        }, 0);
-      }
-    }
-    return () => clearTimeout(timer);
-  }, [display, phase, idx]);
-
   return (
     <section id="top" className="relative px-3 sm:px-5 pt-20 pb-6">
       <div className="amber-panel relative mx-auto max-w-7xl overflow-hidden rounded-[1.75rem] sm:rounded-[2.5rem] px-6 sm:px-10 lg:px-14 pt-24 sm:pt-28 pb-10">
@@ -75,33 +34,33 @@ export default function Hero() {
               </span>
             </div>
 
-            <h1 className="section-title text-[var(--color-ink)] text-[clamp(2.75rem,8vw,6.25rem)]">
-              <span className="block text-[0.3em] font-medium normal-case tracking-[0.02em] text-[var(--color-text-muted)]">
-                I&apos;m an
-              </span>
+            <h1
+              aria-label="AI Agent Developer and Generative AI Designer"
+              className="section-title text-[var(--color-ink)] text-[clamp(2.75rem,8vw,6.25rem)]"
+            >
               <span className="block">
                 <span className="text-accent">AI Agent</span> Developer
               </span>
-              <span className="block text-[0.3em] font-medium normal-case tracking-[0.02em] text-[var(--color-text-muted)] mt-1">
-                Who Ships
+              <span className="block text-[0.3em] font-medium normal-case tracking-[0.02em] text-[var(--color-text-muted)] my-1">
+                and
               </span>
-              <span className="block text-accent">Production Systems</span>
+              <span className="block">
+                <span className="text-accent">Generative AI</span> Designer
+              </span>
             </h1>
 
             <p className="mt-7 max-w-xl text-base sm:text-lg text-[var(--color-ink)]/75 leading-relaxed">
-              I build{" "}
-              <span className="font-mono text-[var(--color-accent-soft)]">
-                {display}
-                <span className="caret" />
-              </span>{" "}
-              AI agent systems, not demos. I trained as a mechanical engineer,
-              spent a few years trading, and now I build LangGraph, RAG, and
-              FastAPI systems that solve real problems.
+              I build production-grade agentic systems, and full brand worlds
+              made end to end with AI.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <a href="#work" className="btn-primary">
                 See my work
+                <span aria-hidden>→</span>
+              </a>
+              <a href="/studio" className="btn-ghost">
+                View the Studio
                 <span aria-hidden>→</span>
               </a>
               <a href="#contact" className="btn-ghost">

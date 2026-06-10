@@ -19,7 +19,7 @@ export default function VideoBlock({ src, poster, mode, label }: Props) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);
 
-  // Set muted imperatively too — the React `muted` attribute alone is
+  // Set muted imperatively too, the React `muted` attribute alone is
   // unreliable for autoplay across browsers.
   useEffect(() => {
     if (mode === "ambient" && videoRef.current) {

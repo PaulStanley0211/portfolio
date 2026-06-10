@@ -6,7 +6,7 @@
 export default function BrushStrokes() {
   return (
     <>
-      {/* Curved "road" — bottom-left */}
+      {/* Curved "road", bottom-left */}
       <svg
         aria-hidden
         className="pointer-events-none absolute -left-10 bottom-0 h-56 w-[42rem] max-w-[70%] text-[var(--color-ink)] opacity-90"

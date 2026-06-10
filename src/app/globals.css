@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Dark "Chase Brocke" palette — near-black canvas, green accent */
+  /* Dark "Chase Brocke" palette, near-black canvas, green accent */
   --color-frame: #0a0a0a;             /* darkest page frame behind panels */
   --color-bg: #0d0d0d;                /* near-black section background */
   --color-bg-elevated: #151515;       /* slightly raised surface */
@@ -105,7 +105,7 @@ html {
   will-change: transform;
 }
 
-/* Subtle grain — faint light speckle on the dark canvas */
+/* Subtle grain, faint light speckle on the dark canvas */
 .grain::before {
   content: "";
   position: fixed;
@@ -127,7 +127,7 @@ html {
   mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black 30%, transparent 75%);
 }
 
-/* Accent words inside headlines — green gradient */
+/* Accent words inside headlines, green gradient */
 .text-gradient {
   background: linear-gradient(120deg, #4ade80 0%, #22c55e 100%);
   -webkit-background-clip: text;
@@ -164,7 +164,7 @@ html {
   border-color: var(--color-border-strong);
 }
 
-/* Primary CTA — green pill (the accent buttons in the reference) */
+/* Primary CTA, green pill (the accent buttons in the reference) */
 .btn-primary {
   position: relative;
   display: inline-flex;
@@ -185,7 +185,7 @@ html {
   box-shadow: 0 16px 40px -12px rgba(74, 222, 128, 0.45);
 }
 
-/* Secondary — bordered ghost pill */
+/* Secondary, bordered ghost pill */
 .btn-ghost {
   display: inline-flex;
   align-items: center;
@@ -292,7 +292,7 @@ html.js .reveal.in {
   animation: blink 1.2s steps(2) infinite;
 }
 
-/* The hero panel — dark with a faint green wash */
+/* The hero panel, dark with a faint green wash */
 .amber-panel {
   background:
     radial-gradient(120% 120% at 78% 8%, rgba(74, 222, 128, 0.1), transparent 45%),
@@ -337,7 +337,7 @@ html.js .reveal.in {
 }
 
 /* ============================================================
-   STUDIO — case-study themes
+   STUDIO, case-study themes
    Each brand scopes its own palette + type under [data-theme="..."],
    overriding the CSS custom properties only inside that subtree so the
    global dark/green site theme above is untouched. The shared .cs-*
@@ -346,7 +346,7 @@ html.js .reveal.in {
    Adding a brand = a new [data-theme] block here + one studio.ts entry.
    ============================================================ */
 
-/* Sillage — bone / amber / antique gold, Playfair + Montserrat Light. */
+/* Sillage, bone / amber / antique gold, Playfair + Montserrat Light. */
 [data-theme="sillage"] {
   --color-frame: #f0e9dd;          /* Bone */
   --color-bg: #f0e9dd;             /* Bone */
@@ -376,7 +376,7 @@ html.js .reveal.in {
   --cs-wordmark-tracking: 0.42em;
 }
 
-/* BIOM — warm cream / charcoal / chrome / blood orange, italic Didone
+/* BIOM, warm cream / charcoal / chrome / blood orange, italic Didone
    (Playfair) display + clean grotesk (Inter) body. */
 [data-theme="biom"] {
   --color-frame: #fcf6f0;          /* Warm Cream */
@@ -397,7 +397,7 @@ html.js .reveal.in {
 
   --font-sans: var(--font-sans);
   --font-display: var(--font-playfair);
-  --font-body: var(--font-sans);  /* Inter — clean grotesk, ≈ Neue Haas */
+  --font-body: var(--font-sans);  /* Inter, clean grotesk, ≈ Neue Haas */
 
   --cs-display-style: italic;     /* italic Didone display */
   --cs-display-tracking: 0;
@@ -462,10 +462,10 @@ html.js .reveal.in {
 }
 
 /* ============================================================
-   BIOM — "technical" treatment.
+   BIOM, "technical" treatment.
    Same warm-cream / charcoal / chrome / blood-orange palette as the
    theme block above, but a sharp, engineered, left-anchored layout
-   with a monospace technical layer — deliberately unlike Sillage's
+   with a monospace technical layer, deliberately unlike Sillage's
    soft, centered editorial world. The cs-* hook classes are inert
    elsewhere; everything here is scoped to [data-theme="biom"].
    ============================================================ */
@@ -530,7 +530,7 @@ html.js .reveal.in {
   background: var(--color-accent);
 }
 
-/* Square, chrome-framed media — no soft rounding or warm shadow. */
+/* Square, chrome-framed media, no soft rounding or warm shadow. */
 [data-theme="biom"] .cs-figure {
   border-radius: 0;
   border-color: rgba(29, 29, 27, 0.28);
@@ -551,7 +551,7 @@ html.js .reveal.in {
   text-align: left;
 }
 
-/* Palette as a clinical mono spec — square chips, monospace data. */
+/* Palette as a clinical mono spec, square chips, monospace data. */
 [data-theme="biom"] .cs-swatch-chip {
   border-radius: 0;
   height: 4.5rem;
@@ -562,7 +562,7 @@ html.js .reveal.in {
   letter-spacing: 0.02em;
 }
 
-/* Kera — cream / sand / stone / ink, Fraunces (warm contrast serif) + Manrope. */
+/* Kera, cream / sand / stone / ink, Fraunces (warm contrast serif) + Manrope. */
 [data-theme="kera"] {
   --color-frame: #f5f1e9;          /* Cream */
   --color-bg: #f5f1e9;             /* Cream */
@@ -598,7 +598,7 @@ html.js .reveal.in {
 }
 
 /* ============================================================
-   KERA — "editorial" treatment.
+   KERA, "editorial" treatment.
    Warm, calm and clean, the opposite of clinical: centered section
    headers under a small sand marker, refined Fraunces headings,
    left-set body copy, soft natural neutrals. Distinct from Sillage's

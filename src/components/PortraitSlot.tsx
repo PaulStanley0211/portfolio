@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 /**
- * The hero portrait. When `src` is provided (e.g. "/portrait.png" — ideally a
+ * The hero portrait. When `src` is provided (e.g. "/portrait.png", ideally a
  * background-removed cut-out PNG dropped into /public), it renders that photo.
  * Until then it shows a styled placeholder so the layout is pixel-correct.
  */

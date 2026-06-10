@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 type Item = { src: string; poster: string; label?: string };
 
 /**
- * A responsive row of portrait (9:16) films — social / Hyper Motion verticals.
+ * A responsive row of portrait (9:16) films, social / Hyper Motion verticals.
  * Each plays as a muted ambient loop (no controls), one per column on desktop.
  */
 export default function VideoRow({ items }: { items: Item[] }) {

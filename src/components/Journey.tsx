@@ -12,7 +12,7 @@ type Stop = {
 
 const STOPS: Stop[] = [
   {
-    period: "2024 — Present",
+    period: "2024 to Present",
     title: "AI Agent Developer",
     org: "Self-directed · Building & Shipping",
     location: "Germany",
@@ -32,7 +32,7 @@ const STOPS: Stop[] = [
     highlight: true,
   },
   {
-    period: "Jun 2022 — Sep 2025",
+    period: "Jun 2022 to Sep 2025",
     title: "Equity, Derivative & Commodities Trader",
     org: "Freelance",
     location: "India",
@@ -40,7 +40,7 @@ const STOPS: Stop[] = [
     tags: ["Risk Management", "Strategy", "Macro Analysis"],
   },
   {
-    period: "Mar 2021 — Feb 2022",
+    period: "Mar 2021 to Feb 2022",
     title: "Mechanical Design Engineer",
     org: "Balaji Transporters & Handlers",
     location: "Visakhapatnam, IN",
@@ -48,7 +48,7 @@ const STOPS: Stop[] = [
     tags: ["CAD", "DFM", "Cross-functional"],
   },
   {
-    period: "2019 — 2021",
+    period: "2019 to 2021",
     title: "M.Sc. Mechanical Engineering",
     org: "Riga Technical University",
     location: "Latvia",
@@ -56,13 +56,13 @@ const STOPS: Stop[] = [
     tags: ["Master's"],
   },
   {
-    period: "Jun — Jul 2016",
+    period: "Jun to Jul 2016",
     title: "Internship · Light & Medium Merchant Mill",
     org: "Visakhapatnam Steel Plant",
     body: "Hands-on time on the plant floor. Where the engineering instinct first clicked.",
   },
   {
-    period: "2014 — 2018",
+    period: "2014 to 2018",
     title: "B.Tech. Mechanical Engineering",
     org: "Karunya Institute of Technology and Sciences",
     body: "Where it all started.",

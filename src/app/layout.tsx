@@ -60,9 +60,10 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Paul Stanley Ganganapalli, AI Agent Developer",
+  title:
+    "Paul Stanley Ganganapalli, AI Agent Developer and Generative AI Designer",
   description:
-    "AI Agent Developer building production-grade systems with LangGraph, RAG, MCP, and Claude. Mechanical engineer turned multi-agent architect.",
+    "AI Agent Developer building production-grade systems with LangGraph, RAG, MCP and Claude, and Generative AI Designer building full brand worlds end to end. Mechanical engineer turned multi-agent architect.",
   metadataBase: new URL("https://www.paulstanley.dev"),
   openGraph: {
     title: "Paul Stanley Ganganapalli, AI Agent Developer",
@@ -76,7 +77,7 @@ export const metadata: Metadata = {
         url: "https://www.paulstanley.dev/sillage/og-home.jpg",
         width: 1200,
         height: 630,
-        alt: "Paul Stanley Ganganapalli — AI Agent Developer",
+        alt: "Paul Stanley Ganganapalli, AI Agent Developer",
       },
     ],
   },
