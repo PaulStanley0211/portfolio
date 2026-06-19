@@ -1,20 +1,8 @@
 import BrushStrokes from "./BrushStrokes";
 
-const SKILLS = [
-  "LangChain",
-  "LangGraph",
-  "Claude",
-  "Python",
-  "FastAPI",
-  "RAG",
-  "MCP",
-  "Docker",
-  "Higgsfield",
-];
-
 const STATS = [
-  { k: "8", v: "AI agent systems shipped" },
-  { k: "M.Sc", v: "Mech. Engineering · 2021" },
+  { k: "4", v: "Full brand worlds, built end to end" },
+  { k: "Concept to film", v: "Identity, product, campaign, motion" },
   { k: "3y+", v: "Markets · risk · uncertainty" },
   { k: "EU", v: "Based in Germany" },
 ];
@@ -31,61 +19,38 @@ export default function Hero() {
             <div className="flex items-center gap-2.5 mb-7">
               <span className="dot-pulse" />
               <span className="font-mono text-xs tracking-[0.18em] uppercase text-[var(--color-ink)]/70">
-                AI Agent Developer · Available
+                Generative AI Creative · Available
               </span>
             </div>
 
             <h1
-              aria-label="AI Agent Developer and Generative AI Designer"
-              className="section-title text-[var(--color-ink)] text-[clamp(2.75rem,8vw,6.25rem)]"
+              aria-label="Generative AI Creative and Brand Filmmaker"
+              className="section-title text-[var(--color-ink)] text-[clamp(2.5rem,7vw,5.5rem)]"
             >
               <span className="block">
-                <span className="text-accent">AI Agent</span> Developer
+                <span className="text-accent">Generative AI</span> Creative
               </span>
-              <span className="block text-[0.3em] font-medium normal-case tracking-[0.02em] text-[var(--color-text-muted)] my-1">
-                and
-              </span>
-              <span className="block">
-                <span className="text-accent">Generative AI</span> Designer
-              </span>
+              <span className="block">&amp; Brand Filmmaker</span>
             </h1>
 
-            <p className="mt-7 max-w-xl text-base sm:text-lg text-[var(--color-ink)]/75 leading-relaxed">
-              I build production-grade agentic systems, and full brand worlds
-              made end to end with AI.
+            <p className="mt-7 max-w-2xl text-base sm:text-lg text-[var(--color-ink)]/75 leading-relaxed">
+              I build full brand worlds and cinematic ads end to end with AI,
+              from concept to finished film. I also build the agentic systems
+              behind the scenes.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
-              <a href="#work" className="btn-primary">
-                See my work
+              <a href="#studio" className="btn-primary">
+                View the Studio
                 <span aria-hidden>→</span>
               </a>
               <a href="#studio" className="btn-ghost">
-                View the Studio
+                Watch the films
                 <span aria-hidden>→</span>
               </a>
               <a href="#contact" className="btn-ghost">
                 Get in touch
               </a>
-            </div>
-
-            {/* Skills strip */}
-            <div className="mt-10">
-              <span className="section-eyebrow">Skills</span>
-              <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2">
-                {SKILLS.map((s, i) => (
-                  <span key={s} className="flex items-center gap-3">
-                    <span className="font-semibold text-base sm:text-lg text-[var(--color-text)]">
-                      {s}
-                    </span>
-                    {i < SKILLS.length - 1 && (
-                      <span aria-hidden className="text-[var(--color-accent)]">
-                        •
-                      </span>
-                    )}
-                  </span>
-                ))}
-              </div>
             </div>
           </div>
         </div>
@@ -97,7 +62,7 @@ export default function Hero() {
               key={s.v}
               className="bg-white/[0.03] px-5 py-5 backdrop-blur-sm transition-colors hover:bg-white/[0.06]"
             >
-              <div className="font-bold text-3xl text-[var(--color-ink)] tracking-tight">
+              <div className="font-bold text-2xl sm:text-3xl text-[var(--color-ink)] tracking-tight">
                 {s.k}
               </div>
               <div className="mt-1 text-xs text-[var(--color-ink)]/65">{s.v}</div>

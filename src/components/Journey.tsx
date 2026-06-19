@@ -76,7 +76,7 @@ export default function Journey() {
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
           <div className="flex items-center gap-3 mb-6">
-            <span className="section-eyebrow">02 · Career Journey</span>
+            <span className="section-eyebrow">04 · Career Journey</span>
             <div className="h-px flex-1 bg-[var(--color-ink)]/10 max-w-[120px]" />
           </div>
           <div className="flex flex-wrap items-end justify-between gap-6 mb-16">

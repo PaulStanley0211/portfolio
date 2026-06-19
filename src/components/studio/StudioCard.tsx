@@ -7,14 +7,27 @@ export default function StudioCard({ project }: { project: StudioProject }) {
     <Link href={`/studio/${project.slug}`} className="group block">
       <article className="feature-card overflow-hidden transition-transform duration-300 group-hover:-translate-y-1">
         <div className="relative aspect-[16/10] overflow-hidden">
-          <Image
-            src={project.thumbnail}
-            alt={`${project.name}, ${project.oneLine}`}
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
+          {project.film ? (
+            <video
+              className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              src={project.film.src}
+              poster={project.film.poster}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+            />
+          ) : (
+            <Image
+              src={project.thumbnail}
+              alt={`${project.name}, ${project.oneLine}`}
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          )}
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
         </div>
         <div className="p-5">
           <div className="flex items-baseline justify-between gap-3">

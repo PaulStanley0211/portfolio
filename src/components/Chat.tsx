@@ -5,10 +5,10 @@ import { useEffect, useRef, useState } from "react";
 type Msg = { role: "user" | "assistant"; content: string };
 
 const SUGGESTED = [
-  "What kind of AI roles is Paul looking for?",
-  "Walk me through his career pivot.",
-  "Which projects show his agent engineering skills best?",
-  "What's his stack and where does he excel?",
+  "What kind of creative work does Paul do?",
+  "Walk me through a brand he built end to end.",
+  "Which AI tools does he use for video?",
+  "What's his edge as an AI creative?",
 ];
 
 const STORAGE_KEY = "paul_twin_chat_v1";
@@ -212,9 +212,10 @@ export default function Chat() {
                   <Bubble role="assistant">
                     <p className="text-[15px] leading-relaxed">
                       Hey, I&apos;m Paul&apos;s digital twin. He&apos;s a
-                      mechanical engineer who moved into AI agent development,
-                      and he&apos;s open to full-time and freelance work right
-                      now. Ask me anything.
+                      generative AI creative who builds brand worlds and
+                      cinematic ads end to end with AI, and he&apos;s open to
+                      full-time and freelance creative work right now. Ask me
+                      anything.
                     </p>
                   </Bubble>
                   <div className="pt-1">

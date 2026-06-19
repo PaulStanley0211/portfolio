@@ -26,9 +26,9 @@ export default function Contact() {
               Paulstanleyganganapalli@gmail.com
             </a>
             <p className="mt-6 text-lg text-[var(--color-text-muted)] max-w-xl leading-relaxed">
-              I&apos;m available for full-time AI Agent Developer roles,
-              remote or on-site, anywhere, and I take on a few freelance
-              projects too. The fastest way to reach me is email.
+              I&apos;m available for generative AI creative and AI video roles,
+              full-time or freelance, remote or on-site. The fastest way to
+              reach me is email.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">

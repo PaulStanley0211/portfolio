@@ -1,14 +1,16 @@
 const ITEMS = [
-  "LangChain",
-  "LangGraph",
+  "Higgsfield",
+  "GPT Image 2",
+  "Nano Banana",
+  "Seedance",
+  "Hyper Motion",
+  "DaVinci Resolve",
+  "ElevenLabs",
   "Claude",
-  "Claude Code",
+  "LangGraph",
   "RAG",
   "MCP",
   "Python",
-  "FastAPI",
-  "Next.js",
-  "Docker",
 ];
 
 export default function Marquee() {

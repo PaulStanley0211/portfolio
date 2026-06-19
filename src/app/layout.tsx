@@ -61,14 +61,14 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   title:
-    "Paul Stanley Ganganapalli, AI Agent Developer and Generative AI Designer",
+    "Paul Stanley Ganganapalli, Generative AI Creative & Brand Filmmaker",
   description:
-    "AI Agent Developer building production-grade systems with LangGraph, RAG, MCP and Claude, and Generative AI Designer building full brand worlds end to end. Mechanical engineer turned multi-agent architect.",
+    "Generative AI creative building full brand worlds and cinematic ads end to end with AI. Higgsfield, generative video, brand identity. Ex-trader and engineer who also builds the systems behind the scenes.",
   metadataBase: new URL("https://www.paulstanley.dev"),
   openGraph: {
-    title: "Paul Stanley Ganganapalli, AI Agent Developer",
+    title: "Paul Stanley Ganganapalli, Generative AI Creative & Brand Filmmaker",
     description:
-      "Production-grade multi-agent systems. LangGraph · RAG · MCP · Claude.",
+      "Generative AI creative building full brand worlds and cinematic ads end to end with AI. Higgsfield, generative video, brand identity. Ex-trader and engineer who also builds the systems behind the scenes.",
     type: "website",
     url: "https://www.paulstanley.dev",
     siteName: "Paul Stanley Ganganapalli",
@@ -77,15 +77,15 @@ export const metadata: Metadata = {
         url: "https://www.paulstanley.dev/sillage/og-home.jpg",
         width: 1200,
         height: 630,
-        alt: "Paul Stanley Ganganapalli, AI Agent Developer",
+        alt: "Paul Stanley Ganganapalli, Generative AI Creative & Brand Filmmaker",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Paul Stanley Ganganapalli, AI Agent Developer",
+    title: "Paul Stanley Ganganapalli, Generative AI Creative & Brand Filmmaker",
     description:
-      "Production-grade multi-agent systems. LangGraph · RAG · MCP · Claude.",
+      "Generative AI creative building full brand worlds and cinematic ads end to end with AI. Higgsfield, generative video, brand identity. Ex-trader and engineer who also builds the systems behind the scenes.",
     images: ["https://www.paulstanley.dev/sillage/og-home.jpg"],
   },
 };

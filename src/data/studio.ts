@@ -57,7 +57,9 @@ export type StudioProject = {
   oneLine: string; // grid-card subtitle
   discipline: string; // e.g. "Brand identity · Art direction · Film"
   year: string;
-  thumbnail: string; // grid-card image
+  thumbnail: string; // grid-card image (poster / video fallback)
+  /** Lead film shown autoplaying on the grid card so motion plays, not a still. */
+  film?: { src: string; poster: string };
   hero: { title: string; tagline: string; image: string };
   /** Short lede shown under the hero, before the blocks. */
   intro: string;
@@ -81,6 +83,7 @@ const sillage: StudioProject = {
   discipline: "Brand identity · Art direction · Film",
   year: "2026",
   thumbnail: "/sillage/poster.webp",
+  film: { src: "/sillage/film-cinematic.mp4", poster: "/sillage/poster.webp" },
   hero: {
     title: "SILLAGE",
     tagline: "Essence invisible, ever remembered.",
@@ -257,6 +260,7 @@ const biom: StudioProject = {
   discipline: "Brand identity · Art direction · Packaging · Film",
   year: "2026",
   thumbnail: "/biom/poster.webp",
+  film: { src: "/biom/film-hero.mp4", poster: "/biom/poster.webp" },
   hero: {
     title: "BIOM",
     tagline: "Feel it work.",
@@ -427,6 +431,7 @@ const kera: StudioProject = {
   discipline: "Brand identity · Art direction · Packaging · Film",
   year: "2026",
   thumbnail: "/kera/poster.webp",
+  film: { src: "/kera/film-spf.mp4", poster: "/kera/poster.webp" },
   hero: {
     title: "KERA",
     tagline: "Good skin, no guesswork.",
@@ -593,6 +598,7 @@ const forma: StudioProject = {
   discipline: "Brand identity · Art direction · Packaging · Film",
   year: "2026",
   thumbnail: "/forma/poster.webp",
+  film: { src: "/forma/film-hyper.mp4", poster: "/forma/poster.webp" },
   hero: {
     title: "FORMA",
     tagline: "Form. Nothing else.",

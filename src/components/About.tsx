@@ -19,27 +19,19 @@ export default function About() {
 
             <div className="mt-8 space-y-5 text-lg leading-relaxed text-[var(--color-text-muted)]">
               <p>
-                A lot of AI projects stop at the demo. I care more about the
-                part nobody shows off. The tool calls that need to retry, the
-                retrieval you actually have to measure, the agent graphs that
-                should fail gracefully instead of falling over. That&apos;s the
-                work I enjoy.
+                I build brand worlds with AI, naming, identity, product,
+                campaign and film, taken from a blank page to a finished,
+                consistent result.
               </p>
               <p>
-                My route here wasn&apos;t a straight line. I did a
-                Master&apos;s in Mechanical Engineering, spent a year on CAD
-                work, then traded equities, derivatives, and commodities for
-                three years. In 2025 it finally clicked that what I really
-                wanted to build was AI.
-              </p>
-              <p>
-                Those earlier chapters carried over more than I expected.
-                Engineering taught me precision. Trading taught me that
-                decisions made under uncertainty need rules, audit trails, and
-                risk limits built in from the start, not bolted on later. Both
-                turned out to be exactly what production AI systems need. So now
-                I build agents that earn their way into production through
-                tests, not promises.
+                The reason it holds together is the background underneath it. I
+                trained as a mechanical engineer, then spent three years trading
+                equities, derivatives and commodities, where precision and
+                decisions under uncertainty were the whole job. That discipline
+                is why my creative work stays consistent and on-brief, and
+                it&apos;s also why I can build the AI systems behind the scenes
+                when a project needs them. I&apos;m a creative who understands
+                what&apos;s under the hood.
               </p>
             </div>
           </Reveal>
@@ -47,7 +39,7 @@ export default function About() {
           <Reveal className="lg:col-span-5" delay={150}>
             <div className="glass rounded-3xl p-7 space-y-6">
               <DataRow label="Based" value="Leinfelden-Echterdingen, DE" />
-              <DataRow label="Role" value="AI Agent Developer" />
+              <DataRow label="Role" value="Generative AI Creative" />
               <DataRow label="Open to" value="Full-time · Freelance · Remote" />
               <DataRow label="Languages" value="English · German (B1)" />
 
@@ -56,15 +48,15 @@ export default function About() {
                 <ul className="space-y-2.5 text-sm text-[var(--color-text-muted)]">
                   <li className="flex items-center gap-2.5">
                     <span className="text-[var(--color-accent)] leading-none">→</span>
-                    Building multi-agent systems with LangGraph
+                    Building brand worlds end to end with AI
                   </li>
                   <li className="flex items-center gap-2.5">
                     <span className="text-[var(--color-accent)] leading-none">→</span>
-                    Benchmarking RAG architectures end-to-end
+                    Cutting cinematic ads and brand films
                   </li>
                   <li className="flex items-center gap-2.5">
                     <span className="text-[var(--color-accent)] leading-none">→</span>
-                    Open to interesting agent-engineering problems
+                    Open to generative AI creative and video work
                   </li>
                 </ul>
               </div>

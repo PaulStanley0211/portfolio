@@ -8,10 +8,10 @@ import { usePathname } from "next/navigation";
 // home first. Studio is a section in the homepage flow, not a separate page.
 const links = [
   { href: "/#about", label: "About", id: "about" },
+  { href: "/#studio", label: "Studio", id: "studio" },
+  { href: "/#work", label: "Work", id: "work" },
   { href: "/#journey", label: "Journey", id: "journey" },
   { href: "/#stack", label: "Stack", id: "stack" },
-  { href: "/#work", label: "Work", id: "work" },
-  { href: "/#studio", label: "Studio", id: "studio" },
   { href: "/#resume", label: "Resume", id: "resume" },
   { href: "/#contact", label: "Contact", id: "contact" },
 ];

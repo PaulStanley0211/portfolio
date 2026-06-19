@@ -106,10 +106,10 @@ export default function Work() {
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
           <div className="flex items-center gap-3 mb-6">
-            <span className="section-eyebrow">04 · Selected Work</span>
+            <span className="section-eyebrow">03 · Selected Work</span>
             <div className="h-px flex-1 bg-[var(--color-border)] max-w-[120px]" />
           </div>
-          <div className="flex flex-wrap items-end justify-between gap-6 mb-16">
+          <div className="flex flex-wrap items-end justify-between gap-6 mb-5">
             <h2 className="section-title text-[clamp(2rem,6vw,4.5rem)] max-w-3xl text-[var(--color-ink)]">
               Check Out <span className="text-accent">My</span> Work
             </h2>
@@ -123,6 +123,10 @@ export default function Work() {
               <span aria-hidden>↗</span>
             </a>
           </div>
+          <p className="max-w-2xl mb-16 text-lg text-[var(--color-text-muted)] leading-relaxed">
+            I also build the systems behind the work, production-grade agents,
+            RAG, and automation.
+          </p>
         </Reveal>
 
         <div className="space-y-16">
