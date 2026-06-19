@@ -638,3 +638,68 @@ html.js .reveal.in {
 [data-theme="kera"] .cs-body {
   line-height: 1.8;
 }
+
+/* FORMA, monochrome quiet-luxury: ink black + off-white only, geometric sans
+   (Montserrat) display with a wide-tracked wordmark. No colour accent, the
+   ink itself is the accent. */
+[data-theme="forma"] {
+  --color-frame: #ede9e3;          /* Off-White */
+  --color-bg: #ede9e3;             /* Off-White */
+  --color-bg-elevated: #e6e1d9;
+  --color-surface: #e8e3db;
+  --color-border: rgba(11, 11, 11, 0.12);
+  --color-border-strong: rgba(11, 11, 11, 0.24);
+  --color-text: #0b0b0b;          /* Ink */
+  --color-text-muted: #57544f;    /* readable warm grey for body */
+  --color-text-dim: #8d8980;      /* quiet grey for labels */
+  --color-ink: #0b0b0b;
+  --color-accent: #0b0b0b;        /* monochrome, the ink is the accent */
+  --color-accent-soft: #b7b1a6;   /* warm grey for subtle marks */
+  --color-gold: #8d8980;
+  --color-cream: #ede9e3;
+  --color-ondark: #ede9e3;        /* light text over the campaign hero */
+
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-montserrat);  /* geometric sans display */
+  --font-body: var(--font-sans);
+
+  --cs-display-style: normal;
+  --cs-display-tracking: 0.01em;
+  --cs-body-weight: 400;
+  --cs-rule-color: rgba(11, 11, 11, 0.22);
+  --cs-wordmark-style: normal;
+  --cs-wordmark-tracking: 0.4em;   /* wide geometric wordmark */
+}
+
+[data-theme="forma"] ::selection {
+  background: var(--color-ink);
+  color: var(--color-cream);
+}
+
+/* ============================================================
+   FORMA, "minimal" treatment.
+   Stripped, monochrome and precise: small wide-tracked grey labels,
+   tight geometric headings, generous whitespace. The opposite of
+   decoration, distinct from Kera's warm centered editorial and BIOM's
+   technical grid. Scoped to [data-theme="forma"].
+   ============================================================ */
+
+/* Montserrat, quiet wide-tracked grey labels. */
+[data-theme="forma"] .cs-eyebrow {
+  font-family: var(--font-montserrat), ui-sans-serif, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  color: var(--color-text-dim);
+}
+
+/* Tight, confident geometric headings. */
+[data-theme="forma"] .cs-heading {
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  line-height: 1.1;
+}
+
+/* Clean, even body measure. */
+[data-theme="forma"] .cs-body {
+  line-height: 1.75;
+}

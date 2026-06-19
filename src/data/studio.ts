@@ -586,7 +586,207 @@ const kera: StudioProject = {
   ],
 };
 
-export const studioProjects: StudioProject[] = [sillage, biom, kera];
+const forma: StudioProject = {
+  slug: "forma",
+  name: "FORMA",
+  oneLine: "Quiet-luxury minimal sneakers, built end to end with AI.",
+  discipline: "Brand identity · Art direction · Packaging · Film",
+  year: "2026",
+  thumbnail: "/forma/poster.webp",
+  hero: {
+    title: "FORMA",
+    tagline: "Form. Nothing else.",
+    image: "/forma/poster.webp",
+  },
+  intro:
+    "A self-directed quiet-luxury sneaker brand, built from a blank page to a full campaign. One operator, the whole pipeline: naming and positioning, verbal and visual identity, the product, the packaging, and the films.",
+  meta: {
+    description:
+      "FORMA. A self-directed quiet-luxury minimal sneaker brand built end to end with AI. Naming, positioning, a monochrome identity, a leather high-top, rigid-box packaging, campaign, and films.",
+    ogImage: `${SITE}/forma/og-poster.jpg`,
+    ogHeight: 679,
+  },
+  blocks: [
+    {
+      type: "text",
+      eyebrow: "Overview",
+      heading: "One operator, start to finish",
+      body: [
+        "FORMA is a self-directed brand project: a quiet-luxury minimal sneaker house built from a blank page to a full campaign. I ran the whole pipeline, naming and positioning first, then verbal and visual identity, then the product, the packaging, and the films.",
+      ],
+    },
+    {
+      type: "text",
+      eyebrow: "The idea",
+      heading: "Form over noise",
+      body: [
+        "Most sneaker branding shouts, with logos, hype and colour. FORMA does the opposite. The name is Italian for form, and the whole brand is built on one belief: clarity is the luxury. Strip away everything that isn't the shape, and what's left is the statement.",
+        "It is made for people who already own good things and don't need them to announce it, design-conscious creatives, architects, quiet-money minimalists.",
+      ],
+    },
+    {
+      type: "quote",
+      text: "Form. Nothing else.",
+      attribution: "FORMA",
+    },
+    {
+      type: "text",
+      eyebrow: "Positioning",
+      heading: "Attainable premium, quietly",
+      body: [
+        "FORMA sits in attainable premium, the register of considered design rather than logo-driven hype. Calm, confident, precise, understated and timeless.",
+        "The manifesto says it plainly: we believe in clarity, in purpose, in the strength of simplicity. Every stitch, every line, every detail, designed to be worn and built to last.",
+      ],
+    },
+    {
+      type: "palette",
+      eyebrow: "Visual identity",
+      heading: "Monochrome, on purpose",
+      body: [
+        "Two values, nothing more: ink black and a warm off-white, used straight or reversed. The hero mark is a sharp, angular geometric F emblem, paired with a clean geometric FORMA wordmark set in wide letter-spacing. The restraint is the brand.",
+      ],
+      swatches: [
+        { name: "Ink", hex: "#0B0B0B" },
+        { name: "Off-White", hex: "#EDE9E3" },
+      ],
+    },
+    {
+      type: "image",
+      full: true,
+      image: {
+        src: "/forma/logo.webp",
+        alt: "FORMA logo system, the angular F emblem with the wide-tracked FORMA wordmark in black and reversed white.",
+        caption:
+          "The mark system: an angular F emblem and a geometric wordmark, in black-on-white and reversed.",
+      },
+    },
+    {
+      type: "text",
+      eyebrow: "The product",
+      heading: "One silhouette, done right",
+      body: [
+        "A single hero: a clean white leather high-top with a padded collar, a rounded toe and a white rubber cupsole. A single bold black F emblem sits on the lateral side panel; everything else is left quiet.",
+        "One silhouette is harder to get right than a range, and it forces the idea to land. Future colourways stay just as restrained, graphite and black.",
+      ],
+    },
+    {
+      type: "imagePair",
+      items: [
+        {
+          src: "/forma/product.webp",
+          alt: "The FORMA high-top, white leather with a single black F emblem on the side panel.",
+        },
+        {
+          src: "/forma/product-sheet.webp",
+          alt: "FORMA high-top multi-angle sheet, the silhouette shown from every side.",
+        },
+      ],
+    },
+    {
+      type: "text",
+      eyebrow: "Packaging",
+      heading: "The unboxing is the brand",
+      body: [
+        "A heavyweight rigid box with a magnetic flip lid, matte black and soft-touch, with a blind-debossed F emblem and the white FORMA wordmark. Inside: tonal-F tissue, a custom insert, an off-white cotton dust bag, and the manifesto printed on the flap.",
+        "The reveal experience was studied from the best presentation boxes, then stripped of the chrome and sport, keeping only the calm.",
+      ],
+    },
+    {
+      type: "imagePair",
+      items: [
+        {
+          src: "/forma/box-closed.webp",
+          alt: "The FORMA box closed, matte black with a blind-debossed F emblem and white wordmark.",
+        },
+        {
+          src: "/forma/box-open.webp",
+          alt: "The FORMA box open, the pair seated in tonal-F tissue with the dust bag.",
+        },
+      ],
+    },
+    {
+      type: "text",
+      eyebrow: "The campaign",
+      heading: "Form in the world",
+      body: [
+        "The campaign keeps the same restraint: the F emblem top-left, a model with a matte-black car and FORMA signage, and one line of copy, FORM. NOTHING ELSE. Quiet confidence, not a hard sell.",
+      ],
+    },
+    {
+      type: "image",
+      image: {
+        src: "/forma/location.webp",
+        alt: "FORMA brand environment, a sunlit concrete lot, calm and architectural.",
+        caption:
+          "The world FORMA lives in: sunlit concrete, still and architectural.",
+        w: 1400,
+        h: 1867,
+      },
+    },
+    {
+      type: "video",
+      eyebrow: "The films",
+      heading: "The hero spin",
+      src: "/forma/film-hyper.mp4",
+      poster: "/forma/film-hyper-poster.webp",
+      mode: "ambient",
+      label: "Hypermotion · Studio void",
+      body: [
+        "A slow Hypermotion turn on a pedestal in a studio void, the shoe alone, lit to read every line. Pure product, no noise.",
+      ],
+    },
+    {
+      type: "videoRow",
+      heading: "Social cuts",
+      body: [
+        "The vertical, social-native register: a UGC unboxing that walks through the box and the build, a styling cut, and a fast kinetic vertical. Same brand, made for the feed.",
+      ],
+      items: [
+        {
+          src: "/forma/film-ugc-unboxing.mp4",
+          poster: "/forma/film-ugc-unboxing-poster.webp",
+          label: "UGC · Unboxing",
+        },
+        {
+          src: "/forma/film-ugc-styling.mp4",
+          poster: "/forma/film-ugc-styling-poster.webp",
+          label: "UGC · Styling",
+        },
+        {
+          src: "/forma/film-kinetic-vertical.mp4",
+          poster: "/forma/film-kinetic-vertical-poster.webp",
+          label: "Kinetic · Vertical",
+        },
+      ],
+    },
+    {
+      type: "video",
+      heading: "Kinetic counterpoint",
+      src: "/forma/film-kinetic.mp4",
+      poster: "/forma/film-kinetic-poster.webp",
+      mode: "ambient",
+      label: "Kinetic cut",
+      body: [
+        "A fast, hard-cut counterpoint to the slow hero spin, the same monochrome world with more energy.",
+      ],
+    },
+    {
+      type: "text",
+      eyebrow: "Tools & process",
+      heading: "One brand across the whole set",
+      body: [
+        "Built through Higgsfield. GPT Image 2 and Nano Banana Pro for the shoe, the logo, the packaging and the posters, with references carried forward at every step so the silhouette, the F emblem and the monochrome palette stayed identical across the set. Marketing Studio for the UGC, and image-to-video (Seedance and Kling) for the Hypermotion and kinetic films.",
+        "Lock each asset before moving on, keep the palette to two values, and the whole stack reads as one brand.",
+      ],
+    },
+    {
+      type: "quote",
+      text: "FORMA. Built solo, end to end, with AI.",
+    },
+  ],
+};
+
+export const studioProjects: StudioProject[] = [sillage, biom, kera, forma];
 
 export function getProject(slug: string): StudioProject | undefined {
   return studioProjects.find((p) => p.slug === slug);
