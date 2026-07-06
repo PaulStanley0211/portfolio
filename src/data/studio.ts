@@ -1006,7 +1006,194 @@ const pepsi: StudioProject = {
   ],
 };
 
-export const studioProjects: StudioProject[] = [sillage, biom, kera, forma, pepsi];
+const magnum: StudioProject = {
+  slug: "magnum",
+  name: "Magnum",
+  oneLine: "A dark, cinematic spec film for Magnum, built with AI.",
+  discipline: "Art direction · Product film · AI film",
+  year: "2026",
+  thumbnail: "/magnum/poster.webp",
+  film: { src: "/magnum/film-main.mp4", poster: "/magnum/poster.webp" },
+  hero: {
+    title: "MAGNUM",
+    tagline: "True to pleasure.",
+    image: "/magnum/poster.webp",
+  },
+  intro:
+    "A self-directed spec commercial: a product-only cinematic film for Magnum, built on the brand's one true moment, the crack of the chocolate shell. From a single hero keyframe to a finished fifteen-second cut. No brand to build here, just art direction and AI filmmaking, the same pipeline pointed at dark, macro indulgence.",
+  meta: {
+    description:
+      "Magnum, The Crack. A self-directed, product-only spec film built with AI. A single hero keyframe drives a fifteen-second cinematic of a chocolate shell fracturing, caramel pulling, and the bar reforming over a molten pool.",
+    ogImage: `${SITE}/magnum/og-poster.jpg`,
+    ogHeight: 670,
+  },
+  blocks: [
+    {
+      type: "text",
+      eyebrow: "Overview",
+      heading: "A spec film, built solo with AI",
+      body: [
+        "Magnum, The Crack is a self-directed spec commercial, a product-only cinematic for an existing brand rather than a brand I built from the ground up. Like the Pepsi spot, it's art direction and filmmaking rather than a full brand build, this time in a completely different register: dark, macro, photoreal indulgence.",
+        "Magnum's whole brand rests on one sensory moment, so I built the entire film on it.",
+      ],
+    },
+    {
+      type: "text",
+      eyebrow: "The idea",
+      heading: "The Crack",
+      body: [
+        "Magnum is one sound: the crack of a thick chocolate shell breaking under the first bite. That is the brand. So the film has exactly one job, make you feel that crack in fifteen seconds.",
+        "In a black void, a slab of chocolate fractures in ultra-slow motion, reveals molten caramel and velvet ice cream, then reassembles and settles over a mirror pool of molten chocolate.",
+      ],
+    },
+    {
+      type: "quote",
+      text: "True to pleasure.",
+      attribution: "Magnum",
+    },
+    {
+      type: "video",
+      eyebrow: "The film",
+      heading: "Fifteen seconds, one crack",
+      src: "/magnum/film-main.mp4",
+      poster: "/magnum/film-poster.webp",
+      mode: "cinematic",
+      label: "Spec spot · 15s · product film",
+      body: [
+        "A hairline fracture races across the shell, lit from within. Then the signature crack, and molten caramel stretches between the drifting shards. The camera orbits through weightless chocolate and arcing caramel, past velvet vanilla ice cream, before the shards reverse-assemble into the whole bar and it settles over a mirror pool of molten chocolate, one gold light blade raking across it.",
+        "No music, the crack is the whole soundtrack. Play it with sound.",
+      ],
+    },
+    {
+      type: "text",
+      eyebrow: "Art direction",
+      heading: "Dark indulgence",
+      body: [
+        "Dark indulgence, shot like a jewel. Molten chocolate, warm gold, velvet texture, frost breathing off the shell, deep black all around it. Everything slow, everything macro, so the material does the talking.",
+        "It's the inverse of the neon Pepsi world, and that was the point: run the same pipeline into a completely opposite look and see it hold.",
+      ],
+    },
+    {
+      type: "palette",
+      eyebrow: "Art direction",
+      heading: "Molten",
+      body: [
+        "The whole film lives in warm darks: near-black, dark chocolate, and molten caramel gold, with one clean note of velvet cream from the ice cream. No cool tones, nothing bright, the restraint is what makes it read as premium.",
+      ],
+      swatches: [
+        { name: "Void Black", hex: "#0B0805" },
+        { name: "Dark Chocolate", hex: "#4A2A18" },
+        { name: "Molten Caramel", hex: "#B9701C" },
+        { name: "Warm Gold", hex: "#E3AC52" },
+        { name: "Velvet Cream", hex: "#F0E7D6" },
+      ],
+    },
+    {
+      type: "text",
+      eyebrow: "The product",
+      heading: "One bar, deconstructed",
+      body: [
+        "Product-only, no actors, no set. The hero is the bar itself: the chocolate shell, the caramel core, the vanilla centre. I started from a clean multi-angle product sheet, the bar on white with the cross-section, so the anatomy was locked before anything moved.",
+      ],
+    },
+    {
+      type: "image",
+      full: true,
+      image: {
+        src: "/magnum/product-sheet.webp",
+        alt: "Magnum product sheet: two whole chocolate-coated bars with drizzle and one cross-section showing vanilla ice cream and a caramel core, on white.",
+        caption:
+          "The clean product sheet: the bar from every angle, and the cross-section, vanilla ice cream and a caramel core.",
+        w: 2400,
+        h: 1792,
+      },
+    },
+    {
+      type: "text",
+      eyebrow: "Reference pipeline",
+      heading: "A single frame, then motion",
+      body: [
+        "The whole film grew from one still. I generated a single hero keyframe, the fracture you see as the film's poster above, at its peak, and fed that one image to the video model as the only reference. The black-void world and the molten pool were set as a text descriptor and a lighting plate.",
+        "The branding stays IP-safe the same way as the Pepsi spot: it travels through the keyframe image, never the prompt, where the product is only ever \"a chocolate-coated ice cream bar\". The Magnum logo and the True to Pleasure line are a post overlay.",
+      ],
+    },
+    {
+      type: "image",
+      full: true,
+      image: {
+        src: "/magnum/env-plate.webp",
+        alt: "The environment plate: a black void with two gold light shafts raking down through drifting dust onto a mirror pool of molten chocolate.",
+        caption:
+          "The world the film lives in: a black void, two gold light shafts, and a mirror pool of molten chocolate.",
+        w: 2752,
+        h: 1536,
+      },
+    },
+    {
+      type: "text",
+      eyebrow: "Key frames",
+      heading: "The moments it turns on",
+      body: ["Pulled from the cut as stills."],
+    },
+    {
+      type: "imagePair",
+      items: [
+        {
+          src: "/magnum/frame-fracture.webp",
+          alt: "A hairline fracture racing across the dark chocolate shell, lit from within by warm gold, frost breathing off it.",
+          w: 1920,
+          h: 1080,
+        },
+        {
+          src: "/magnum/frame-crack.webp",
+          alt: "The shell separated along the crack, molten caramel stretching in glowing strands between the chocolate shards.",
+          w: 1920,
+          h: 1080,
+        },
+      ],
+    },
+    {
+      type: "imagePair",
+      items: [
+        {
+          src: "/magnum/frame-caramel.webp",
+          alt: "Macro of caramel pulling into a glowing golden web as the chocolate shards drift apart.",
+          w: 1920,
+          h: 1080,
+        },
+        {
+          src: "/magnum/frame-icecream.webp",
+          alt: "The reveal: velvet vanilla ice cream with a caramel ribbon, close on the lens.",
+          w: 1920,
+          h: 1080,
+        },
+      ],
+    },
+    {
+      type: "text",
+      eyebrow: "Tools & process",
+      heading: "Keyframe to screen",
+      body: [
+        "Built through Higgsfield. Nano Banana Pro for the product sheet and the keyframes, the fracture, the environment plate and the end-card, all in the same dark-indulgence look. Seedance 2.0 for the video, one image per call, so that single fracture keyframe carried the whole generation.",
+        "A fast, cheap probe first to check the motion read, then a standard-quality master. Product-only meant no character sheets to wrangle, so the discipline was all in the lighting and the timing of the crack.",
+      ],
+    },
+    {
+      type: "text",
+      eyebrow: "What's next",
+      heading: "The remaining mile",
+      body: [
+        "This is the picture-locked master. The finish is post: the Magnum logo and the True to Pleasure end-card as overlays, and the sound design, the creak, the crack, the caramel pull, the final echo, mixed with no music, because the crack is the music. The film is done; the polish is the last mile, same as the rest of the studio.",
+      ],
+    },
+    {
+      type: "quote",
+      text: "Magnum, True to Pleasure. A spec film, built solo with AI.",
+    },
+  ],
+};
+
+export const studioProjects: StudioProject[] = [sillage, biom, kera, forma, pepsi, magnum];
 
 export function getProject(slug: string): StudioProject | undefined {
   return studioProjects.find((p) => p.slug === slug);
