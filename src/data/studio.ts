@@ -1202,6 +1202,12 @@ const eclat: StudioProject = {
   discipline: "Art direction · Campaign · AI film",
   year: "2026",
   thumbnail: "/eclat-de-lavande-campaign/poster.webp",
+  // Vertical film shown in a blurred-fill 16:9 wrap so the landscape grid card
+  // autoplays like the others without cropping the composition.
+  film: {
+    src: "/eclat-de-lavande-campaign/film-grid.mp4",
+    poster: "/eclat-de-lavande-campaign/poster.webp",
+  },
   hero: {
     title: "ÉCLAT DE LAVANDE",
     tagline: "The radiance of lavender.",
