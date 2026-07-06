@@ -95,7 +95,7 @@ const sillage: StudioProject = {
     "A complete luxury perfume house, built from a blank page to a finished campaign. Run the way an agency would, naming and positioning first, then verbal and visual identity, then the product, then the campaign and the films. One operator, full pipeline, start to finish.",
   meta: {
     description:
-      "Sillage. A self-directed luxury fragrance house built end to end with AI. Naming, positioning, verbal and visual identity, product, campaign, a fifteen-second commercial, and two film cuts.",
+      "Sillage. A self-directed luxury fragrance house built end to end with AI. Naming, positioning, verbal and visual identity, product, campaign, and two films.",
     ogImage: `${SITE}/sillage/og-poster.jpg`,
     ogHeight: 679,
   },
@@ -210,27 +210,14 @@ const sillage: StudioProject = {
     {
       type: "video",
       eyebrow: "The films",
-      heading: "Éclat de Lavande",
-      src: "/sillage/film-eclat.mp4",
-      poster: "/sillage/film-eclat-poster.webp",
-      mode: "cinematic",
-      aspect: "9/16",
-      label: "The commercial · 15s",
-      body: [
-        "The finished commercial: a fifteen-second, social-native vertical spot shot in a Provençal lavender field at golden hour. A woman moves through the rows, the bottle catches the last light, and the brand idea plays out literally, she walks on and leaves her sillage behind her.",
-        "Graded, titled, and scored. Play it with sound.",
-      ],
-    },
-    {
-      type: "video",
       heading: "She walks into it",
       src: "/sillage/film-cinematic.mp4",
       poster: "/sillage/poster.webp",
       mode: "ambient",
       label: "Cinematic cut · 10s",
       body: [
-        "Two shorter cuts sit alongside it, deliberately opposite, to show the brand holds across registers.",
-        "The first is a slow, emotional cinematic cut in a bright sunlit studio, the inverse of the dark poster. She lifts the bottle, sprays once into the air, and steps into the cloud, letting the scent settle and rise into a golden trail that lingers where she stood. A woman walking into her own sillage.",
+        "I made two films, deliberately opposite, to show the brand holds across registers.",
+        "The film is a slow, emotional cinematic cut in a bright sunlit studio, the inverse of the dark poster. She lifts the bottle, sprays once into the air, and steps into the cloud, letting the scent settle and rise into a golden trail that lingers where she stood. A woman walking into her own sillage.",
       ],
     },
     {
@@ -1208,7 +1195,175 @@ const magnum: StudioProject = {
   ],
 };
 
-export const studioProjects: StudioProject[] = [sillage, biom, kera, forma, pepsi, magnum];
+const eclat: StudioProject = {
+  slug: "eclat-de-lavande-campaign",
+  name: "Éclat de Lavande",
+  oneLine: "A golden-hour fragrance campaign for Sillage, built with AI.",
+  discipline: "Art direction · Campaign · AI film",
+  year: "2026",
+  thumbnail: "/eclat-de-lavande-campaign/poster.webp",
+  hero: {
+    title: "ÉCLAT DE LAVANDE",
+    tagline: "The radiance of lavender.",
+    image: "/eclat-de-lavande-campaign/poster.webp",
+  },
+  intro:
+    "A self-directed campaign for Éclat de Lavande, a fragrance in the Sillage house I built end to end. One golden-hour arc through Provence, taken from a six-shot storyboard to a finished vertical film, with the model, the flacon and the world all art-directed and generated to match. One operator, full pipeline.",
+  meta: {
+    description:
+      "Éclat de Lavande. A self-directed golden-hour fragrance campaign for the Sillage house, built with AI. A six-shot storyboard, a cast model, the flacon, a Provence world, and a finished fifteen-second vertical film.",
+    ogImage: `${SITE}/eclat-de-lavande-campaign/og-poster.jpg`,
+    ogHeight: 670,
+  },
+  blocks: [
+    {
+      type: "text",
+      eyebrow: "Overview",
+      heading: "A campaign for the house",
+      body: [
+        "Éclat de Lavande is a fragrance in Sillage, the luxury perfume house I built end to end. This is its campaign: a single golden-hour film and the full set of assets behind it, the model, the flacon, and a Provence world, all art-directed and generated to hold together as one piece.",
+        "Where the Sillage case study is about building the brand, this one is about pointing it at a single scent and shooting the ad.",
+      ],
+    },
+    {
+      type: "text",
+      eyebrow: "The idea",
+      heading: "The radiance of lavender",
+      body: [
+        "Éclat de Lavande means the radiance of lavender. The whole campaign is one unbroken golden hour in Provence: a woman moves through a lavender field, past a sunlit threshold, to the flacon on a windowsill, and the light does the selling.",
+        "It carries the house idea all the way through, she walks on and leaves her sillage, her trail, behind her.",
+      ],
+    },
+    {
+      type: "quote",
+      text: "The radiance of lavender.",
+      attribution: "Éclat de Lavande",
+    },
+    {
+      type: "video",
+      eyebrow: "The film",
+      heading: "One golden hour, vertical",
+      src: "/eclat-de-lavande-campaign/film.mp4",
+      poster: "/eclat-de-lavande-campaign/film-poster.webp",
+      mode: "cinematic",
+      aspect: "9/16",
+      label: "The commercial · 15s · social-native",
+      body: [
+        "The finished commercial: a fifteen-second, social-native vertical spot. A wide walk into the lavender field, a medium at the threshold, the flacon revealed indoors, the spray and the scent beat, a close on her face, and a hero hold that resolves on the Sillage S.",
+        "Graded and scored, no music, so the light and the sound design carry it. Play it with sound.",
+      ],
+    },
+    {
+      type: "text",
+      eyebrow: "The storyboard",
+      heading: "Six shots, one arc",
+      body: [
+        "I boarded the whole spot first, six vertical frames from the wide field walk to the hero product resolve, so the golden-hour arc and the edit were locked before a single second of video was generated.",
+        "The opener doubled as the film's start frame, which kept the look consistent from the very first beat.",
+      ],
+    },
+    {
+      type: "image",
+      full: true,
+      image: {
+        src: "/eclat-de-lavande-campaign/storyboard.webp",
+        alt: "The six-shot Éclat de Lavande storyboard: field walk, threshold, flacon reveal, hand lift, face close-up, and hero product resolve.",
+        caption: "The six-shot board, the whole golden-hour arc planned before the film.",
+        w: 1192,
+        h: 1608,
+      },
+    },
+    {
+      type: "text",
+      eyebrow: "The face",
+      heading: "Cast and locked",
+      body: [
+        "One model, cast and locked as a reference sheet so she stayed the same person across every shot: a sleek low bun, pearl drops, and a single off-shoulder cream satin gown that reads timeless rather than of any one season.",
+      ],
+    },
+    {
+      type: "image",
+      full: true,
+      image: {
+        src: "/eclat-de-lavande-campaign/model-sheet.webp",
+        alt: "Model reference sheet: full-length turnaround in an off-shoulder cream satin gown, expression grid, and fabric and jewellery detail crops.",
+        caption: "The model reference: one face, one gown, locked for every shot.",
+        w: 2000,
+        h: 1116,
+      },
+    },
+    {
+      type: "text",
+      eyebrow: "The flacon",
+      heading: "The house mark, on the bottle",
+      body: [
+        "The product is the Éclat de Lavande flacon: a heavy clear-glass bottle of warm amber juice, a cream label with a fine gold lavender sprig, and the Sillage S engraved into the gold cap. It ties the scent straight back to the house.",
+      ],
+    },
+    {
+      type: "image",
+      full: true,
+      image: {
+        src: "/eclat-de-lavande-campaign/product-sheet.webp",
+        alt: "Éclat de Lavande flacon shown from many angles: clear glass, amber juice, cream-and-gold label, and the gold cap engraved with the Sillage S.",
+        caption: "The flacon from every angle, with the Sillage S on the cap.",
+        w: 2000,
+        h: 1116,
+      },
+    },
+    {
+      type: "text",
+      eyebrow: "The world",
+      heading: "Provence, at golden hour",
+      body: [
+        "A single, consistent world built as a set of environment plates: lavender fields and a cypress lane, a wisteria-framed stone threshold, and a calm linen-and-stone salon for the interior beats. Warm light, aged stone, nothing that breaks the spell.",
+      ],
+    },
+    {
+      type: "imagePair",
+      items: [
+        {
+          src: "/eclat-de-lavande-campaign/env-terrace.webp",
+          alt: "A Provençal stone terrace at golden hour, an arched doorway with a billowing linen curtain, wisteria and potted lavender.",
+          w: 2000,
+          h: 1116,
+        },
+        {
+          src: "/eclat-de-lavande-campaign/env-cypress.webp",
+          alt: "A cypress-lined gravel lane leading to a stone château at golden hour, dust catching the low sun.",
+          w: 2000,
+          h: 1116,
+        },
+      ],
+    },
+    {
+      type: "image",
+      full: true,
+      image: {
+        src: "/eclat-de-lavande-campaign/env-salon.webp",
+        alt: "A calm Provençal salon interior: beamed ceiling, stone fireplace, linen slipcovered chairs, and dried lavender in soft window light.",
+        caption: "The interior for the flacon beats, linen, stone, and soft window light.",
+        w: 2000,
+        h: 1116,
+      },
+    },
+    {
+      type: "text",
+      eyebrow: "Tools & process",
+      heading: "Board, generate, cut",
+      body: [
+        "Built through Higgsfield. Nano Banana Pro at 2k for the storyboard, the model and product sheets, and every environment plate, all art-directed to one golden-hour look. Seedance 2.0 for the video, with the storyboard opener as the start frame and a couple of per-beat rerolls to lock the flacon and clean up the scent shot.",
+        "Then a straightforward edit to a fifteen-second 1080p master: the six beats assembled, a scrim-and-outline end card, loudness normalised, no music. Lock each asset, carry it forward, and the whole spot reads as one shoot.",
+      ],
+    },
+    {
+      type: "quote",
+      text: "Éclat de Lavande. A Sillage campaign, built solo with AI.",
+    },
+  ],
+};
+
+export const studioProjects: StudioProject[] = [sillage, biom, kera, forma, pepsi, magnum, eclat];
 
 export function getProject(slug: string): StudioProject | undefined {
   return studioProjects.find((p) => p.slug === slug);
