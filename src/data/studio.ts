@@ -792,7 +792,221 @@ const forma: StudioProject = {
   ],
 };
 
-export const studioProjects: StudioProject[] = [sillage, biom, kera, forma];
+const pepsi: StudioProject = {
+  slug: "pepsi",
+  name: "Pepsi",
+  oneLine: "A neon anime spec commercial for Pepsi, art-directed and built with AI.",
+  discipline: "Art direction · Storyboarding · AI film",
+  year: "2026",
+  thumbnail: "/pepsi/poster.webp",
+  film: { src: "/pepsi/film-main.mp4", poster: "/pepsi/poster.webp" },
+  hero: {
+    title: "PEPSI",
+    tagline: "Thirsty for more.",
+    image: "/pepsi/poster.webp",
+  },
+  intro:
+    "A self-directed spec commercial: an anime club spot for Pepsi's Thirsty For More, taken from a hand-drawn nine-panel storyboard to a finished fifteen-second film. No brand to build here, this one is pure art direction and AI filmmaking, the same pipeline pointed at a completely different visual language.",
+  meta: {
+    description:
+      "Pepsi, Thirsty For More. A self-directed anime spec commercial built with AI. A hand-drawn storyboard, character and product references, and a fifteen-second cel-shaded film in a neon club world.",
+    ogImage: `${SITE}/pepsi/og-poster.jpg`,
+    ogHeight: 675,
+  },
+  blocks: [
+    {
+      type: "text",
+      eyebrow: "Overview",
+      heading: "A spec film, built solo with AI",
+      body: [
+        "Pepsi, Thirsty For More is a self-directed spec commercial, an anime club spot for an existing brand rather than a brand I built from scratch. It's a deliberate departure from the photoreal work: no naming, no packaging, no product to design. Just art direction and filmmaking, taking a hand-drawn storyboard all the way to a finished fifteen-second cut.",
+        "The point was range. Same pipeline, pointed at a completely different visual language, to prove it holds outside the polished-product world.",
+      ],
+    },
+    {
+      type: "text",
+      eyebrow: "The idea",
+      heading: "Thirsty For More",
+      body: [
+        "A neon-soaked anime club, cut to a bass drop. Energy, movement, refresh, the can as the hero of a world that feels like a music video rather than a soda ad.",
+        "The whole thing lives in a bold 2D cel-shade style, a hard left turn from the realism, chosen precisely because it's the harder thing to keep consistent across a moving shot.",
+      ],
+    },
+    {
+      type: "quote",
+      text: "Thirsty for more.",
+      attribution: "Pepsi",
+    },
+    {
+      type: "video",
+      eyebrow: "The film",
+      heading: "Fifteen seconds, eight beats",
+      src: "/pepsi/film-main.mp4",
+      poster: "/pepsi/film-poster.webp",
+      mode: "cinematic",
+      label: "Spec spot · 15s · anime cel-shade",
+      body: [
+        "The globe logo rockets through a neon light tunnel and bursts into the club; a crash-zoom carries through the crowd to the hero; he cracks the can with the spray catching the light; hard cut to the cap girl drinking, head back; a b-boy freezes mid-air as the dance-off trades moves; the hero turns the can straight to the lens with a grin; snap to the end-card.",
+        "Painterly cinematic wides alternate with crisp cel close-ups, the hybrid the brief was after. Play it with sound.",
+      ],
+    },
+    {
+      type: "text",
+      eyebrow: "Art direction",
+      heading: "The look",
+      body: [
+        "One style lock, carried into every frame: bold clean lineart, cel shading with hard neon rim light, deep navy-black club darkness cut by electric pink, cyan and Pepsi-blue beams, and high-contrast speed lines on every move.",
+        "Reference-driven, so the look never drifts from shot to shot.",
+      ],
+    },
+    {
+      type: "palette",
+      eyebrow: "Art direction",
+      heading: "Neon club",
+      body: [
+        "The whole film lives in four or five values, navy-black darkness, Pepsi blue, and two hits of electric neon. Restraint in the palette is what lets the speed lines and the rim light read as energy instead of noise.",
+      ],
+      swatches: [
+        { name: "Club Black", hex: "#0A0E1A" },
+        { name: "Pepsi Blue", hex: "#0A4EA2" },
+        { name: "Cobalt", hex: "#2A57D6" },
+        { name: "Cyan", hex: "#21E6FF" },
+        { name: "Electric Pink", hex: "#FF2E97" },
+      ],
+    },
+    {
+      type: "text",
+      eyebrow: "From storyboard",
+      heading: "Nine panels, hand-drawn",
+      body: [
+        "It started as a nine-panel anime storyboard: the logo through a tunnel, the title over the crowd, the hero with the can, the b-boy freeze, the cap girl drinking, the dance-off, the can to camera, the end-card.",
+        "That sheet was the style anchor and the shot list in one, the single thing every later asset was measured against.",
+      ],
+    },
+    {
+      type: "image",
+      image: {
+        src: "/pepsi/storyboard.webp",
+        alt: "The original hand-drawn nine-panel anime storyboard for the Pepsi spot, neon club scenes in a vertical grid.",
+        caption: "The original nine-panel storyboard, style anchor and shot list in one.",
+        w: 352,
+        h: 545,
+      },
+    },
+    {
+      type: "text",
+      eyebrow: "Reference pipeline",
+      heading: "How it stayed one film",
+      body: [
+        "Everything ran reference-first. A hero character sheet and a dancer-girl sheet locked identity across every beat; a twelve-view can turnaround kept the product on-model; then a single five-beat reference board, can, bottle, both characters, the club and the style in one frame, drove the video generation.",
+        "The branding travels through the references, never the prompts. In text the product is only ever \"a navy-blue cola can with a red-white-and-blue sphere emblem\", which keeps the generator's IP filter happy while the real brand stays exact in the image.",
+      ],
+    },
+    {
+      type: "imagePair",
+      items: [
+        {
+          src: "/pepsi/char-hero.webp",
+          alt: "Hero character sheet, an anime young man in a navy bomber jacket, turnaround with expression grid and detail crops.",
+          w: 2400,
+          h: 1792,
+        },
+        {
+          src: "/pepsi/char-dancer.webp",
+          alt: "Dancer-girl character sheet, navy hoodie and cap, turnaround with expression grid and detail crops.",
+          w: 2400,
+          h: 1792,
+        },
+      ],
+    },
+    {
+      type: "image",
+      full: true,
+      image: {
+        src: "/pepsi/reference-board.webp",
+        alt: "The five-beat master reference board, globe burst, club wide, girl drinking, hero with the can, and the can-and-bottle end lockup.",
+        caption:
+          "The five-beat master reference, one frame carrying can, bottle, both characters, the club and the style. This is the single image that drove the film.",
+        w: 2400,
+        h: 1792,
+      },
+    },
+    {
+      type: "image",
+      full: true,
+      image: {
+        src: "/pepsi/can-neon.webp",
+        alt: "The Pepsi can in a neon light burst with a liquid orbit swirling around it.",
+        caption: "The can, styled into the world.",
+        w: 2400,
+        h: 1792,
+      },
+    },
+    {
+      type: "text",
+      eyebrow: "Key frames",
+      heading: "The moments it turns on",
+      body: ["The best beats, pulled from the cut as stills."],
+    },
+    {
+      type: "imagePair",
+      items: [
+        {
+          src: "/pepsi/frame-tunnel.webp",
+          alt: "The hero as a small silhouette at the end of a graffiti-lined neon light tunnel, motion blur streaking past.",
+          w: 1920,
+          h: 1080,
+        },
+        {
+          src: "/pepsi/frame-dance.webp",
+          alt: "A b-boy breaking in the centre of the circle, crowd around, Pepsi screens glowing on the club wall.",
+          w: 1920,
+          h: 1080,
+        },
+      ],
+    },
+    {
+      type: "imagePair",
+      items: [
+        {
+          src: "/pepsi/frame-drink.webp",
+          alt: "The cap girl tilting a Pepsi bottle to drink under crossing pink and cyan laser beams.",
+          w: 1920,
+          h: 1080,
+        },
+        {
+          src: "/pepsi/frame-endcard.webp",
+          alt: "The end-card, a condensation-beaded Pepsi can framed by glowing neon diamonds.",
+          w: 1920,
+          h: 1080,
+        },
+      ],
+    },
+    {
+      type: "text",
+      eyebrow: "Tools & process",
+      heading: "Storyboard to screen",
+      body: [
+        "Built through Higgsfield. GPT Image 2 and Nano Banana Pro for the character sheets, the can turnaround and the reference board, all style-locked to the storyboard so identity and branding held. Seedance 2.0 for the video, which takes one reference image per call, so the five-beat board did the heavy lifting.",
+        "Fast, cheap probes first to validate the beats and catch drift, an early cut let a character's outfit shapeshift between shots, fixed by locking the wardrobe in the prompt, then a standard-quality master once the read was clean.",
+      ],
+    },
+    {
+      type: "text",
+      eyebrow: "What's next",
+      heading: "The remaining mile",
+      body: [
+        "This is the picture-locked master. The remaining polish is post: the THIRSTY FOR MORE title and end-card lockup as graphic overlays, and a licensed club track under the sound design. The world and the cut are done; the finish is the last mile, same as the rest of the studio.",
+      ],
+    },
+    {
+      type: "quote",
+      text: "Pepsi, Thirsty For More. A spec film, built solo with AI.",
+    },
+  ],
+};
+
+export const studioProjects: StudioProject[] = [sillage, biom, kera, forma, pepsi];
 
 export function getProject(slug: string): StudioProject | undefined {
   return studioProjects.find((p) => p.slug === slug);
