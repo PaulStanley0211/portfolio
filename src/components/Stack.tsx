@@ -2,6 +2,15 @@ import Reveal from "./Reveal";
 
 const GROUPS: { title: string; items: { name: string; meta?: string }[] }[] = [
   {
+    title: "Generative / Creative",
+    items: [
+      { name: "Nano Banana Pro", meta: "reference stills" },
+      { name: "GPT Image 2", meta: "text-in-image" },
+      { name: "Seedance 2.0", meta: "image-to-video" },
+      { name: "Higgsfield", meta: "Hyper Motion" },
+    ],
+  },
+  {
     title: "Agent Frameworks",
     items: [
       { name: "LangChain", meta: "tool calling, chains" },
@@ -51,11 +60,11 @@ export default function Stack() {
           </h2>
         </Reveal>
 
-        <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[var(--color-ink)]/10 rounded-3xl overflow-hidden border border-[var(--color-border)] shadow-[0_18px_50px_-30px_rgba(27,24,21,0.4)]">
+        <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-px bg-[var(--color-ink)]/10 rounded-3xl overflow-hidden border border-[var(--color-border)] shadow-[0_18px_50px_-30px_rgba(27,24,21,0.4)]">
           {GROUPS.map((g, i) => (
             <Reveal key={g.title} delay={i * 80}>
-              <div className="bg-[var(--color-surface)] p-7 h-full flex flex-col gap-5 hover:bg-[var(--color-bg)] transition-colors">
-                <div className="flex items-center justify-between">
+              <div className="bg-[var(--color-surface)] p-6 h-full flex flex-col gap-5 hover:bg-[var(--color-bg)] transition-colors">
+                <div className="flex items-start justify-between gap-2 xl:min-h-[2.5rem]">
                   <h3 className="text-sm font-mono uppercase tracking-[0.16em] text-[var(--color-ink)]">
                     {g.title}
                   </h3>
@@ -67,13 +76,13 @@ export default function Stack() {
                   {g.items.map((it) => (
                     <li
                       key={it.name}
-                      className="group flex items-baseline justify-between gap-3 border-b border-[var(--color-border)] pb-2.5 last:border-0 last:pb-0"
+                      className="group border-b border-[var(--color-border)] pb-2.5 last:border-0 last:pb-0"
                     >
-                      <span className="text-[var(--color-text)] text-sm tracking-tight">
+                      <span className="block text-[var(--color-text)] text-sm tracking-tight">
                         {it.name}
                       </span>
                       {it.meta && (
-                        <span className="font-mono text-[10px] text-[var(--color-text-dim)] text-right">
+                        <span className="mt-1 block font-mono text-[10px] text-[var(--color-text-dim)]">
                           {it.meta}
                         </span>
                       )}
