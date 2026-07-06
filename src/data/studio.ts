@@ -37,6 +37,8 @@ export type Block =
       src: string;
       poster: string;
       mode: "ambient" | "cinematic";
+      /** Frame aspect. Defaults to landscape 16:9; use 9:16 for vertical films. */
+      aspect?: "16/9" | "9/16";
       label?: string;
       eyebrow?: string;
       heading?: string;
@@ -93,7 +95,7 @@ const sillage: StudioProject = {
     "A complete luxury perfume house, built from a blank page to a finished campaign. Run the way an agency would, naming and positioning first, then verbal and visual identity, then the product, then the campaign and the films. One operator, full pipeline, start to finish.",
   meta: {
     description:
-      "Sillage. A self-directed luxury fragrance house built end to end with AI. Naming, positioning, verbal and visual identity, product, campaign, and two films.",
+      "Sillage. A self-directed luxury fragrance house built end to end with AI. Naming, positioning, verbal and visual identity, product, campaign, a fifteen-second commercial, and two film cuts.",
     ogImage: `${SITE}/sillage/og-poster.jpg`,
     ogHeight: 679,
   },
@@ -208,14 +210,27 @@ const sillage: StudioProject = {
     {
       type: "video",
       eyebrow: "The films",
+      heading: "Éclat de Lavande",
+      src: "/sillage/film-eclat.mp4",
+      poster: "/sillage/film-eclat-poster.webp",
+      mode: "cinematic",
+      aspect: "9/16",
+      label: "The commercial · 15s",
+      body: [
+        "The finished commercial: a fifteen-second, social-native vertical spot shot in a Provençal lavender field at golden hour. A woman moves through the rows, the bottle catches the last light, and the brand idea plays out literally, she walks on and leaves her sillage behind her.",
+        "Graded, titled, and scored. Play it with sound.",
+      ],
+    },
+    {
+      type: "video",
       heading: "She walks into it",
       src: "/sillage/film-cinematic.mp4",
       poster: "/sillage/poster.webp",
       mode: "ambient",
       label: "Cinematic cut · 10s",
       body: [
-        "I made two films, deliberately opposite, to show the brand holds across registers.",
-        "The film is a slow, emotional cinematic cut in a bright sunlit studio, the inverse of the dark poster. She lifts the bottle, sprays once into the air, and steps into the cloud, letting the scent settle and rise into a golden trail that lingers where she stood. A woman walking into her own sillage.",
+        "Two shorter cuts sit alongside it, deliberately opposite, to show the brand holds across registers.",
+        "The first is a slow, emotional cinematic cut in a bright sunlit studio, the inverse of the dark poster. She lifts the bottle, sprays once into the air, and steps into the cloud, letting the scent settle and rise into a golden trail that lingers where she stood. A woman walking into her own sillage.",
       ],
     },
     {

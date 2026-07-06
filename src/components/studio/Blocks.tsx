@@ -167,6 +167,7 @@ export default function Blocks({ block }: { block: Block }) {
             poster={block.poster}
             mode={block.mode}
             label={block.label}
+            aspect={block.aspect}
           />
         </Reveal>
       );

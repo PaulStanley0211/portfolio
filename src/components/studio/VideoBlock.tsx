@@ -7,6 +7,8 @@ type Props = {
   poster: string;
   mode: "ambient" | "cinematic";
   label?: string;
+  /** Frame aspect. Defaults to landscape 16:9; use 9:16 for vertical films. */
+  aspect?: "16/9" | "9/16";
 };
 
 /**
@@ -15,9 +17,18 @@ type Props = {
  *  - cinematic → poster until tapped, then plays with sound + native controls.
  * Both preload only metadata so the page stays fast.
  */
-export default function VideoBlock({ src, poster, mode, label }: Props) {
+export default function VideoBlock({
+  src,
+  poster,
+  mode,
+  label,
+  aspect = "16/9",
+}: Props) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);
+  // Vertical (9:16) films get a narrow, phone-format frame so they don't tower
+  // over the page; landscape keeps the wide reading width.
+  const portrait = aspect === "9/16";
 
   // Set muted imperatively too, the React `muted` attribute alone is
   // unreliable for autoplay across browsers.
@@ -35,8 +46,10 @@ export default function VideoBlock({ src, poster, mode, label }: Props) {
   };
 
   return (
-    <figure className="mx-auto w-full max-w-4xl px-6">
-      <div className="relative aspect-[16/9] overflow-hidden rounded-sm border border-[var(--color-border)] bg-[var(--color-bg-elevated)] shadow-[0_30px_70px_-40px_rgba(26,23,20,0.55)]">
+    <figure className={`mx-auto w-full px-6 ${portrait ? "max-w-[420px]" : "max-w-4xl"}`}>
+      <div
+        className={`relative ${portrait ? "aspect-[9/16]" : "aspect-[16/9]"} overflow-hidden rounded-sm border border-[var(--color-border)] bg-[var(--color-bg-elevated)] shadow-[0_30px_70px_-40px_rgba(26,23,20,0.55)]`}
+      >
         <video
           ref={videoRef}
           className="absolute inset-0 h-full w-full object-cover"
