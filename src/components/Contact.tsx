@@ -20,10 +20,10 @@ export default function Contact() {
               <span className="block text-right">Something</span>
             </h2>
             <a
-              href="mailto:Paulstanleyganganapalli@gmail.com"
+              href="mailto:paulstanleyganganapalli@gmail.com"
               className="mt-8 inline-block text-lg sm:text-2xl font-semibold tracking-tight text-[var(--color-text)] underline decoration-[var(--color-border-strong)] underline-offset-[6px] transition-colors hover:text-[var(--color-accent)] hover:decoration-[var(--color-accent)]"
             >
-              Paulstanleyganganapalli@gmail.com
+              paulstanleyganganapalli@gmail.com
             </a>
             <p className="mt-6 text-lg text-[var(--color-text-muted)] max-w-xl leading-relaxed">
               I&apos;m available for generative AI creative and AI video roles,
@@ -33,7 +33,7 @@ export default function Contact() {
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <a
-                href="mailto:Paulstanleyganganapalli@gmail.com"
+                href="mailto:paulstanleyganganapalli@gmail.com"
                 className="btn-primary"
               >
                 Email me
@@ -69,8 +69,8 @@ export default function Contact() {
               <div className="relative space-y-5">
                 <ContactRow
                   label="Email"
-                  value="Paulstanleyganganapalli@gmail.com"
-                  href="mailto:Paulstanleyganganapalli@gmail.com"
+                  value="paulstanleyganganapalli@gmail.com"
+                  href="mailto:paulstanleyganganapalli@gmail.com"
                 />
                 <ContactRow
                   label="Phone"

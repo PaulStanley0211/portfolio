@@ -25,7 +25,7 @@ export default function Footer() {
               LinkedIn <span aria-hidden>↗</span>
             </a>
             <a
-              href="mailto:Paulstanleyganganapalli@gmail.com"
+              href="mailto:paulstanleyganganapalli@gmail.com"
               className="inline-flex items-center gap-1 hover:text-[var(--color-accent)] transition-colors"
             >
               Email <span aria-hidden>↗</span>

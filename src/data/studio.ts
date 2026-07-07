@@ -73,6 +73,8 @@ export type StudioProject = {
     /** Height of that card (width is always 1200). */
     ogHeight: number;
   };
+  /** Optional spec-work disclaimer, rendered subtly in the case-study footer. */
+  disclaimer?: string;
   blocks: Block[];
 };
 
@@ -81,7 +83,7 @@ const SITE = "https://www.paulstanley.dev";
 const sillage: StudioProject = {
   slug: "sillage",
   name: "Sillage",
-  oneLine: "A luxury fragrance house, built end to end with AI.",
+  oneLine: "The scent that lingers long after you've gone.",
   discipline: "Brand identity · Art direction · Film",
   year: "2026",
   thumbnail: "/sillage/poster.webp",
@@ -258,7 +260,7 @@ const sillage: StudioProject = {
 const biom: StudioProject = {
   slug: "biom",
   name: "BIOM",
-  oneLine: "A luxury prebiotic soda, built end to end with AI.",
+  oneLine: "Prebiotic fizz your gut roots for.",
   discipline: "Brand identity · Art direction · Packaging · Film",
   year: "2026",
   thumbnail: "/biom/poster.webp",
@@ -596,7 +598,7 @@ const kera: StudioProject = {
 const forma: StudioProject = {
   slug: "forma",
   name: "FORMA",
-  oneLine: "Quiet-luxury minimal sneakers, built end to end with AI.",
+  oneLine: "Sneakers, stripped to the essential.",
   discipline: "Brand identity · Art direction · Packaging · Film",
   year: "2026",
   thumbnail: "/forma/poster.webp",
@@ -797,9 +799,11 @@ const forma: StudioProject = {
 const pepsi: StudioProject = {
   slug: "pepsi",
   name: "Pepsi",
-  oneLine: "A neon anime spec commercial for Pepsi, art-directed and built with AI.",
+  oneLine: "A neon anime spec spot, thirsty for more.",
   discipline: "Art direction · Storyboarding · AI film",
   year: "2026",
+  disclaimer:
+    "Unofficial spec work. Created independently as a self-directed concept, not affiliated with, authorized by, or endorsed by PepsiCo. All trademarks belong to their respective owners.",
   thumbnail: "/pepsi/poster.webp",
   film: { src: "/pepsi/film-main.mp4", poster: "/pepsi/poster.webp" },
   hero: {
@@ -1011,9 +1015,11 @@ const pepsi: StudioProject = {
 const magnum: StudioProject = {
   slug: "magnum",
   name: "Magnum",
-  oneLine: "A dark, cinematic spec film for Magnum, built with AI.",
+  oneLine: "A dark, cinematic product film for Magnum.",
   discipline: "Art direction · Product film · AI film",
   year: "2026",
+  disclaimer:
+    "Unofficial spec work. Created independently as a self-directed concept, not affiliated with, authorized by, or endorsed by Magnum or Unilever. All trademarks belong to their respective owners.",
   thumbnail: "/magnum/poster.webp",
   film: { src: "/magnum/film-main.mp4", poster: "/magnum/poster.webp" },
   hero: {
@@ -1198,8 +1204,8 @@ const magnum: StudioProject = {
 const eclat: StudioProject = {
   slug: "eclat-de-lavande-campaign",
   name: "Éclat de Lavande",
-  oneLine: "A golden-hour fragrance campaign for Sillage, built with AI.",
-  discipline: "Art direction · Campaign · AI film",
+  oneLine: "A golden-hour fragrance campaign, shot through Provence.",
+  discipline: "Sillage · Campaign",
   year: "2026",
   thumbnail: "/eclat-de-lavande-campaign/poster.webp",
   // Vertical film shown in a blurred-fill 16:9 wrap so the landscape grid card

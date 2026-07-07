@@ -133,6 +133,11 @@ export default async function CaseStudyPage({
           <p className="text-[0.74rem] uppercase tracking-[0.24em] text-[var(--color-text-muted)]">
             Built solo, end to end, with AI
           </p>
+          {project.disclaimer && (
+            <p className="max-w-xl text-[0.68rem] leading-relaxed text-[var(--color-text-dim)]">
+              {project.disclaimer}
+            </p>
+          )}
           <div className="mt-2 flex items-center gap-6">
             <Link
               href="/#studio"

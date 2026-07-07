@@ -27,16 +27,16 @@ const PROJECTS: Project[] = [
   {
     name: "Predictive Maintenance Multi-Agent System",
     tagline: "Four agents. Zero humans in the loop.",
-    body: "LangGraph pipeline of Monitor → Diagnostics → Recommendation → Workflow agents that watches industrial pumps, RAGs maintenance manuals via Claude, and files tickets. Deployed on Azure with three MCP servers.",
+    body: "A LangGraph pipeline of four agents — Monitor → Diagnostics → Recommendation → Workflow — that watches industrial pumps, flags anomalies with ISO 10816 vibration zones and z-score analysis, and separates the three fault modes that matter: bearing wear, cavitation, and misalignment. Diagnostics RAGs the maintenance manuals through Claude; the workflow agent files the ticket. Three MCP servers expose sensor data, knowledge-base search, and ticket management as tools, deployed on Azure App Service with managed Redis and PostgreSQL. [METRIC?: detection accuracy or test count]",
     stack: ["LangGraph", "Claude API", "MCP Servers", "Azure App Service", "PostgreSQL", "Langfuse"],
     status: "Shipped",
     category: "AI Agents & RAG",
-    repo: "https://github.com/PaulStanley0211/Predictive_maintaince_agent",
+    repo: "https://github.com/PaulStanley0211/Predictive_maintenance_agent",
   },
   {
     name: "Customer Complaints AI Agent",
     tagline: "From inbox to drafted reply in under 10 seconds.",
-    body: "Classifies sentiment and urgency, routes complaints across 7 departments, and generates context-aware bilingual replies. Live Gmail IMAP fetch, SQLite history, and auto-escalation for critical cases.",
+    body: "Triages inbound complaints end to end: classifies 10 complaint types, reads five sentiment levels from calm to furious, and routes across 7 departments with an urgency tier that auto-escalates critical cases. Replies come back context-aware and bilingual (English and German) in under 10 seconds, against a 15–30-minute manual baseline. Live Gmail IMAP intake, SQLite history, powered by Claude.",
     stack: ["Claude API", "Streamlit", "SQLAlchemy", "Gmail IMAP", "Python"],
     status: "Shipped",
     category: "AI Agents & RAG",
@@ -50,11 +50,12 @@ const PROJECTS: Project[] = [
     status: "Shipped",
     category: "AI Agents & RAG",
     repo: "https://github.com/PaulStanley0211/prelegal",
+    liveUrl: "[DEMO_URL]",
   },
   {
     name: "Knowledge Management RAG Agent",
     tagline: "Hybrid agentic RAG, bilingual EN/DE.",
-    body: "LangGraph state machine (plan → search → reflect → answer) over a hybrid vector + BM25 index for German automotive and machinery companies. Five search tools the agent can pick from based on query type.",
+    body: "A LangGraph state machine — plan → search → reflect → answer — over a hybrid ChromaDB + BM25 index for German automotive and machinery documentation. The agent chooses from five search tools (hybrid 60/40, pure vector, keyword, and metadata-filtered Excel and PDF lookups) and re-searches up to three times when the reflect node judges results weak. Local all-MiniLM-L6-v2 embeddings, Claude for synthesis; it turns a 30–60-minute manual lookup into an answer in under 10 seconds. [METRIC?: retrieval hit rate / faithfulness]",
     stack: ["LangGraph", "ChromaDB", "Claude", "Hybrid Search (BM25 + Vector)", "Streamlit"],
     status: "Shipped",
     category: "AI Agents & RAG",
@@ -77,6 +78,7 @@ const PROJECTS: Project[] = [
     status: "Shipped",
     category: "Trading Systems",
     repo: "https://github.com/PaulStanley0211/Fin-Alliance",
+    liveUrl: "[DEMO_URL]",
   },
   {
     name: "QuantFlow: DAX 40 Trading Workflow",
@@ -246,7 +248,7 @@ function ProjectRow({
                     rel="noopener noreferrer"
                     className="btn-primary"
                   >
-                    Live Site
+                    Live Demo
                     <span aria-hidden>↗</span>
                   </a>
                 )}

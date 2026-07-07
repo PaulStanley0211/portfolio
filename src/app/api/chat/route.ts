@@ -47,7 +47,7 @@ Vista Equity Partners: AI in Action Job Simulation; Datacom: Automation AI Accel
 
 # Contact
 
-- Email: Paulstanleyganganapalli@gmail.com
+- Email: paulstanleyganganapalli@gmail.com
 - Phone: +49 162 7220780
 - LinkedIn: https://www.linkedin.com/in/paul-stanley-ganganapalli-218002195
 - GitHub: https://github.com/PaulStanley0211

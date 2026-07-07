@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     siteName: "Paul Stanley Ganganapalli",
     images: [
       {
-        url: "https://www.paulstanley.dev/sillage/og-home.jpg",
+        url: "https://www.paulstanley.dev/og/home.jpg",
         width: 1200,
         height: 630,
         alt: "Paul Stanley Ganganapalli, Generative AI Creative & Brand Filmmaker",
@@ -86,7 +86,7 @@ export const metadata: Metadata = {
     title: "Paul Stanley Ganganapalli, Generative AI Creative & Brand Filmmaker",
     description:
       "Generative AI creative building full brand worlds and cinematic ads end to end with AI. Higgsfield, generative video, brand identity. Ex-trader and engineer who also builds the systems behind the scenes.",
-    images: ["https://www.paulstanley.dev/sillage/og-home.jpg"],
+    images: ["https://www.paulstanley.dev/og/home.jpg"],
   },
 };
 
