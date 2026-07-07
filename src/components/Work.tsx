@@ -249,7 +249,7 @@ function ProjectRow({
                     className="btn-primary"
                   >
                     Live Demo
-                    <span aria-hidden>↗</span>
+                    <span aria-hidden>→</span>
                   </a>
                 )}
                 <a

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import BrushStrokes from "./BrushStrokes";
 
 const STATS = [
@@ -45,10 +44,6 @@ export default function Hero() {
                 View the Studio
                 <span aria-hidden>→</span>
               </a>
-              <Link href="/studio/sillage" className="btn-ghost">
-                Watch the films
-                <span aria-hidden>→</span>
-              </Link>
               <a href="#contact" className="btn-ghost">
                 Get in touch
               </a>
