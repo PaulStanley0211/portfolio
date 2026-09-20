@@ -14,6 +14,9 @@ const links = [
   { href: "/#stack", label: "Stack", id: "stack" },
   { href: "/#resume", label: "Resume", id: "resume" },
   { href: "/#contact", label: "Contact", id: "contact" },
+  // The Cinematic Commercial System sales page is a static page at /system,
+  // not a homepage section, so it has no scroll-spy id.
+  { href: "/system", label: "System", id: "system" },
 ];
 
 export default function Nav() {

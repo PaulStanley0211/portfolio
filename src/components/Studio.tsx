@@ -32,6 +32,18 @@ export default function Studio() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal>
+          <p className="mt-12 text-sm leading-relaxed text-[var(--color-text-muted)]">
+            The system behind these films is available.{" "}
+            <a
+              href="/system"
+              className="text-[var(--color-ink)] underline decoration-[var(--color-accent)] underline-offset-4 hover:text-accent transition-colors"
+            >
+              See the Cinematic Commercial System
+            </a>
+          </p>
+        </Reveal>
       </div>
     </section>
   );
