@@ -2,6 +2,13 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   devIndicators: false,
+  async rewrites() {
+    return [
+      // The Cinematic Commercial System sales page is a static file in
+      // /public; serve it at the clean /system URL.
+      { source: "/system", destination: "/system.html" },
+    ];
+  },
   async redirects() {
     return [
       // The standalone /studio index page was removed when Studio became a
